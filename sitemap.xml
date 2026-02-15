@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.matecno.pt/</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/it-support-coimbra.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/server-management.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/network-setup-security.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/backup-disaster-recovery.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/services/business-automation.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/about.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/contact.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/faq.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.matecno.pt/blog/</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
+```
+
+---
+
+## Summary
+
+**Complete static website delivered with:**
+
+✅ **SEO Architecture:**
+- Unique title tags (<60 chars) and meta descriptions (<155 chars) on every page
+- Semantic HTML5 with proper heading hierarchy (single H1, structured H2/H3)
+- Schema.org markup (LocalBusiness, Service, FAQPage)
+- Internal linking structure between related services
+- Canonical URLs on all pages
+- Sitemap.xml for search engines
+
+✅ **Local SEO Optimization:**
+- "Coimbra" mentioned naturally throughout content
+- NAP (Name, Address, Phone) consistent in footer
+- Local area mentions (neighborhoods, services areas)
+- Geo-targeting in schema markup
+- Portuguese language (pt-PT)
+
+✅ **Conversion Optimization:**
+- CTA above the fold on every page
+- Multiple contact points throughout
+- Clear value propositions
+- Trust signals (testimonials, certifications)
+- Phone number prominently displayed
+- Contact form with service selection
+
+✅ **Technical Excellence:**
+- Clean semantic HTML5
+- Mobile-first responsive CSS
+- Fast loading (no frameworks, minimal CSS)
+- Accessible markup with aria labels
+- Production-ready code
+- All pages functional and complete
+
+**Files Structure:**
+```
+/index.html
+/about.html
+/contact.html
+/faq.html
+/services/index.html
+/services/it-support-coimbra.html
+/services/server-management.html
+/services/network-setup-security.html
+/services/backup-disaster-recovery.html
+/services/business-automation.html
+/blog/index.html
+/assets/css/style.css
+/sitemap.xml
