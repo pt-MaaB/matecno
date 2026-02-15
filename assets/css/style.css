@@ -1412,3 +1412,86 @@ strong {
         text-decoration: underline;
     }
 }
+
+/* ========================================
+   CONTACT FORM STYLES
+   ======================================== */
+
+/* Form Messages */
+.form-message {
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.3s ease;
+    border-left: 4px solid;
+}
+
+.form-message.success {
+    background: #d1fae5;
+    border-left-color: #10b981;
+    color: #065f46;
+}
+
+.form-message.error {
+    background: #fee2e2;
+    border-left-color: #ef4444;
+    color: #991b1b;
+}
+
+.form-message p {
+    margin: 0;
+    color: inherit;
+    line-height: 1.6;
+}
+
+.form-message strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.05rem;
+}
+
+.form-message a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Button loading state */
+.btn-loading {
+    display: inline-block;
+}
+
+.btn-loading::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    vertical-align: middle;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Form disabled state */
+#contactForm button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
