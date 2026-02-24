@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout
+  title="SEO em Coimbra — Posicionamento no Google para Empresas | MaTecno"
+  description="Serviços de SEO para empresas em Coimbra. Apareça no topo do Google para os termos que os seus clientes pesquisam. Auditorias, otimização on-page e link building."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-200 text-sm uppercase tracking-widest mb-3">SEO</p>
+      <h1 class="text-4xl font-bold text-white mb-4">SEO em Coimbra — Apareça no Topo do Google</h1>
+      <p class="text-blue-200 text-lg">95% das pesquisas em Portugal são feitas no Google. Se a sua empresa não aparece na primeira página, está a perder clientes para a concorrência.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+      <h2>O que incluímos no serviço de SEO</h2>
+      <ul>
+        <li><strong>Auditoria SEO completa</strong> — identificamos os problemas técnicos e de conteúdo que impedem o seu site de rankear</li>
+        <li><strong>Pesquisa de palavras-chave</strong> — descobrimos o que os seus clientes pesquisam no Google</li>
+        <li><strong>Otimização on-page</strong> — títulos, meta descrições, headings, velocidade e estrutura</li>
+        <li><strong>SEO local</strong> — Google My Business, citações locais e palavras-chave geográficas</li>
+        <li><strong>Criação de conteúdo</strong> — artigos e páginas que respondem às dúvidas dos seus clientes</li>
+        <li><strong>Link building</strong> — obtenção de links de qualidade para aumentar a autoridade do seu site</li>
+        <li><strong>Relatórios mensais</strong> — acompanhamento de rankings, tráfego e resultados</li>
+      </ul>
+
+      <h2>SEO local vs. SEO nacional</h2>
+      <p><strong>SEO local</strong> é ideal para negócios que servem uma área geográfica específica (como Coimbra). Otimizamos para termos como "suporte informático Coimbra" ou "restaurante Coimbra" — pesquisas com alta intenção de compra local.</p>
+      <p><strong>SEO nacional</strong> é para empresas que vendem em todo o Portugal ou online. Mais competitivo, mas com maior alcance.</p>
+      <p>Para a maioria das PMEs em Coimbra, começar pelo SEO local é a estratégia mais rápida e eficaz para gerar resultados.</p>
+
+      <h2>Quanto tempo demora o SEO a funcionar?</h2>
+      <p>O SEO é uma estratégia a médio-longo prazo. Os primeiros resultados visíveis surgem geralmente ao fim de 3–6 meses. Mas ao contrário da publicidade paga, os resultados orgânicos são duradouros — uma vez no topo, o custo de manutenção é mínimo.</p>
+
+      <h2>Porque escolher a MaTecno para o seu SEO?</h2>
+      <p>Praticamos o que ensinamos — este próprio website é construído e otimizado segundo as melhores práticas de SEO. A MaTecno aparece no Google porque sabe como fazer SEO funcionar para negócios locais em Portugal.</p>
+    </div>
+  </section>
+
+  <section class="py-8 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 mb-2">Também pode interessar:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/servicos/design-websites" class="text-brand hover:underline text-sm">Design de Websites →</a>
+        <a href="/servicos/alojamento-web" class="text-brand hover:underline text-sm">Alojamento Web →</a>
+        <a href="/servicos/emails-profissionais" class="text-brand hover:underline text-sm">Emails Profissionais →</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Pronto para aparecer no topo do Google em Coimbra?" subtitle="Peça uma auditoria SEO gratuita ao seu website. Sem compromisso." />
+  <Footer />
+</Layout>

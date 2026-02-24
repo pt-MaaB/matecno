@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout
+  title="Sobre a MaTecno — Serviços IT para Empresas em Coimbra"
+  description="Conheça a MaTecno, empresa de serviços informáticos para PMEs em Coimbra. Suporte informático, redes, servidores, cibersegurança, websites e SEO."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-4">Sobre a MaTecno</h1>
+      <p class="text-blue-200 text-lg">A tecnologia ao serviço do seu negócio, com proximidade e transparência.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="prose prose-lg mx-auto">
+        <h2>Quem somos</h2>
+        <p>A MaTecno é uma empresa de serviços de tecnologia e informática sediada em Coimbra, focada em apoiar pequenas e médias empresas da região centro de Portugal. Nascemos com uma missão clara: tornar a tecnologia acessível, compreensível e vantajosa para os negócios locais.</p>
+
+        <h2>A nossa missão</h2>
+        <p>Muitas PMEs em Coimbra enfrentam os mesmos desafios tecnológicos: redes lentas, servidores sem manutenção, sem presença online, sem proteção contra ataques informáticos. A MaTecno existe para resolver estes problemas com soluções práticas, acessíveis e com suporte local.</p>
+
+        <h2>O que nos distingue</h2>
+        <ul>
+          <li><strong>Somos locais</strong> — em Coimbra, conhecemos o mercado e estamos perto dos nossos clientes</li>
+          <li><strong>Transparência total</strong> — orçamentos claros, sem letras pequenas nem custos surpresa</li>
+          <li><strong>Resposta rápida</strong> — quando há um problema, estamos lá. Sempre em menos de 24 horas</li>
+          <li><strong>Abordagem educativa</strong> — explicamos o que fazemos para que compreenda o valor do serviço</li>
+          <li><strong>Preços justos para PMEs</strong> — tecnologia profissional não tem de custar como uma grande empresa</li>
+        </ul>
+
+        <h2>Os nossos serviços</h2>
+        <p>Oferecemos um conjunto completo de serviços IT para empresas: <a href="/servicos/redes">redes e Wi-Fi</a>, <a href="/servicos/servidores">administração de servidores</a>, <a href="/servicos/ciberseguranca">cibersegurança</a>, <a href="/servicos/emails-profissionais">emails profissionais</a>, <a href="/servicos/alojamento-web">alojamento web</a>, <a href="/servicos/design-websites">design de websites</a> e <a href="/servicos/seo">SEO</a>.</p>
+
+        <h2>A nossa localização</h2>
+        <p>Baseados em Coimbra, servimos empresas no distrito de Coimbra e região centro. Para suporte remoto, cobrimos todo o Portugal.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Quer saber mais sobre como podemos ajudar?" subtitle="Entre em contacto. Uma conversa de 15 minutos pode fazer a diferença para o seu negócio." />
+  <Footer />
+</Layout>

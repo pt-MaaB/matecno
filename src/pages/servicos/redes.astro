@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout
+  title="Configuração e Manutenção de Redes Empresariais em Coimbra | MaTecno"
+  description="Configuração, instalação e manutenção de redes Wi-Fi, switches, routers e VPN para empresas em Coimbra. Redes rápidas, seguras e fiáveis para o seu escritório."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-200 text-sm uppercase tracking-widest mb-3">Serviços de Rede</p>
+      <h1 class="text-4xl font-bold text-white mb-4">Configuração e Manutenção de Redes Empresariais em Coimbra</h1>
+      <p class="text-blue-200 text-lg">Wi-Fi lento ou redes instáveis custam produtividade. A MaTecno garante uma infraestrutura de rede sólida para a sua empresa.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+      <h2>O que incluímos no serviço de redes empresariais</h2>
+      <ul>
+        <li><strong>Instalação e configuração de routers e switches</strong> — equipamento adequado ao tamanho e necessidades da sua empresa</li>
+        <li><strong>Wi-Fi profissional para escritórios</strong> — cobertura total sem pontos cegos, com segmentação por utilizador</li>
+        <li><strong>Configuração de VPN</strong> — acesso remoto seguro para colaboradores em teletrabalho</li>
+        <li><strong>Segmentação de redes (VLANs)</strong> — separar rede de convidados da rede interna de trabalho</li>
+        <li><strong>Monitorização e manutenção preventiva</strong> — detetar problemas antes que afetem o negócio</li>
+        <li><strong>Resolução de avarias</strong> — suporte rápido quando a rede falha</li>
+      </ul>
+
+      <h2>Problemas comuns que resolvemos</h2>
+      <ul>
+        <li>Wi-Fi lento ou com quedas frequentes no escritório</li>
+        <li>Rede sobrecarregada com muitos utilizadores</li>
+        <li>Sem acesso remoto seguro para teletrabalho</li>
+        <li>Equipamento desatualizado ou mal configurado</li>
+        <li>Rede sem separação entre clientes e funcionários</li>
+      </ul>
+
+      <h2>Porquê investir numa boa rede empresarial?</h2>
+      <p>Uma rede lenta ou instável pode custar horas de produtividade por semana. Para uma PME com 5 colaboradores, isso representa centenas de euros mensais em tempo perdido. Uma infraestrutura bem configurada paga-se rapidamente.</p>
+    </div>
+  </section>
+
+  <section class="py-8 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 mb-2">Também pode interessar:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/servicos/ciberseguranca" class="text-brand hover:underline text-sm">Cibersegurança →</a>
+        <a href="/servicos/servidores" class="text-brand hover:underline text-sm">Administração de Servidores →</a>
+        <a href="/servicos/emails-profissionais" class="text-brand hover:underline text-sm">Emails Profissionais →</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Quer uma rede empresarial mais rápida e segura?" subtitle="Peça um diagnóstico gratuito. Avaliamos a sua rede e apresentamos soluções sem compromisso." />
+  <Footer />
+</Layout>

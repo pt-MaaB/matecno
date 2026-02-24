@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout
+  title="Administração de Servidores Windows e Linux em Coimbra | MaTecno"
+  description="Gestão e manutenção de servidores Windows Server e Linux para PMEs em Coimbra. Backups, atualizações, monitorização e suporte — para que os seus sistemas nunca parem."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-200 text-sm uppercase tracking-widest mb-3">Administração de Servidores</p>
+      <h1 class="text-4xl font-bold text-white mb-4">Administração de Servidores Windows e Linux para PMEs em Coimbra</h1>
+      <p class="text-blue-200 text-lg">O servidor é o coração da sua empresa. Mantemos os seus sistemas a funcionar, seguros e atualizados.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+      <h2>Serviços de administração de servidores incluídos</h2>
+      <ul>
+        <li><strong>Instalação e configuração de servidores</strong> — Windows Server (2019/2022) e distribuições Linux (Ubuntu, Debian, CentOS)</li>
+        <li><strong>Gestão de utilizadores e permissões</strong> — Active Directory, grupos e políticas de acesso</li>
+        <li><strong>Backups automatizados</strong> — política de backups locais e na nuvem, com testes regulares de restauro</li>
+        <li><strong>Atualizações e patches de segurança</strong> — manutenção preventiva para evitar vulnerabilidades</li>
+        <li><strong>Monitorização proativa</strong> — alertas de disco, CPU, RAM e serviços críticos</li>
+        <li><strong>Servidores de ficheiros</strong> — partilha de documentos segura para toda a equipa</li>
+        <li><strong>Servidores de email internos</strong> — instalação e gestão de servidores de correio</li>
+      </ul>
+
+      <h2>Windows Server vs. Linux — qual escolher?</h2>
+      <p><strong>Windows Server</strong> é ideal para empresas que usam o ecossistema Microsoft (Office, Active Directory, Exchange). Integração nativa com os serviços Windows que a equipa já conhece.</p>
+      <p><strong>Linux</strong> é mais económico (sem licenças), mais estável para servidores web e bases de dados, e é a escolha certa para ambientes técnicos. Reduz os custos operacionais a longo prazo.</p>
+      <p>A MaTecno analisa as necessidades da sua empresa e recomenda a solução mais adequada.</p>
+
+      <h2>Porque ter um servidor dedicado na sua empresa?</h2>
+      <ul>
+        <li>Centralizar ficheiros e dados da empresa com controlo total</li>
+        <li>Garantir backups automáticos e recuperação rápida em caso de avaria</li>
+        <li>Gerir utilizadores, acessos e políticas de segurança</li>
+        <li>Melhorar o desempenho de aplicações internas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-8 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 mb-2">Também pode interessar:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/servicos/redes" class="text-brand hover:underline text-sm">Redes Empresariais →</a>
+        <a href="/servicos/ciberseguranca" class="text-brand hover:underline text-sm">Cibersegurança →</a>
+        <a href="/servicos/alojamento-web" class="text-brand hover:underline text-sm">Alojamento Web →</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Precisa de um servidor bem gerido?" subtitle="Analisamos a sua infraestrutura atual e apresentamos um plano de manutenção à medida." />
+  <Footer />
+</Layout>

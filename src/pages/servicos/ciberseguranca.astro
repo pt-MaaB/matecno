@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout
+  title="Cibersegurança para PMEs em Coimbra | MaTecno"
+  description="Proteja os dados e sistemas da sua empresa com soluções de cibersegurança acessíveis para PMEs em Coimbra. Firewall, antivírus, backups e formação para a sua equipa."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-200 text-sm uppercase tracking-widest mb-3">Cibersegurança</p>
+      <h1 class="text-4xl font-bold text-white mb-4">Cibersegurança para PMEs em Coimbra</h1>
+      <p class="text-blue-200 text-lg">66% dos ataques informáticos têm como alvo pequenas e médias empresas. Não espere ser a próxima vítima.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+      <h2>O que oferecemos em cibersegurança para empresas</h2>
+      <ul>
+        <li><strong>Auditoria de segurança</strong> — avaliamos os pontos fracos dos seus sistemas e redes</li>
+        <li><strong>Configuração de firewall</strong> — proteção perimetral da rede empresarial</li>
+        <li><strong>Soluções antivírus e anti-malware</strong> — proteção endpoint para todos os dispositivos</li>
+        <li><strong>Política de passwords e autenticação multifator (MFA)</strong> — reduz dramaticamente o risco de acesso indevido</li>
+        <li><strong>Backups seguros e testados</strong> — a última linha de defesa contra ransomware</li>
+        <li><strong>Formação da equipa</strong> — como reconhecer phishing e ameaças comuns</li>
+        <li><strong>Conformidade com o RGPD</strong> — orientação básica para proteção de dados pessoais</li>
+      </ul>
+
+      <h2>Riscos mais comuns para PMEs portuguesas</h2>
+      <ul>
+        <li><strong>Ransomware</strong> — encripta os seus ficheiros e exige resgate. Pode paralisar o negócio dias ou semanas</li>
+        <li><strong>Phishing</strong> — emails falsos que roubam passwords ou dados bancários</li>
+        <li><strong>Passwords fracas</strong> — a causa número 1 de acessos não autorizados</li>
+        <li><strong>Software desatualizado</strong> — vulnerabilidades conhecidas que os atacantes exploram</li>
+        <li><strong>Sem backups</strong> — perda permanente de dados em caso de ataque ou avaria</li>
+      </ul>
+
+      <h2>Quanto custa um ataque informático?</h2>
+      <p>O custo médio de um ataque de ransomware para uma PME europeia ultrapassa os 50.000€ — incluindo tempo de inatividade, recuperação de dados, danos reputacionais e potenciais coimas do RGPD. Investir em prevenção custa muito menos.</p>
+    </div>
+  </section>
+
+  <section class="py-8 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 mb-2">Também pode interessar:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/servicos/redes" class="text-brand hover:underline text-sm">Redes Empresariais →</a>
+        <a href="/servicos/servidores" class="text-brand hover:underline text-sm">Administração de Servidores →</a>
+        <a href="/servicos/emails-profissionais" class="text-brand hover:underline text-sm">Emails Profissionais →</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Sabe se a sua empresa está protegida?" subtitle="Peça uma auditoria de segurança gratuita. Identificamos os riscos sem compromisso." />
+  <Footer />
+</Layout>

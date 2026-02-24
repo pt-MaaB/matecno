@@ -1,0 +1,31 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+const {
+  title = "Pronto para melhorar a tecnologia da sua empresa?",
+  subtitle = "Peça um diagnóstico gratuito. Respondemos em menos de 24 horas.",
+} = Astro.props;
+---
+
+<section class="bg-brand py-12 px-4">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">{title}</h2>
+    <p class="text-blue-100 mb-6">{subtitle}</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a
+        href="/contacto"
+        class="px-6 py-3 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        Peça um Orçamento Gratuito
+      </a>
+      <a
+        href="tel:+351919642845"
+        class="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand transition-colors"
+      >
+        Ligue Agora: +351 919 642 845
+      </a>
+    </div>
+  </div>
+</section>

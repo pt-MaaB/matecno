@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const services = [
+  {
+    title: 'Redes e Wi-Fi',
+    description: 'Configuração e manutenção de redes empresariais, Wi-Fi, switches e VPN.',
+    href: '/servicos/redes',
+    icon: '🌐',
+  },
+  {
+    title: 'Servidores',
+    description: 'Administração de servidores Windows e Linux para PMEs.',
+    href: '/servicos/servidores',
+    icon: '🖥️',
+  },
+  {
+    title: 'Cibersegurança',
+    description: 'Proteja os dados da sua empresa com soluções de segurança acessíveis.',
+    href: '/servicos/ciberseguranca',
+    icon: '🔒',
+  },
+  {
+    title: 'Emails Profissionais',
+    description: 'Microsoft 365 e Google Workspace — email com o domínio da sua empresa.',
+    href: '/servicos/emails-profissionais',
+    icon: '📧',
+  },
+  {
+    title: 'Alojamento Web',
+    description: 'Hosting rápido, seguro e fiável para o website da sua empresa.',
+    href: '/servicos/alojamento-web',
+    icon: '☁️',
+  },
+  {
+    title: 'Design de Websites',
+    description: 'Websites profissionais para empresas em Coimbra que geram clientes.',
+    href: '/servicos/design-websites',
+    icon: '🎨',
+  },
+  {
+    title: 'SEO',
+    description: 'Posicionamento no Google para que os seus clientes o encontrem primeiro.',
+    href: '/servicos/seo',
+    icon: '📈',
+  },
+];
+---
+
+<Layout
+  title="Suporte Informático para Empresas em Coimbra | MaTecno"
+  description="MaTecno oferece suporte informático, redes, servidores, cibersegurança, emails profissionais, alojamento web, design de websites e SEO para empresas em Coimbra. Peça um orçamento gratuito."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark to-brand py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-blue-200 text-sm font-medium uppercase tracking-widest mb-4">Serviços IT para Empresas em Coimbra</p>
+      <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
+        Suporte Informático Profissional<br />para a sua Empresa em Coimbra
+      </h1>
+      <p class="text-blue-100 text-lg max-w-2xl mx-auto mb-8">
+        A MaTecno trata da tecnologia da sua empresa para que possa focar no que realmente importa: o seu negócio. Redes, servidores, cibersegurança, websites e SEO — tudo num só lugar.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contacto"
+          class="px-8 py-4 bg-white text-brand font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+        >
+          Peça um Orçamento Gratuito
+        </a>
+        <a
+          href="tel:+351919642845"
+          class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand transition-colors text-lg"
+        >
+          📞 +351 919 642 845
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Os Nossos Serviços de IT para Empresas</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Soluções completas de tecnologia para pequenas e médias empresas em Coimbra e região centro.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(s => <ServiceCard {...s} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why MaTecno -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Porquê escolher a MaTecno?</h2>
+        <p class="text-gray-600">Somos locais, ágeis e comprometidos com o sucesso da sua empresa.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: '📍', title: 'Locais em Coimbra', desc: 'Conhecemos o mercado local e estamos perto de si.' },
+          { icon: '⚡', title: 'Resposta Rápida', desc: 'Respondemos em menos de 24 horas úteis.' },
+          { icon: '💶', title: 'Preços Transparentes', desc: 'Orçamentos claros, sem surpresas.' },
+          { icon: '🤝', title: 'Suporte Dedicado', desc: 'Um parceiro tecnológico de confiança para a sua empresa.' },
+        ].map(item => (
+          <div class="text-center p-6 rounded-xl bg-gray-50">
+            <span class="text-4xl block mb-3">{item.icon}</span>
+            <h3 class="font-semibold text-gray-900 mb-2">{item.title}</h3>
+            <p class="text-sm text-gray-600">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+
+  <Footer />
+</Layout>
