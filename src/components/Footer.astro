@@ -14,7 +14,7 @@ const year = new Date().getFullYear();
 
 <footer class="bg-gray-900 text-gray-300">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Brand -->
       <div>
         <p class="text-white font-bold text-lg mb-2">MaTecno</p>
@@ -35,6 +35,17 @@ const year = new Date().getFullYear();
               <a href={s.href} class="text-sm hover:text-white transition-colors">{s.label}</a>
             </li>
           ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <p class="text-white font-semibold mb-3">Empresa</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+          <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
+          <li><a href="/contacto" class="hover:text-white transition-colors">Contacto</a></li>
         </ul>
       </div>
 
@@ -63,7 +74,7 @@ const year = new Date().getFullYear();
 
     <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-500">
       <p>© {year} MaTecno — Todos os direitos reservados</p>
-      <p>Feito com ❤️ em Coimbra, Portugal</p>
+      <p>Suporte IT e Administração de Sistemas em Coimbra, Portugal</p>
     </div>
   </div>
 </footer>

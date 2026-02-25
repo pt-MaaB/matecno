@@ -14,6 +14,8 @@ const PRIORITIES = {
   'https://matecno.pt/servicos/design-websites/': 0.8,
   'https://matecno.pt/servicos/seo/': 0.8,
   'https://matecno.pt/sobre/': 0.6,
+  'https://matecno.pt/blog/': 0.8,
+  'https://matecno.pt/faq/': 0.7,
 };
 
 export default defineConfig({
@@ -24,11 +26,12 @@ export default defineConfig({
       serialize(item) {
         const isService = item.url.includes('/servicos/');
         const isHome = item.url === 'https://matecno.pt/';
+        const isBlogPost = item.url.includes('/blog/') && item.url !== 'https://matecno.pt/blog/';
         return {
           ...item,
           lastmod: new Date().toISOString().split('T')[0],
           changefreq: isHome ? 'weekly' : isService ? 'monthly' : 'monthly',
-          priority: PRIORITIES[item.url] ?? 0.7,
+          priority: PRIORITIES[item.url] ?? (isBlogPost ? 0.6 : 0.5),
         };
       },
     }),

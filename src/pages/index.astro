@@ -49,6 +49,48 @@ const services = [
     icon: '📈',
   },
 ];
+
+const industries = [
+  {
+    icon: '👔',
+    title: 'Escritórios de Contabilidade',
+    desc: 'Backups seguros, compliance RGPD e sistemas sempre disponíveis para cumprimento de prazos.',
+  },
+  {
+    icon: '⚖️',
+    title: 'Escritórios de Advogados',
+    desc: 'Confidencialidade de dados, acesso remoto seguro e gestão documental eficiente.',
+  },
+  {
+    icon: '🏥',
+    title: 'Clínicas e Consultórios',
+    desc: 'Proteção de dados de saúde, disponibilidade de sistemas de marcação e conformidade legal.',
+  },
+  {
+    icon: '🏪',
+    title: 'Comércio e Retalho',
+    desc: 'Redes estáveis, integração de ferramentas de gestão e suporte técnico rápido.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Que tipo de empresas apoiam em Coimbra?',
+    a: 'Trabalhamos principalmente com pequenas e médias empresas em Coimbra, incluindo escritórios de contabilidade, advogados, clínicas médicas, consultórios e pequenos negócios de retalho com 1 a 20 colaboradores.',
+  },
+  {
+    q: 'Oferecem suporte presencial ou apenas remoto?',
+    a: 'Oferecemos ambos. Muitos problemas podem ser resolvidos remotamente de forma mais rápida, mas também prestamos suporte presencial em Coimbra quando necessário para instalações, configurações ou situações mais complexas.',
+  },
+  {
+    q: 'Qual o tempo de resposta para problemas urgentes?',
+    a: 'Para clientes com contrato de manutenção, garantimos resposta em menos de 2 horas durante o horário comercial. Problemas críticos que afetem operações são priorizados imediatamente.',
+  },
+  {
+    q: 'Como funcionam os backups automáticos?',
+    a: 'Configuramos sistemas de backup que funcionam automaticamente sem intervenção. Os dados são copiados regularmente para localizações seguras (local e cloud), com testes de recuperação periódicos para garantir que funcionam quando necessário.',
+  },
+];
 ---
 
 <Layout
@@ -121,7 +163,50 @@ const services = [
     </div>
   </section>
 
+  <!-- Target Industries -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Setores que Apoiamos em Coimbra</h2>
+        <p class="text-gray-600">Especialistas em IT para profissionais independentes e PMEs locais.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {industries.map(ind => (
+          <div class="flex gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <span class="text-3xl shrink-0">{ind.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">{ind.title}</h3>
+              <p class="text-sm text-gray-600">{ind.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <CTABanner />
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Perguntas Frequentes</h2>
+      </div>
+      <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+        {faqs.map(faq => (
+          <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 class="font-semibold text-gray-900 mb-2" itemprop="name">{faq.q}</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p class="text-gray-600 text-sm" itemprop="text">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="text-center mt-6">
+        <a href="/faq" class="text-brand hover:underline text-sm font-medium">Ver todas as perguntas frequentes →</a>
+      </p>
+    </div>
+  </section>
 
   <Footer />
 </Layout>

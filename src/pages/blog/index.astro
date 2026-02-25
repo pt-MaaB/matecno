@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort(
+  (a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+);
+---
+
+<Layout
+  title="Blog de Tecnologia para Empresas | MaTecno Coimbra"
+  description="Artigos práticos sobre segurança informática, backups, redes, servidores e tecnologia para PMEs em Coimbra. Guias e dicas da MaTecno."
+>
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-4">Blog MaTecno</h1>
+      <p class="text-blue-200 text-lg">Guias práticos e dicas de tecnologia para empresas em Coimbra</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+            <a href={`/blog/${post.slug}`} class="block">
+              <img
+                src={post.data.image}
+                alt={post.data.imageAlt}
+                class="w-full h-48 object-cover"
+                loading="lazy"
+              />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-sm font-medium text-brand-dark bg-blue-50 px-2 py-0.5 rounded">
+                  {post.data.categoryIcon} {post.data.category}
+                </span>
+                <span class="text-xs text-gray-400">{post.data.readTime}</span>
+              </div>
+              <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                <a href={`/blog/${post.slug}`} class="hover:text-brand transition-colors">
+                  {post.data.title}
+                </a>
+              </h2>
+              <p class="text-gray-500 text-sm leading-relaxed flex-grow mb-4">
+                {post.data.description}
+              </p>
+              <a
+                href={`/blog/${post.slug}`}
+                class="text-brand font-semibold text-sm hover:underline mt-auto"
+              >
+                Ler artigo →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl font-bold text-white mb-3">Precisa de Ajuda com IT para a Sua Empresa?</h2>
+      <p class="text-blue-200 mb-6">A MaTecno oferece suporte informático profissional para PMEs em Coimbra.</p>
+      <a
+        href="/contacto"
+        class="inline-block px-6 py-3 bg-white text-brand-dark font-bold rounded-lg hover:bg-blue-50 transition-colors"
+      >
+        Solicitar Orçamento Gratuito
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

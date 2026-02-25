@@ -1,0 +1,49 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "pubDate": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "categoryIcon": {
+          "type": "string"
+        },
+        "readTime": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "imageAlt": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "pubDate",
+        "category",
+        "categoryIcon",
+        "readTime",
+        "image",
+        "imageAlt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

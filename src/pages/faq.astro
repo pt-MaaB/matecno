@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const categories = [
+  {
+    title: "Geral",
+    faqs: [
+      {
+        q: "Que tipo de empresas são os vossos clientes típicos?",
+        a: "Trabalhamos principalmente com pequenas e médias empresas em Coimbra com 5 a 50 colaboradores. Os nossos clientes típicos incluem escritórios de contabilidade, advogados, clínicas médicas e dentárias, consultórios, pequenas empresas de serviços e comércio. Empresas que precisam de suporte IT profissional mas não justificam uma equipa interna completa."
+      },
+      {
+        q: "Trabalham apenas em Coimbra ou noutras regiões também?",
+        a: "Focamo-nos principalmente em Coimbra e concelhos limítrofes onde podemos prestar suporte presencial eficaz. Para suporte remoto (gestão de servidores cloud, monitorização, etc.), podemos trabalhar com clientes em qualquer localização. Contacte-nos para confirmar se a sua localização está na nossa área de serviço presencial."
+      },
+      {
+        q: "Quanto custam os vossos serviços?",
+        a: "Os custos variam conforme as necessidades específicas. Oferecemos: (1) Suporte pontual cobrado por hora para intervenções ocasionais, (2) Contratos mensais de manutenção desde valores acessíveis incluindo horas de suporte, monitorização e backups, (3) Projetos específicos com orçamento fixo. Contacte-nos para um orçamento personalizado sem compromisso."
+      },
+      {
+        q: "Qual a diferença entre suporte pontual e contrato de manutenção?",
+        a: "Suporte pontual é pago por hora quando necessário, ideal para intervenções ocasionais. Contratos de manutenção incluem horas mensais, monitorização proativa, backups automáticos, manutenção preventiva e tempos de resposta garantidos. Contratos são mais económicos para empresas que precisam de suporte regular e oferecem maior tranquilidade com vigilância contínua dos sistemas."
+      },
+      {
+        q: "Têm contratos de fidelização ou posso cancelar a qualquer momento?",
+        a: "Os nossos contratos de manutenção são tipicamente mensais ou trimestrais, sem períodos de fidelização longos. Pode cancelar com aviso prévio de 30 dias. Acreditamos em manter clientes pela qualidade do serviço, não por contratos vinculativos."
+      },
+    ]
+  },
+  {
+    title: "Suporte Técnico",
+    faqs: [
+      {
+        q: "Qual o tempo de resposta para problemas urgentes?",
+        a: "Para clientes com contrato de manutenção, garantimos resposta inicial em menos de 2 horas durante horário comercial (9h-18h). Problemas críticos que afetem completamente as operações são tratados com máxima prioridade. Para suporte pontual, fazemos o possível mas não há tempos garantidos."
+      },
+      {
+        q: "Oferecem suporte fora do horário comercial?",
+        a: "Sim, mediante acordo prévio. Para clientes com contratos premium, disponibilizamos suporte em horário alargado ou fins de semana para emergências. Isto é particularmente útil para empresas que operam fora do horário normal ou têm prazos críticos."
+      },
+      {
+        q: "O suporte é remoto ou presencial?",
+        a: "Ambos. Aproximadamente 70% dos problemas são resolvidos remotamente de forma mais rápida e eficiente. Para situações que requerem presença física (instalação de equipamentos, problemas de hardware, configurações locais), deslocamo-nos às vossas instalações em Coimbra. A abordagem é sempre a mais adequada ao problema."
+      },
+      {
+        q: "Que tipo de problemas conseguem resolver?",
+        a: "Cobrimos toda a infraestrutura IT: problemas de Windows/software, questões de email, falhas de rede, problemas de impressoras, configuração de equipamentos, lentidão de sistemas, vírus e malware, problemas de acesso remoto, falhas de servidor, recuperação de dados, entre outros. Se é relacionado com IT empresarial, provavelmente podemos ajudar."
+      },
+      {
+        q: "Trabalham com utilizadores Mac ou só Windows?",
+        a: "Trabalhamos com ambos. A maioria das nossas empresas clientes usa Windows, mas temos experiência com Mac e ambientes mistos. A nível de servidores, trabalhamos tanto com Windows Server como Linux."
+      },
+    ]
+  },
+  {
+    title: "Segurança e Backups",
+    faqs: [
+      {
+        q: "Os meus dados estão seguros se usar backups na cloud?",
+        a: "Sim. Todos os backups são encriptados antes de saírem da vossa rede (encriptação end-to-end com AES-256) e armazenados em datacenters europeus certificados. Apenas vocês têm as chaves de encriptação. É muito mais seguro que pen drives ou discos externos no escritório que podem ser roubados ou danificados."
+      },
+      {
+        q: "Com que frequência devem ser feitos backups?",
+        a: "Recomendamos backups diários para a maioria das empresas, com backups contínuos ou a cada poucas horas para dados muito críticos (bases de dados de produção, por exemplo). O importante é ter múltiplas cópias em localizações diferentes (local + cloud) seguindo a regra 3-2-1."
+      },
+      {
+        q: "O que é um ataque de ransomware e como me protejo?",
+        a: "Ransomware é um tipo de malware que encripta todos os vossos ficheiros e exige pagamento para os libertar. Proteção eficaz requer múltiplas camadas: backups imutáveis que o ransomware não consegue encriptar, firewall adequado, formação de utilizadores para identificar emails suspeitos, e atualizações de segurança regulares. Implementamos todas estas medidas."
+      },
+      {
+        q: "Quanto tempo demora a recuperar dados em caso de desastre?",
+        a: "Ficheiros individuais: minutos. Servidores completos: tipicamente 1 a 4 horas para pequenas empresas, dependendo do volume de dados. Com tecnologias de Instant Recovery, servidores virtuais podem estar operacionais em menos de 15 minutos arrancando diretamente do backup enquanto a restauração completa decorre em background."
+      },
+      {
+        q: "A nossa empresa cumpre os requisitos de RGPD?",
+        a: "Podemos avaliar. O RGPD requer medidas técnicas e organizacionais adequadas para proteger dados pessoais. Do ponto de vista técnico, isto inclui: encriptação, controlo de acessos, backups, logs de auditoria, e políticas de retenção de dados. Fazemos auditorias de compliance e implementamos as medidas técnicas necessárias."
+      },
+    ]
+  },
+  {
+    title: "Implementação e Projetos",
+    faqs: [
+      {
+        q: "Quanto tempo demora a implementar uma nova infraestrutura IT?",
+        a: "Depende da complexidade. Para escritórios pequenos (5-10 pessoas): tipicamente 1-2 semanas incluindo servidores, rede, backups e migração. Para projetos maiores ou mais complexos: 4-8 semanas. Planeamos sempre para minimizar impacto nas operações, muitas vezes fazendo trabalho fora de horas."
+      },
+      {
+        q: "Precisamos de comprar equipamento novo ou podem trabalhar com o que temos?",
+        a: "Fazemos sempre uma avaliação primeiro. Se o equipamento existente for adequado e seguro, aproveitamos. Apenas recomendamos substituição quando há riscos claros (equipamento sem suporte, falhas de segurança conhecidas, hardware obsoleto). Transparência total nas recomendações."
+      },
+      {
+        q: "Fornecem o equipamento ou temos de comprar nós?",
+        a: "Ambas as opções. Podemos fornecer equipamento (servidores, switches, firewalls, etc.) ou podem adquirir diretamente e nós instalamos e configuramos. Trabalhamos com fornecedores de confiança e não temos margens excessivas em equipamentos — o nosso negócio é serviços, não revenda de hardware."
+      },
+      {
+        q: "Podem ajudar com migração para a cloud (Microsoft 365, etc.)?",
+        a: "Sim, temos experiência em migrações para Microsoft 365, Google Workspace e outras plataformas cloud. Gerimos todo o processo: planeamento, migração de emails e ficheiros, formação de utilizadores e suporte pós-migração. Minimizamos interrupções e garantimos que nada se perde no processo."
+      },
+      {
+        q: "Oferecem formação aos utilizadores?",
+        a: "Sim, incluímos formação básica em projetos de implementação. Para formação mais extensiva (Office, ferramentas específicas, segurança e boas práticas), podemos organizar sessões personalizadas. Acreditamos que utilizadores bem formados são uma camada importante de segurança e produtividade."
+      },
+    ]
+  },
+];
+
+const allFaqs = categories.flatMap(c => c.faqs);
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": allFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+  }))
+};
+---
+
+<Layout
+  title="Perguntas Frequentes — Suporte IT para Empresas em Coimbra | MaTecno"
+  description="Respostas às perguntas mais comuns sobre serviços IT, suporte técnico, backups e segurança informática para empresas em Coimbra."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <Header />
+
+  <section class="bg-brand-dark py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-4">Perguntas Frequentes</h1>
+      <p class="text-blue-200 text-lg">Respostas às questões mais comuns sobre os nossos serviços IT em Coimbra</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-gray-600 mb-10 text-center">
+        Não encontra a resposta que procura?{' '}
+        <a href="/contacto" class="text-brand font-semibold hover:underline">Entre em contacto connosco</a>
+        {' '}— teremos todo o gosto em esclarecer.
+      </p>
+
+      <div class="space-y-12">
+        {categories.map((category) => (
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
+              {category.title}
+            </h2>
+            <div class="space-y-6">
+              {category.faqs.map((faq) => (
+                <div class="bg-gray-50 rounded-xl p-6">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                  <p class="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Ainda tem dúvidas?" subtitle="Fale diretamente connosco. Estamos disponíveis para esclarecer todas as suas questões." />
+  <Footer />
+</Layout>
