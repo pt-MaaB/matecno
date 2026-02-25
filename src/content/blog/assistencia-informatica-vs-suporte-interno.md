@@ -5,7 +5,7 @@ pubDate: "2026-02-25"
 category: "Suporte IT"
 categoryIcon: "🖥️"
 readTime: "10 min"
-image: "/images/blog/assistencia-informatica-externa-vs-interna.svg"
+image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=600&fit=crop"
 imageAlt: "Comparação entre suporte informático interno e externo"
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2026-02-25"
 category: "Suporte IT"
 categoryIcon: "🖥️"
 readTime: "8 min"
-image: "/images/blog/suporte-informatico-profissional.svg"
+image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=600&fit=crop"
 imageAlt: "Técnico a dar suporte informático a empresa"
 ---
 

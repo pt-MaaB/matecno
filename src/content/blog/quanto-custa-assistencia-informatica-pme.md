@@ -5,7 +5,7 @@ pubDate: "2026-02-25"
 category: "Suporte IT"
 categoryIcon: "🖥️"
 readTime: "9 min"
-image: "/images/blog/custo-assistencia-informatica-pme.svg"
+image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop"
 imageAlt: "Gráfico de custos de assistência informática para PMEs"
 ---
 

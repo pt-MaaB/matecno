@@ -5,7 +5,7 @@ pubDate: "2026-02-25"
 category: "Suporte IT"
 categoryIcon: "🖥️"
 readTime: "7 min"
-image: "/images/blog/perguntas-assistencia-informatica-coimbra.svg"
+image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=600&fit=crop"
 imageAlt: "Empresário a fazer perguntas antes de contratar assistência informática"
 ---
 
