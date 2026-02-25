@@ -31,7 +31,7 @@ O modelo mais simples: paga uma taxa horária quando precisa de um técnico. Sem
 
 Um valor fixo mensal cobre um conjunto definido de serviços: visitas periódicas, actualizações, monitoring, e um número de horas de suporte incluídas.
 
-**Preço típico para uma PME com 5–15 utilizadores**: 150€ a 400€/mês
+**Preço típico para uma PME com 1–25 utilizadores**: 150€ a 400€/mês
 
 **O que está incluído (tipicamente)**:
 - X visitas mensais (presenciais ou remotas)
@@ -104,7 +104,7 @@ Muitas empresas vêem o suporte informático como um custo. Mas o custo de não 
 
 Um colaborador que passa 30 minutos por dia a lidar com problemas informáticos (computador lento, impressora que não funciona, email que não sincroniza) perde 2,5 horas por semana — mais de 10 horas por mês.
 
-Com 10 colaboradores, isso são 100 horas mensais de produtividade perdida. A €15/hora de custo médio por colaborador, são **1.500€/mês de produtividade desperdiçada**.
+Com 10 colaboradores, isso são 100 horas mensais de produtividade perdida. A €10/hora de custo médio por colaborador, são **1.000€/mês de produtividade desperdiçada**.
 
 ### Incidentes de segurança
 

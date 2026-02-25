@@ -51,7 +51,7 @@ Um técnico informático com experiência razoável em Portugal custa, em termos
 | Equipamento e licenças | 50€ – 100€ |
 | **Total mensal** | **~1.845€ – 2.737€** |
 
-Para uma empresa com 20 a 30 colaboradores, este custo pode fazer sentido. Para uma empresa com 5 a 15 pessoas, raramente compensa.
+Para uma empresa com mais de 25 colaboradores, este custo pode fazer sentido. Para uma empresa com até 25 pessoas, raramente compensa.
 
 ### Outras limitações do técnico interno
 
@@ -99,7 +99,7 @@ A externalização da assistência informática consiste em contratar uma empres
 
 | Critério | Interno | Externo |
 |----------|---------|---------|
-| Custo mensal (20 colaboradores) | 1.800–2.700€ | 300–800€ |
+| Custo mensal (25 colaboradores) | 1.800–2.700€ | 300–800€ |
 | Cobertura fora de horas | Limitada | Sim (com MSP) |
 | Acesso a especialistas | Limitado | Sim |
 | Continuidade (férias/doença) | Não | Sim |
@@ -121,8 +121,8 @@ Este modelo combina a proximidade do técnico interno com a profundidade de conh
 Faça estas perguntas:
 
 **1. Quantos utilizadores/dispositivos tem?**
-- Menos de 15: Assistência externa provavelmente mais rentável
-- 15 a 50: Avaliar caso a caso
+- Menos de 25: Assistência externa provavelmente mais rentável
+- 25 a 50: Avaliar caso a caso
 - Mais de 50: Considerar híbrido
 
 **2. Qual é a criticidade da IT para o negócio?**
@@ -148,6 +148,6 @@ Os nossos contratos de suporte informático incluem:
 - Consultor dedicado que conhece a sua empresa
 - Relatório mensal com estado dos sistemas
 
-Para a maioria das PMEs em Coimbra com 5 a 30 colaboradores, a assistência informática externa é a opção mais inteligente — mais completa, mais barata, e menos arriscada do que um técnico interno.
+Para a maioria das PMEs em Coimbra com 1 a 25 colaboradores, a assistência informática externa é a opção mais inteligente — mais completa, mais barata, e menos arriscada do que um técnico interno.
 
 [Fale connosco](/contacto) para perceber qual o modelo certo para a sua empresa. Análise inicial gratuita e sem compromisso.

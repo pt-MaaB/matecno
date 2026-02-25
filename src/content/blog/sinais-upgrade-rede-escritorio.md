@@ -120,7 +120,7 @@ Olhe para o seu armário de rede. Vê um emaranhado de cabos sem identificação
 **Cálculo de Produtividade Perdida (10 colaboradores):**
 - Tempo perdido/colaborador/dia: 20 minutos
 - Total mensal: 72 horas = quase 2 semanas
-- Total anual: 870 horas = **€13,050/ano em produtividade** (a €15/hora)
+- Total anual: 870 horas = **€8,700/ano em produtividade** (a €10/hora)
 
 **Investimento típico em upgrade:**
 - 3x Access Points profissionais: €900
