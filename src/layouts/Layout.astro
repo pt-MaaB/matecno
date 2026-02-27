@@ -83,6 +83,15 @@ const localBusinessSchema = {
 
     <!-- LocalBusiness JSON-LD Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPCGLZP0QB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JPCGLZP0QB');
+    </script>
   </head>
   <body class="font-sans bg-white text-gray-900 antialiased">
     <slot />
