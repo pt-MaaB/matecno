@@ -1,4 +1,6 @@
 ---
+import { SEO } from '../data/site.mjs';
+
 interface Props {
   title: string;
   description: string;
@@ -8,49 +10,10 @@ interface Props {
 const { title, description, canonical } = Astro.props;
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "MaTecno",
-  "description": "Serviços de tecnologia e informática para empresas em Coimbra: suporte informático, redes, servidores, cibersegurança, emails profissionais, alojamento web, design de websites e SEO.",
-  "url": "https://matecno.pt",
-  "telephone": "+351919642845",
-  "email": "geral@matecno.pt",
-  "areaServed": {
-    "@type": "City",
-    "name": "Coimbra"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Coimbra",
-    "addressRegion": "Centro",
-    "addressCountry": "PT"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "40.2033",
-    "longitude": "-8.4103"
-  },
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.2033",
-      "longitude": "-8.4103"
-    },
-    "geoRadius": "50000"
-  },
-  "priceRange": "€€",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
-  ],
-  "sameAs": []
-};
+// Single organisation-level schema for the whole site — the ProfessionalService
+// / SoftwareCompany object authored in src/data/site.mjs (replaces the old
+// networking LocalBusiness schema).
+const orgSchema = SEO.jsonld;
 ---
 
 <!doctype html>
@@ -71,7 +34,7 @@ const localBusinessSchema = {
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
-    <meta property="og:site_name" content="MaTecno" />
+    <meta property="og:site_name" content="Matecno" />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
@@ -81,8 +44,8 @@ const localBusinessSchema = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- LocalBusiness JSON-LD Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <!-- Organisation JSON-LD Schema (ProfessionalService / SoftwareCompany) -->
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPCGLZP0QB"></script>

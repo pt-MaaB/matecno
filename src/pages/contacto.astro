@@ -1,165 +1,146 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { HUBS, CORE } from '../data/site.mjs';
+
+const hub = HUBS.find((h) => h.key === 'contact');
+const { title, description, h1, paras, cta } = hub.page;
+const color = hub.color;
+
+const WA_HREF = 'https://wa.me/351919642845?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico';
+const MAIL_HREF = 'mailto:geral@matecno.pt';
+
+// "O que acontece a seguir" — the promise after they reach out.
+const steps = [
+  {
+    title: 'Respondemos em menos de 24h',
+    body: 'Escreve por WhatsApp ou email. Responde uma pessoa — o Mauro ou a equipa — não um bot nem um comercial.',
+  },
+  {
+    title: 'Diagnóstico gratuito de 30 min',
+    body: 'Por chamada ou pessoalmente. Mapeamos o processo que te custa tempo ou dinheiro. Sem compromisso.',
+  },
+  {
+    title: 'Orçamento claro — ou um não honesto',
+    body: 'Se vale a pena construir, sais com um orçamento claro. Se não fizer sentido, dizemos já e poupamos-te o resto.',
+  },
+];
 ---
 
-<Layout
-  title="Contacto — MaTecno | Suporte IT em Coimbra"
-  description="Entre em contacto com a MaTecno. Peça um orçamento gratuito por telefone, email ou WhatsApp. Respondemos em 24 horas."
->
-  <Header />
+<Layout title={title} description={description}>
+  <div class="min-h-screen bg-white text-gray-900">
+    <!-- Top nav -->
+    <header class="border-b border-gray-100">
+      <nav class="max-w-3xl mx-auto flex flex-wrap items-center gap-x-5 gap-y-2 px-5 py-4 text-sm">
+        <a href="/" class="font-semibold tracking-wide text-gray-900">MATECNO</a>
+        <span class="text-gray-300">/</span>
+        {HUBS.map((h) => (
+          <a
+            href={h.route}
+            class:list={[
+              'text-gray-500 hover:text-gray-900 transition-colors',
+              h.key === hub.key && 'text-gray-900 font-medium',
+            ]}
+          >{h.label}</a>
+        ))}
+      </nav>
+    </header>
 
-  <section class="bg-brand-dark py-14 px-4 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold text-white mb-4">Fale Connosco</h1>
-      <p class="text-blue-200 text-lg">Peça um orçamento gratuito ou coloque as suas dúvidas. Respondemos em menos de 24 horas úteis.</p>
-    </div>
-  </section>
+    <main class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <span class="inline-block h-1.5 w-10 rounded-full mb-6" style={`background:${color}`}></span>
 
-  <section class="py-16 px-4">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Offer-led hero -->
+      <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight mb-4">{h1}</h1>
+      <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
+        Diagnóstico gratuito, 30 minutos, sem compromisso. Mapeamos o processo que dói e dizemos com honestidade se vale a pena construir.
+      </p>
 
-      <!-- Contact info -->
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Informações de Contacto</h2>
-        <ul class="space-y-5">
-          <li class="flex items-start gap-4">
-            <span class="text-2xl">📞</span>
-            <div>
-              <p class="font-semibold text-gray-900">Telefone / WhatsApp</p>
-              <a href="tel:+351919642845" class="text-brand hover:underline">+351 919 642 845</a>
-              <p class="text-sm text-gray-500 mt-1">Segunda a Sexta, 9h–18h</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-2xl">✉️</span>
-            <div>
-              <p class="font-semibold text-gray-900">Email</p>
-              <a href="mailto:geral@matecno.pt" class="text-brand hover:underline">geral@matecno.pt</a>
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-2xl">💬</span>
-            <div>
-              <p class="font-semibold text-gray-900">WhatsApp</p>
-              <a
-                href="https://wa.me/351919642845?text=Olá%2C%20gostaria%20de%20pedir%20um%20orçamento"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-brand hover:underline"
-              >Enviar mensagem →</a>
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-2xl">📍</span>
-            <div>
-              <p class="font-semibold text-gray-900">Área de Serviço</p>
-              <p class="text-gray-600">Coimbra e região centro de Portugal</p>
-              <p class="text-sm text-gray-500 mt-1">Suporte remoto disponível para todo o Portugal</p>
-            </div>
-          </li>
-        </ul>
+      <!-- Prominent CTA box, near the top -->
+      <div class="rounded-2xl p-7 sm:p-9 text-white shadow-lg" style={`background:${color}`}>
+        <p class="text-lg sm:text-xl font-semibold leading-snug mb-6">{cta}</p>
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3">
+          <a href={WA_HREF} target="_blank" rel="noopener"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-semibold text-gray-900 shadow-sm hover:bg-gray-100 transition-colors">
+            <span aria-hidden="true">💬</span> WhatsApp — +351 919 642 845
+          </a>
+          <a href={MAIL_HREF}
+            class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition-colors">
+            <span aria-hidden="true">✉️</span> geral@matecno.pt
+          </a>
+        </div>
+        <p class="mt-4 text-white/85 text-sm">Resposta em menos de 24 horas · PT ou EN · Coimbra e remoto para o país</p>
       </div>
 
-      <!-- Contact form -->
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Peça um Orçamento Gratuito</h2>
-        <form
-          action="https://formspree.io/f/xaqdaevr"
-          method="POST"
-          class="space-y-4"
-        >
+      <!-- Supporting copy -->
+      <div class="mt-12 space-y-5 text-gray-700 leading-relaxed text-[1.05rem]">
+        {paras.map((p) => <p>{p}</p>)}
+      </div>
 
+      <!-- O que acontece a seguir -->
+      <section class="mt-14">
+        <h2 class="text-2xl font-semibold tracking-tight mb-6">O que acontece a seguir</h2>
+        <ol class="space-y-4">
+          {steps.map((step, i) => (
+            <li class="flex gap-4 rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
+              <span
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white font-semibold"
+                style={`background:${color}`}
+              >{i + 1}</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">{step.title}</h3>
+                <p class="text-gray-600 text-[0.95rem] leading-relaxed">{step.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <!-- Contact form (kept — working Formspree endpoint) -->
+      <div class="mt-14 rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+        <h2 class="text-xl font-semibold mb-1">Preferes escrever? Conta-nos o que precisas</h2>
+        <p class="text-gray-500 text-[0.95rem] mb-6">Resposta em menos de 24 horas. Sem compromisso.</p>
+        <form action="https://formspree.io/f/xaqdaevr" method="POST" class="space-y-4">
           <div>
             <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              required
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-              placeholder="O seu nome"
-            />
+            <input type="text" id="nome" name="nome" required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
+              placeholder="O teu nome" />
           </div>
-
           <div>
             <label for="empresa" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
-            <input
-              type="text"
-              id="empresa"
-              name="empresa"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-              placeholder="Nome da empresa (opcional)"
-            />
+            <input type="text" id="empresa" name="empresa"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
+              placeholder="Nome da empresa (opcional)" />
           </div>
-
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-              placeholder="email@suaempresa.pt"
-            />
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
+              placeholder="email@aempresa.pt" />
           </div>
-
           <div>
             <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-            <input
-              type="tel"
-              id="telefone"
-              name="telefone"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-              placeholder="+351 9xx xxx xxx"
-            />
+            <input type="tel" id="telefone" name="telefone"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
+              placeholder="+351 9xx xxx xxx" />
           </div>
-
           <div>
-            <label for="servico" class="block text-sm font-medium text-gray-700 mb-1">Serviço de interesse</label>
-            <select
-              id="servico"
-              name="servico"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
-            >
-              <option value="">Selecione um serviço</option>
-              <option>Redes e Wi-Fi Empresarial</option>
-              <option>Administração de Servidores</option>
-              <option>Cibersegurança</option>
-              <option>Emails Profissionais</option>
-              <option>Alojamento Web</option>
-              <option>Design de Website</option>
-              <option>SEO</option>
-              <option>Outro / Não sei ainda</option>
-            </select>
+            <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">O que precisas construir *</label>
+            <textarea id="mensagem" name="mensagem" required rows="4"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400 resize-none"
+              placeholder="Descreve brevemente o problema ou a ideia..."></textarea>
           </div>
-
-          <div>
-            <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem *</label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              required
-              rows="4"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent resize-none"
-              placeholder="Descreva brevemente o que precisa..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
-          >
-            Enviar Pedido de Orçamento
+          <button type="submit"
+            class="w-full px-6 py-3 rounded-lg font-semibold text-white transition-opacity hover:opacity-90"
+            style={`background:${color}`}>
+            Enviar mensagem
           </button>
-
-          <p class="text-xs text-gray-500 text-center">Respondemos sempre em menos de 24 horas úteis.</p>
+          <p class="text-xs text-gray-500 text-center">Respondemos sempre em menos de 24 horas.</p>
         </form>
       </div>
-    </div>
-  </section>
 
-  <Footer />
+      <p class="mt-10 text-sm">
+        <a href={CORE.route} class="text-gray-500 hover:text-gray-900 transition-colors">← Voltar ao início</a>
+      </p>
+    </main>
+  </div>
 </Layout>
