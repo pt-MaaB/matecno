@@ -1,0 +1,26 @@
+---
+// Compact PT · EN · ES language switcher. Each link points to the equivalent
+// page in that locale (hreflang alternates). Used in the graph header and on
+// the section / contact pages.
+interface Alt { lang: string; href: string; short: string; name: string }
+interface Props { alternates: Alt[]; current: string; class?: string }
+const { alternates, current, class: klass = '' } = Astro.props;
+---
+<nav class:list={['flex items-center gap-1.5 font-mono text-[12px]', klass]} aria-label="Idioma / Language">
+  {alternates.map((a, i) => (
+    <>
+      {i > 0 && <span class="text-gray-300" aria-hidden="true">·</span>}
+      <a
+        href={a.href}
+        hreflang={a.lang}
+        lang={a.lang}
+        title={a.name}
+        aria-current={a.lang === current ? 'true' : undefined}
+        class:list={[
+          'tracking-[0.1em] transition-colors',
+          a.lang === current ? 'text-gray-900 font-semibold' : 'text-gray-400 hover:text-gray-900',
+        ]}
+      >{a.short}</a>
+    </>
+  ))}
+</nav>

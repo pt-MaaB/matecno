@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GraphExplorer from './GraphExplorer.astro';
+import { getSite, getGraphContent, alternatesFor } from '../data/site.mjs';
+
+interface Props { lang: string }
+const { lang } = Astro.props;
+
+const site = getSite(lang);
+const content = getGraphContent(lang);
+const alternates = alternatesFor('home');
+---
+
+<Layout
+  title={site.seo.title}
+  description={site.seo.description}
+  lang={lang}
+  htmlLang={site.htmlLang}
+  ogLocale={site.ogLocale}
+  jsonld={site.seo.jsonld}
+  alternates={alternates}
+  ui={site.ui}
+>
+  <GraphExplorer content={content} />
+</Layout>

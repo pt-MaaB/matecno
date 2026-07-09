@@ -45,19 +45,28 @@ interface Hub {
   extra?: string[];
   page: HubPage;
 }
+interface Alt { lang: string; htmlLang: string; href: string; short: string; name: string }
 interface Content {
   seo: { title: string; description: string; jsonld: Record<string, unknown> };
   core: { label: string; route: string; tagline: string };
   hubs: Hub[];
   colors?: Record<string, string>;
+  ui?: Record<string, string>;
+  lang?: string;
+  alternates?: Alt[];
 }
 
 interface Props {
   content: Content;
 }
 
+import LangSwitcher from './LangSwitcher.astro';
+
 const { content } = Astro.props;
 const { core, hubs } = content;
+const ui = content.ui ?? {};
+const alternates = content.alternates ?? [];
+const lang = content.lang ?? 'pt';
 ---
 
 <div class="mtc-explorer" data-mtc-root>
@@ -73,15 +82,18 @@ const { core, hubs } = content;
   <!-- Real navigation with real <a href> links -->
   <header class="mtc-nav" id="mtc-nav">
     <a class="mtc-logo" href={core.route} data-mtc-logo>{core.label}</a>
-    <nav class="mtc-navlinks" aria-label="Principal">
+    <nav class="mtc-navlinks" aria-label={ui.navAria}>
       {hubs.map((h) => (
         <a href={h.route}>{h.label}</a>
       ))}
     </nav>
-    <div class="mtc-legend" aria-hidden="true">
-      {hubs.map((h) => (
-        <span><i style={`background:${h.color}`}></i>{h.label}</span>
-      ))}
+    <div class="mtc-navright">
+      <div class="mtc-legend" aria-hidden="true">
+        {hubs.map((h) => (
+          <span><i style={`background:${h.color}`}></i>{h.label}</span>
+        ))}
+      </div>
+      <LangSwitcher alternates={alternates} current={lang} />
     </div>
   </header>
 
@@ -122,14 +134,12 @@ const { core, hubs } = content;
   <canvas id="mtc-graph"></canvas>
   <svg id="mtc-links" aria-hidden="true"></svg>
 
-  <button class="mtc-back" id="mtc-back" type="button">← voltar ao sistema</button>
-  <div class="mtc-hint" id="mtc-hint">
-    arrasta — orbitar &nbsp;·&nbsp; scroll — zoom &nbsp;·&nbsp; passa o rato — caminho até ao núcleo &nbsp;·&nbsp; clica — dissecar
-  </div>
+  <button class="mtc-back" id="mtc-back" type="button">← {ui.back}</button>
+  <div class="mtc-hint" id="mtc-hint">{ui.hint}</div>
   <div class="mtc-intro" id="mtc-intro" aria-hidden="true">
     <div class="mtc-wordmark">MATE<span class="u">CNO</span></div>
   </div>
-  <div class="mtc-detail" id="mtc-detail" role="dialog" aria-label="Detalhe" aria-modal="false"></div>
+  <div class="mtc-detail" id="mtc-detail" role="dialog" aria-label={ui.detailLabel} aria-modal="false"></div>
 </div>
 
 <style is:global>
@@ -260,8 +270,13 @@ const { core, hubs } = content;
   .mtc-navlinks a:hover {
     color: var(--mtc-ink);
   }
-  .mtc-legend {
+  .mtc-navright {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 26px);
+  }
+  .mtc-legend {
     display: flex;
     gap: 16px;
     font-family: var(--mtc-mono);
@@ -632,6 +647,7 @@ const { core, hubs } = content;
     }
     var HUBS_DATA = DATA.hubs || [];
     var CORE_LABEL = (DATA.core && DATA.core.label) || 'MATECNO';
+    var UI = DATA.ui || {};
 
     var reduce =
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1128,7 +1144,7 @@ const { core, hubs } = content;
         '</span><h2>' +
         esc(H2.label) +
         '</h2></div>' +
-        '<p class="dkick">nó dissecado</p>' +
+        '<p class="dkick">' + esc(UI.dissected || 'nó dissecado') + '</p>' +
         '<div class="dmark"><span></span><span></span></div>' +
         H2.aspects
           .map(function (asp, ai) {
@@ -1158,8 +1174,8 @@ const { core, hubs } = content;
             col +
             '" href="' +
             esc(H2.route) +
-            '">ver página ' +
-            esc(H2.label) +
+            '">' +
+            (UI.viewPage ? esc(UI.viewPage).replace('{label}', esc(H2.label)) : 'ver página ' + esc(H2.label)) +
             ' →</a>'
           : '');
       // reduced-motion: reveal everything immediately, no cascade

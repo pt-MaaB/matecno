@@ -1,9 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import GraphExplorer from '../components/GraphExplorer.astro';
-import { SEO, CORE, HUBS } from '../data/site.mjs';
+import HomePage from '../components/HomePage.astro';
 ---
 
-<Layout title={SEO.title} description={SEO.description}>
-  <GraphExplorer content={{ seo: SEO, core: CORE, hubs: HUBS }} />
-</Layout>
+<HomePage lang="pt" />

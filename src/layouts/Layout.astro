@@ -1,23 +1,28 @@
 ---
-import { SEO } from '../data/site.mjs';
+import { DEFAULT_LOCALE } from '../data/structure.mjs';
 
+interface Alt { lang: string; htmlLang: string; href: string }
+interface Ui { floatingWaAria: string; floatingWaMessage: string }
 interface Props {
   title: string;
   description: string;
-  canonical?: string;
+  lang: string;
+  htmlLang: string;
+  ogLocale: string;
+  jsonld: unknown;
+  alternates: Alt[];
+  ui: Ui;
 }
 
-const { title, description, canonical } = Astro.props;
-const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
-
-// Single organisation-level schema for the whole site — the ProfessionalService
-// / SoftwareCompany object authored in src/data/site.mjs (replaces the old
-// networking LocalBusiness schema).
-const orgSchema = SEO.jsonld;
+const { title, description, lang, htmlLang, ogLocale, jsonld, alternates, ui } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const abs = (href: string) => new URL(href, Astro.site).href;
+const xDefault = alternates.find((a) => a.lang === DEFAULT_LOCALE) ?? alternates[0];
+const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floatingWaMessage)}`;
 ---
 
 <!doctype html>
-<html lang="pt">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,12 +33,21 @@ const orgSchema = SEO.jsonld;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- hreflang alternates -->
+    {alternates.map((a) => (
+      <link rel="alternate" hreflang={a.htmlLang} href={abs(a.href)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={abs(xDefault.href)} />
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale" content={ogLocale} />
+    {alternates
+      .filter((a) => a.lang !== lang)
+      .map((a) => <meta property="og:locale:alternate" content={a.htmlLang.replace('-', '_')} />)}
     <meta property="og:site_name" content="Matecno" />
 
     <!-- Robots -->
@@ -45,7 +59,7 @@ const orgSchema = SEO.jsonld;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Organisation JSON-LD Schema (ProfessionalService / SoftwareCompany) -->
-    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPCGLZP0QB"></script>
@@ -61,10 +75,10 @@ const orgSchema = SEO.jsonld;
 
     <!-- WhatsApp Floating Button -->
     <a
-      href="https://wa.me/351919642845?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20serviços"
+      href={waHref}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Fale connosco no WhatsApp"
+      aria-label={ui.floatingWaAria}
       class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
