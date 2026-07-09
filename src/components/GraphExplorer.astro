@@ -132,8 +132,11 @@ const { core, hubs } = content;
   <div class="mtc-detail" id="mtc-detail" role="dialog" aria-label="Detalhe" aria-modal="false"></div>
 </div>
 
-<style>
-  /* Scoped to this component. White bg is the explorer's own surface. */
+<style is:global>
+  /* Global (not scoped): the dissect panel + connector lines are injected via
+     innerHTML at runtime, so they never receive Astro's scope hash. This
+     component only renders on the homepage, and every selector below is
+     namespaced (.mtc-* / .acard / #mtc-*), so global is safe and correct. */
   .mtc-explorer {
     --mtc-bg: #ffffff;
     --mtc-ink: #1b1b1e;
@@ -321,6 +324,7 @@ const { core, hubs } = content;
 
   /* dissect detail panel */
   .mtc-detail {
+    --acc: #1b1b1e;
     position: fixed;
     top: 0;
     right: 0;
@@ -346,7 +350,7 @@ const { core, hubs } = content;
     display: flex;
     align-items: baseline;
     gap: 12px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
   .mtc-detail .dhead .k {
     font-family: var(--mtc-mono);
@@ -361,41 +365,87 @@ const { core, hubs } = content;
     margin: 0;
     color: var(--mtc-ink);
   }
+  .mtc-detail .dkick {
+    font-family: var(--mtc-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mtc-dim);
+    margin: 2px 0 0;
+  }
+  .mtc-detail .dmark {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 14px 0 20px;
+  }
+  .mtc-detail .dmark span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--acc);
+  }
+  .mtc-detail .dmark span:first-child {
+    width: 34px;
+  }
+  .mtc-detail .dmark span:last-child {
+    width: 18px;
+  }
   .mtc-detail .dlink {
-    display: inline-block;
-    margin-top: 14px;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--acc) 55%, transparent);
     font-family: var(--mtc-mono);
     font-size: 12px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s ease;
   }
   .mtc-detail .dlink:hover {
-    text-decoration: underline;
+    background: color-mix(in srgb, var(--acc) 10%, transparent);
+    transform: translateX(3px);
   }
 
   .acard {
+    position: relative;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.09);
-    border-radius: 13px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 2px solid var(--acc);
+    border-radius: 14px;
     padding: 20px 22px;
-    box-shadow: 0 20px 50px -34px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 22px 50px -34px rgba(0, 0, 0, 0.4);
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.35s ease, box-shadow 0.35s ease;
   }
   .acard.in {
     opacity: 1;
     transform: none;
+  }
+  .acard.in:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 28px 60px -32px rgba(0, 0, 0, 0.5);
   }
   .acard .num {
     font-family: var(--mtc-mono);
     font-size: 11px;
     letter-spacing: 0.12em;
     color: var(--mtc-dim);
-    margin: 0 0 8px;
+    margin: 0 0 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+  .acard .num b {
+    color: var(--acc);
+    font-weight: 500;
   }
   .acard .num i {
     width: 7px;
@@ -404,9 +454,9 @@ const { core, hubs } = content;
   }
   .acard h3 {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: -0.01em;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: var(--mtc-ink);
   }
   .acard ul {
@@ -415,15 +465,19 @@ const { core, hubs } = content;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 7px;
   }
   .acard li {
-    font-size: 13.5px;
+    font-size: 13px;
     color: var(--mtc-ink);
-    background: #f4f3f0;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 7px;
-    padding: 5px 10px;
+    background: color-mix(in srgb, var(--acc) 7%, #fff);
+    border: 1px solid color-mix(in srgb, var(--acc) 22%, transparent);
+    border-radius: 999px;
+    padding: 5px 11px;
+    transition: background 0.2s ease;
+  }
+  .acard li:hover {
+    background: color-mix(in srgb, var(--acc) 14%, #fff);
   }
   .acard p {
     margin: 0;
@@ -1065,6 +1119,7 @@ const { core, hubs } = content;
       clusterFadeT = 1;
       var col = HEX[H2.g];
       var idxLabel = String(h + 1).padStart(2, '0');
+      detail.style.setProperty('--acc', col);
       detail.innerHTML =
         '<div class="dhead"><span class="k" style="color:' +
         col +
@@ -1073,6 +1128,8 @@ const { core, hubs } = content;
         '</span><h2>' +
         esc(H2.label) +
         '</h2></div>' +
+        '<p class="dkick">nó dissecado</p>' +
+        '<div class="dmark"><span></span><span></span></div>' +
         H2.aspects
           .map(function (asp, ai) {
             return (
@@ -1080,9 +1137,9 @@ const { core, hubs } = content;
               ai +
               '"><p class="num"><i style="background:' +
               col +
-              '"></i>' +
+              '"></i><b>' +
               String(ai + 1).padStart(2, '0') +
-              ' · ' +
+              '</b> · ' +
               esc(asp.label) +
               '</p><h3>' +
               esc(asp.title) +

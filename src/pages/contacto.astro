@@ -5,8 +5,10 @@ import { HUBS, CORE } from '../data/site.mjs';
 const hub = HUBS.find((h) => h.key === 'contact');
 const { title, description, h1, paras, cta } = hub.page;
 const color = hub.color;
+const others = HUBS.filter((h) => h.key !== 'contact');
+const mono = 'font-mono';
 
-const WA_HREF = 'https://wa.me/351919642845?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico';
+const WA_HREF = 'https://wa.me/351919642845?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito';
 const MAIL_HREF = 'mailto:geral@matecno.pt';
 
 // "O que acontece a seguir" — the promise after they reach out.
@@ -27,120 +29,147 @@ const steps = [
 ---
 
 <Layout title={title} description={description}>
-  <div class="min-h-screen bg-white text-gray-900">
-    <!-- Top nav -->
+  <div class="min-h-screen bg-white text-gray-900 antialiased">
+    <!-- node-colour top accent -->
+    <div class="h-[3px] w-full" style={`background:${color}`}></div>
+
+    <!-- nav -->
     <header class="border-b border-gray-100">
-      <nav class="max-w-3xl mx-auto flex flex-wrap items-center gap-x-5 gap-y-2 px-5 py-4 text-sm">
-        <a href="/" class="font-semibold tracking-wide text-gray-900">MATECNO</a>
+      <nav class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-4 text-[13px]">
+        <a href="/" class={`${mono} font-semibold tracking-[0.14em] text-gray-900`}>MATECNO</a>
         <span class="text-gray-300">/</span>
         {HUBS.map((h) => (
           <a
             href={h.route}
             class:list={[
-              'text-gray-500 hover:text-gray-900 transition-colors',
-              h.key === hub.key && 'text-gray-900 font-medium',
+              'transition-colors hover:text-gray-900',
+              h.key === 'contact' ? 'text-gray-900 font-medium' : 'text-gray-400',
             ]}
           >{h.label}</a>
         ))}
       </nav>
     </header>
 
-    <main class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
-      <span class="inline-block h-1.5 w-10 rounded-full mb-6" style={`background:${color}`}></span>
+    <main class="mx-auto max-w-4xl px-6 pb-24 pt-14 sm:pt-20">
+      <!-- hero -->
+      <p class={`${mono} flex items-center gap-2.5 text-[11px] uppercase tracking-[0.2em] text-gray-400`}>
+        <span class="inline-block h-2 w-2 rounded-full" style={`background:${color}`}></span>
+        Contacto — nó do sistema
+      </p>
+      <div class="mb-8 mt-5 flex flex-col gap-[5px]">
+        <span class="block h-px w-9" style={`background:${color}`}></span>
+        <span class="block h-px w-5" style={`background:${color}`}></span>
+      </div>
 
-      <!-- Offer-led hero -->
-      <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight mb-4">{h1}</h1>
-      <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
+      <h1 class="max-w-[20ch] text-[2.4rem] font-semibold leading-[1.05] tracking-tight text-gray-900 sm:text-[3.2rem]">{h1}</h1>
+      <p class="mt-7 max-w-[46ch] text-xl font-light leading-relaxed text-gray-500 sm:text-[1.6rem]">
         Diagnóstico gratuito, 30 minutos, sem compromisso. Mapeamos o processo que dói e dizemos com honestidade se vale a pena construir.
       </p>
 
-      <!-- Prominent CTA box, near the top -->
-      <div class="rounded-2xl p-7 sm:p-9 text-white shadow-lg" style={`background:${color}`}>
-        <p class="text-lg sm:text-xl font-semibold leading-snug mb-6">{cta}</p>
-        <div class="flex flex-col sm:flex-row flex-wrap gap-3">
+      <!-- prominent CTA, near the top -->
+      <div class="relative mt-10 overflow-hidden rounded-3xl p-8 text-white sm:p-11" style={`background:${color}`}>
+        <p class={`${mono} mb-4 text-[11px] uppercase tracking-[0.2em] text-white/70`}>Fala connosco</p>
+        <p class="mb-8 max-w-[34ch] text-xl font-medium leading-snug sm:text-[1.7rem]">{cta}</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a href={WA_HREF} target="_blank" rel="noopener"
-            class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-semibold text-gray-900 shadow-sm hover:bg-gray-100 transition-colors">
-            <span aria-hidden="true">💬</span> WhatsApp — +351 919 642 845
+            class="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-gray-900 transition-transform hover:-translate-y-0.5">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35Z"/></svg>
+            WhatsApp — +351 919 642 845
           </a>
           <a href={MAIL_HREF}
-            class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition-colors">
-            <span aria-hidden="true">✉️</span> geral@matecno.pt
+            class="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/70 px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-white/10">
+            geral@matecno.pt
           </a>
         </div>
-        <p class="mt-4 text-white/85 text-sm">Resposta em menos de 24 horas · PT ou EN · Coimbra e remoto para o país</p>
+        <p class="mt-6 text-[13px] text-white/80">Resposta em menos de 24 horas · PT ou EN · Coimbra e remoto para o país</p>
       </div>
 
-      <!-- Supporting copy -->
-      <div class="mt-12 space-y-5 text-gray-700 leading-relaxed text-[1.05rem]">
-        {paras.map((p) => <p>{p}</p>)}
+      <!-- supporting copy -->
+      {paras.length > 0 && (
+        <div class="mt-12 max-w-[62ch] space-y-5 text-[1.05rem] leading-relaxed text-gray-600">
+          {paras.map((p) => <p>{p}</p>)}
+        </div>
+      )}
+
+      <!-- o que acontece a seguir -->
+      <div class="mb-6 mt-16 flex items-center gap-3">
+        <span class={`${mono} text-[11px] uppercase tracking-[0.16em] text-gray-400`}>O que acontece a seguir</span>
+        <span class="h-px flex-1 bg-gray-100"></span>
       </div>
+      <ol class="grid gap-4 sm:grid-cols-3">
+        {steps.map((step, i) => (
+          <li class="rounded-2xl border border-gray-200/80 bg-white p-6">
+            <div class="mb-4 flex items-center gap-2">
+              <span class={`${mono} text-[11px] font-medium tracking-[0.1em]`} style={`color:${color}`}>{String(i + 1).padStart(2, '0')}</span>
+              <span class="h-px flex-1 bg-gray-100"></span>
+            </div>
+            <h3 class="mb-2 text-[15px] font-semibold leading-snug text-gray-900">{step.title}</h3>
+            <p class="text-[13.5px] leading-snug text-gray-600">{step.body}</p>
+          </li>
+        ))}
+      </ol>
 
-      <!-- O que acontece a seguir -->
-      <section class="mt-14">
-        <h2 class="text-2xl font-semibold tracking-tight mb-6">O que acontece a seguir</h2>
-        <ol class="space-y-4">
-          {steps.map((step, i) => (
-            <li class="flex gap-4 rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
-              <span
-                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white font-semibold"
-                style={`background:${color}`}
-              >{i + 1}</span>
-              <div>
-                <h3 class="font-semibold text-lg mb-1">{step.title}</h3>
-                <p class="text-gray-600 text-[0.95rem] leading-relaxed">{step.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <!-- Contact form (kept — working Formspree endpoint) -->
-      <div class="mt-14 rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
-        <h2 class="text-xl font-semibold mb-1">Preferes escrever? Conta-nos o que precisas</h2>
-        <p class="text-gray-500 text-[0.95rem] mb-6">Resposta em menos de 24 horas. Sem compromisso.</p>
+      <!-- contact form (kept — working Formspree endpoint) -->
+      <div class="mt-16 rounded-3xl border border-gray-200/80 bg-gray-50/60 p-7 sm:p-9">
+        <p class={`${mono} mb-4 text-[11px] uppercase tracking-[0.16em] text-gray-400`}>Preferes escrever</p>
+        <h2 class="mb-1 text-xl font-semibold tracking-tight text-gray-900">Conta-nos o que precisas</h2>
+        <p class="mb-7 text-[14px] text-gray-500">Resposta em menos de 24 horas. Sem compromisso.</p>
         <form action="https://formspree.io/f/xaqdaevr" method="POST" class="space-y-4">
-          <div>
-            <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
-            <input type="text" id="nome" name="nome" required
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
-              placeholder="O teu nome" />
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="nome" class="mb-1.5 block text-[13px] font-medium text-gray-700">Nome *</label>
+              <input type="text" id="nome" name="nome" required
+                class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] transition-colors focus:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-900/5"
+                placeholder="O teu nome" />
+            </div>
+            <div>
+              <label for="empresa" class="mb-1.5 block text-[13px] font-medium text-gray-700">Empresa</label>
+              <input type="text" id="empresa" name="empresa"
+                class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] transition-colors focus:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-900/5"
+                placeholder="Opcional" />
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-[13px] font-medium text-gray-700">Email *</label>
+              <input type="email" id="email" name="email" required
+                class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] transition-colors focus:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-900/5"
+                placeholder="email@aempresa.pt" />
+            </div>
+            <div>
+              <label for="telefone" class="mb-1.5 block text-[13px] font-medium text-gray-700">Telefone</label>
+              <input type="tel" id="telefone" name="telefone"
+                class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] transition-colors focus:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-900/5"
+                placeholder="+351 9xx xxx xxx" />
+            </div>
           </div>
           <div>
-            <label for="empresa" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
-            <input type="text" id="empresa" name="empresa"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
-              placeholder="Nome da empresa (opcional)" />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-            <input type="email" id="email" name="email" required
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
-              placeholder="email@aempresa.pt" />
-          </div>
-          <div>
-            <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-            <input type="tel" id="telefone" name="telefone"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
-              placeholder="+351 9xx xxx xxx" />
-          </div>
-          <div>
-            <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">O que precisas construir *</label>
+            <label for="mensagem" class="mb-1.5 block text-[13px] font-medium text-gray-700">O que precisas construir *</label>
             <textarea id="mensagem" name="mensagem" required rows="4"
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400 resize-none"
+              class="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-[15px] transition-colors focus:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-900/5"
               placeholder="Descreve brevemente o problema ou a ideia..."></textarea>
           </div>
           <button type="submit"
-            class="w-full px-6 py-3 rounded-lg font-semibold text-white transition-opacity hover:opacity-90"
+            class="w-full rounded-full px-6 py-3.5 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
             style={`background:${color}`}>
             Enviar mensagem
           </button>
-          <p class="text-xs text-gray-500 text-center">Respondemos sempre em menos de 24 horas.</p>
+          <p class={`${mono} text-center text-[11px] tracking-wide text-gray-400`}>Respondemos sempre em menos de 24 horas</p>
         </form>
       </div>
 
-      <p class="mt-10 text-sm">
-        <a href={CORE.route} class="text-gray-500 hover:text-gray-900 transition-colors">← Voltar ao início</a>
-      </p>
+      <!-- explore other nodes -->
+      <div class="mt-16 border-t border-gray-100 pt-8">
+        <p class={`${mono} mb-4 text-[11px] uppercase tracking-[0.16em] text-gray-400`}>Outros nós</p>
+        <div class="flex flex-wrap gap-2.5">
+          {others.map((o) => (
+            <a href={o.route}
+              class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-[13.5px] text-gray-600 transition-colors hover:border-gray-300 hover:text-gray-900">
+              <span class="inline-block h-1.5 w-1.5 rounded-full" style={`background:${o.color}`}></span>
+              {o.label}
+            </a>
+          ))}
+        </div>
+        <a href={CORE.route} class={`${mono} mt-7 inline-block text-[12px] text-gray-400 transition-colors hover:text-gray-900`}>← voltar ao grafo</a>
+      </div>
     </main>
   </div>
 </Layout>
