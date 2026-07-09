@@ -61,7 +61,9 @@ function buildJsonLd(pack, lang) {
 export function getSite(lang) {
   const pack = PACKS[lang] || PACKS[DEFAULT_LOCALE];
   const hubs = HUB_KEYS.map((key) => {
-    const h = pack.hubs[key];
+    // Fall back to the default locale for any hub a pack hasn't translated yet,
+    // so adding a hub/locale incrementally never breaks the build.
+    const h = pack.hubs[key] || PACKS[DEFAULT_LOCALE].hubs[key];
     return {
       key,
       route: routeFor(key, lang),

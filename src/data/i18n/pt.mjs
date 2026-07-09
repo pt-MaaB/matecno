@@ -134,6 +134,57 @@ export default {
         cta: 'Agenda um diagnóstico gratuito: WhatsApp +351 919 642 845 ou geral@matecno.pt — 30 min, mapeamos o processo e orçamentamos sem compromisso.',
       },
     },
+    leads: {
+      label: 'Leads & Dados',
+      aspects: [
+        {
+          label: 'Oferta',
+          title: 'O que entregamos',
+          items: [
+            'Geração de leads B2B — verificadas e qualificadas',
+            'Enriquecimento e limpeza de listas que já tens',
+            'Inteligência de mercado — dados públicos à medida',
+            'Geração de leads contínua — fluxo mensal',
+            'Tudo segmentado por setor e região',
+          ],
+        },
+        {
+          label: 'Cada lead',
+          title: 'Cada contacto, completo',
+          items: [
+            'Nome e cargo do decisor',
+            'Email verificado — que não volta',
+            'Telefone direto',
+            'Sem duplicados, sempre atualizado',
+            'Em folhas limpas, relatórios ou feeds',
+          ],
+        },
+        {
+          label: 'Confiança',
+          title: 'Fontes públicas, RGPD',
+          items: [
+            'Dados de fontes públicas',
+            'Em conformidade com o RGPD',
+            'Sem listas compradas de origem duvidosa',
+            'Sem spam',
+            'Diagnóstico gratuito antes de pagares',
+          ],
+        },
+      ],
+      page: {
+        title: 'Geração de Leads B2B e Dados | Matecno Coimbra',
+        description:
+          'Encontramos, qualificamos e entregamos leads B2B verificadas — nome, cargo, email e telefone. Enriquecimento de dados e inteligência de mercado. Fontes públicas, RGPD. Diagnóstico gratuito.',
+        h1: 'Encontramos os clientes que ainda não te conhecem',
+        paras: [
+          'Automatizamos processos — e há um que dói em quase todas as empresas: encontrar clientes. Por isso construímos também os sistemas que encontram, qualificam e entregam leads, e os dados que alimentam as tuas decisões.',
+          'Geração de leads B2B: encontramos e entregamos contactos de empresas qualificados e verificados, segmentados por setor e região — nome, cargo, email verificado e telefone, prontos a contactar, para a tua equipa comercial nunca ficar sem quem ligar. E se já tens uma lista incompleta ou desatualizada, fazemos o enriquecimento e a limpeza: devolvemos registos completos, verificados e sem duplicados — emails que não voltam, contactos que existem mesmo.',
+          'Inteligência de mercado: recolhemos dados públicos da web à medida — preços da concorrência, listagens, monitorização, estudos de mercado — entregues em folhas limpas, relatórios ou feeds automáticos. E para quem quer previsibilidade, a geração de leads contínua dá-te um fluxo mensal de leads novas à medida do teu cliente ideal: definimos juntos o perfil e tratamos do resto todos os meses.',
+          'Trabalhamos só com dados de fontes públicas e em conformidade com o RGPD — sem listas compradas de origem duvidosa, sem spam. E antes de pagares, o diagnóstico é gratuito: dizemos-te com honestidade se conseguimos encontrar leads no teu mercado.',
+        ],
+        cta: 'Diagnóstico gratuito: antes de pagares, dizemos com honestidade se conseguimos encontrar leads no teu mercado — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+      },
+    },
     produtos: {
       label: 'Produtos',
       aspects: [

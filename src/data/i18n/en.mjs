@@ -141,6 +141,56 @@ export default {
         "cta": "Book a free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, we map the process and quote with no commitment."
       }
     },
+    "leads": {
+      "label": "Leads & Data",
+      "aspects": [
+        {
+          "label": "Offer",
+          "title": "What we deliver",
+          "items": [
+            "B2B lead generation — verified and qualified",
+            "Enrichment and cleaning of lists you already have",
+            "Market intelligence — custom public data",
+            "Continuous lead generation — a monthly flow",
+            "All segmented by sector and region"
+          ]
+        },
+        {
+          "label": "Every lead",
+          "title": "Every contact, complete",
+          "items": [
+            "Decision-maker's name and job title",
+            "Verified email — one that won't bounce",
+            "Direct phone number",
+            "No duplicates, always current",
+            "In clean spreadsheets, reports or feeds"
+          ]
+        },
+        {
+          "label": "Trust",
+          "title": "Public sources, GDPR",
+          "items": [
+            "Data from public sources",
+            "GDPR-compliant",
+            "No bought lists of dubious origin",
+            "No spam",
+            "Free assessment before you pay"
+          ]
+        }
+      ],
+      "page": {
+        "title": "B2B Lead Generation and Data | Matecno Coimbra",
+        "description": "We find, qualify and deliver verified B2B leads — name, job title, email and phone. Data enrichment and market intelligence. Public sources, GDPR. Free assessment.",
+        "h1": "We find the customers who don't know you yet",
+        "paras": [
+          "We automate processes — and one of them hurts almost every company: finding customers. That's why we also build the systems that find, qualify and deliver leads, and the data that feeds your decisions.",
+          "B2B lead generation: we find and deliver qualified, verified company contacts, segmented by sector and region — name, job title, verified email and phone, ready to contact, so your sales team never runs out of people to call. And if you already have an incomplete or outdated list, we handle the enrichment and cleaning: we return complete, verified records with no duplicates — emails that won't bounce, contacts that actually exist.",
+          "Market intelligence: we collect custom public data from the web — competitor pricing, listings, monitoring, market research — delivered in clean spreadsheets, reports or automated feeds. And for those who want predictability, continuous lead generation gives you a monthly flow of new leads matched to your ideal customer: we define the profile together and handle the rest every month.",
+          "We work only with data from public sources and in compliance with GDPR — no bought lists of dubious origin, no spam. And before you pay, the assessment is free: we tell you honestly whether we can find leads in your market."
+        ],
+        "cta": "Free assessment: before you pay, we tell you honestly whether we can find leads in your market — WhatsApp +351 919 642 845 or geral@matecno.pt."
+      }
+    },
     "produtos": {
       "label": "Products",
       "aspects": [

@@ -256,6 +256,7 @@ const lang = content.lang ?? 'pt';
   }
   .mtc-navlinks {
     display: flex;
+    flex-wrap: wrap;
     gap: 18px;
   }
   .mtc-navlinks a {
@@ -265,6 +266,7 @@ const lang = content.lang ?? 'pt';
     text-transform: uppercase;
     color: var(--mtc-muted);
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.2s;
   }
   .mtc-navlinks a:hover {
@@ -288,13 +290,17 @@ const lang = content.lang ?? 'pt';
     display: flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
   }
   .mtc-legend i {
     width: 8px;
     height: 8px;
     border-radius: 50%;
   }
-  @media (max-width: 820px) {
+  /* With 6 hubs the colour legend + nav + switcher no longer fit together on
+     narrower screens — drop the (redundant, nodes are labelled) legend below
+     1440px so the bar never wraps mid-label. */
+  @media (max-width: 1439px) {
     .mtc-legend {
       display: none;
     }
