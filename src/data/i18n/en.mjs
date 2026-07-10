@@ -95,50 +95,65 @@ export default {
       "label": "Services",
       "aspects": [
         {
-          "label": "We build",
-          "title": "What we build",
+          "label": "Software",
+          "title": "Custom software",
+          "desc": "Web applications and multi-tenant platforms, built from scratch for your business.",
           "items": [
-            "Custom software — multi-tenant web apps that handle real users",
-            "Automations that remove repetitive work from entire processes",
-            "Fast websites and platforms, written from scratch",
-            "Robust backends, APIs, and admin panels",
-            "Integrations that connect the systems you already use"
+            "Web apps that hold up under real users",
+            "Platforms and management panels",
+            "The code is yours, no lock-in"
           ]
         },
         {
-          "label": "Stack",
-          "title": "Our core stack",
+          "label": "Automation",
+          "title": "Process automation",
+          "desc": "We remove the repetitive work that eats your team's hours, every day.",
           "items": [
-            "Next.js and React — frontend and applications",
-            "Node.js and TypeScript — backend and APIs",
-            "PostgreSQL and Prisma — data model",
-            "Python — automations and processing",
-            "Native i18n — multi-language (PT · EN · ES)"
+            "Invoices, emails, reports, flows between systems",
+            "Less human error, more useful time",
+            "Runs itself, hands-off"
           ]
         },
         {
-          "label": "Integrations",
-          "title": "We connect to what you use",
+          "label": "Websites",
+          "title": "Websites and platforms",
+          "desc": "Fast, hand-written sites — no templates, ready for SEO and conversion.",
           "items": [
-            "Stripe — payments and subscriptions",
-            "Google Workspace and Calendar",
-            "Transactional email and webmail",
-            "WhatsApp — notifications and reminders",
-            "Webhooks and REST APIs — system to system"
+            "Built from scratch, not assembled",
+            "Native multi-language (i18n)",
+            "Fast and SEO-optimized"
           ]
+        },
+        {
+          "label": "Backends",
+          "title": "Backends, APIs and integrations",
+          "desc": "We connect the systems you already use and build the engineering behind them.",
+          "items": [
+            "Robust backends and APIs",
+            "Stripe, Google, WhatsApp, email",
+            "System to system, no manual work"
+          ]
+        },
+        {
+          "label": "Leads & Data",
+          "title": "Leads & Data",
+          "desc": "We find, qualify and deliver B2B leads — and the data that drives your decisions.",
+          "items": [
+            "Verified B2B lead generation",
+            "Data enrichment and cleaning",
+            "Market intelligence"
+          ],
+          "linkTo": "leads"
         }
       ],
       "page": {
-        "title": "Services — Custom Software in Coimbra | Matecno",
-        "description": "Custom software, automations, websites, backends, and integrations for businesses. We write the code from scratch, with a modern stack and real integrations. Free assessment.",
-        "h1": "What Matecno builds",
+        "title": "Services — Custom Software, Automation and B2B Leads | Matecno",
+        "description": "Custom software, process automation, websites, backends and integrations — plus B2B lead generation and data. We write the code from scratch, on a modern stack. Free assessment.",
+        "h1": "The services we deliver",
         "paras": [
-          "We build what off-the-shelf software can't solve: custom applications, automations that remove repetitive work, websites and platforms, robust backends, and integrations between the systems you already use. We write the code from scratch — we don't assemble templates.",
-          "We work in a modern, proven stack: Next.js and React on the frontend, Node.js and TypeScript on the backend, PostgreSQL and Prisma for data, and Python for automations. We connect it all to Stripe, Google Workspace, email, and WhatsApp, with REST APIs and webhooks getting your systems talking to each other.",
-          "The proof is HoraCerta: a multi-tenant bookings platform, in three languages and with automatic reminders, in production on Next.js, Prisma, and Postgres. Real software, running, solving a concrete business problem — not a demo.",
-          "Have a process that should be automatic, an idea to turn into a product, or systems that don't talk to each other? Book a free assessment — 30 minutes where we map what hurts and tell you, honestly, whether it's worth building."
+          "We don't sell hours or templates. Each service solves a concrete business problem — from software built around how your business runs to the leads that fill your pipeline."
         ],
-        "cta": "Book a free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, we map the process and quote with no commitment."
+        "cta": "Book a free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, we map your process and quote with no commitment."
       }
     },
     "leads": {

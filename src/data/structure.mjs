@@ -16,13 +16,15 @@ export const OG_LOCALE = { pt: 'pt_PT', en: 'en_US', es: 'es_ES' };
 export const LOCALE_NAME = { pt: 'Português', en: 'English', es: 'Español' };
 export const LOCALE_SHORT = { pt: 'PT', en: 'EN', es: 'ES' };
 
-// Hub order (drives nav + graph). Keys are language-independent.
-// 'leads' (Leads & Dados) sits next to 'serv' — both are "what we do" pillars.
-export const HUB_KEYS = ['serv', 'leads', 'produtos', 'method', 'about', 'contact'];
+// Top-level pillars (drive nav + the graph's core-connected hubs). Keys are
+// language-independent. 'leads' is NOT a pillar — Leads & Dados is one of the
+// services listed under 'serv' (a satellite of Serviços on the graph) with its
+// own detail page; its data still lives in the packs under hubs.leads and its
+// colour/slug remain below for that page.
+export const HUB_KEYS = ['serv', 'produtos', 'method', 'about', 'contact'];
 
 // Brand colours per hub (hex). core is the dark MATECNO centre.
-// leads = magenta: maximally distinct from the other five hues (no legend/graph
-// dot confusion with the royal-blue 'serv').
+// leads = magenta — the accent for the Leads & Dados service detail page.
 export const COLORS = {
   serv: '#2f6fe0',
   leads: '#c2268f',
@@ -33,12 +35,9 @@ export const COLORS = {
   core: '#1b1b1e',
 };
 
-// Hand-placed 3D coordinates from V14 (do not re-solve). 'leads' fills the
-// open back-left region — ~4.0 units from every existing hub (its nearest is
-// 'method' at 3.96), so it never collides in the 2D projection.
+// Hand-placed 3D coordinates from V14 (do not re-solve).
 export const POS = {
   serv: [-2.9, 0.9, 0.4],
-  leads: [-1.1, -1.4, -2.6],
   produtos: [2.9, 1.1, -0.7],
   method: [-1.6, -2.7, 1.1],
   about: [2.2, -1.8, 1.7],

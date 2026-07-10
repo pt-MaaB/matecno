@@ -89,6 +89,15 @@ export function getSite(lang) {
   };
 }
 
+// Assemble a single hub (top-level pillar OR a non-pillar like 'leads') from
+// its string pack + structure. Used by section/detail pages so a hub that
+// isn't in HUB_KEYS (e.g. the Leads & Dados service page) still resolves.
+export function getHub(key, lang) {
+  const pack = PACKS[lang] || PACKS[DEFAULT_LOCALE];
+  const h = pack.hubs[key] || PACKS[DEFAULT_LOCALE].hubs[key];
+  return { key, route: routeFor(key, lang), label: h.label, color: COLORS[key], aspects: h.aspects, page: h.page };
+}
+
 // The object <GraphExplorer content={...} /> serialises to JSON. Carries the ui
 // chrome strings, the current lang and the home hreflang alternates (switcher).
 export function getGraphContent(lang) {

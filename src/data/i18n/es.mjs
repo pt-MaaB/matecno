@@ -95,48 +95,63 @@ export default {
       "label": "Servicios",
       "aspects": [
         {
-          "label": "Construimos",
-          "title": "Lo que construimos",
+          "label": "Software",
+          "title": "Software a medida",
+          "desc": "Aplicaciones web y plataformas multi-tenant, construidas desde cero para tu negocio.",
           "items": [
-            "Software a medida — web apps multi-tenant que aguantan usuarios reales",
-            "Automatizaciones que eliminan trabajo repetitivo de procesos enteros",
-            "Webs y plataformas rápidas, escritas desde cero",
-            "Backends, APIs y paneles de gestión robustos",
-            "Integraciones que conectan los sistemas que ya usas"
+            "Web apps que soportan usuarios reales",
+            "Plataformas y paneles de gestión",
+            "El código es tuyo, sin lock-in"
           ]
         },
         {
-          "label": "Stack",
-          "title": "Tecnologías que dominamos",
+          "label": "Automatización",
+          "title": "Automatización de procesos",
+          "desc": "Eliminamos el trabajo repetitivo que consume horas a tu equipo, cada día.",
           "items": [
-            "Next.js y React — frontend y aplicaciones",
-            "Node.js y TypeScript — backend y APIs",
-            "PostgreSQL y Prisma — modelo de datos",
-            "Python — automatizaciones y procesamiento",
-            "i18n nativo — multi-idioma (PT · EN · ES)"
+            "Facturas, emails, informes, flujos entre sistemas",
+            "Menos error humano, más tiempo útil",
+            "Funciona solo, sin intervención"
           ]
         },
         {
-          "label": "Integraciones",
-          "title": "Conectamos con lo que ya usas",
+          "label": "Webs",
+          "title": "Webs y plataformas",
+          "desc": "Webs rápidas, escritas a mano — sin plantillas, listas para SEO y conversión.",
           "items": [
-            "Stripe — pagos y suscripciones",
-            "Google Workspace y Calendar",
-            "Email transaccional y webmail",
-            "WhatsApp — notificaciones y recordatorios",
-            "Webhooks y APIs REST — de sistema a sistema"
+            "Hechas desde cero, no montadas",
+            "Multi-idioma nativo (i18n)",
+            "Rápidas y optimizadas para SEO"
           ]
+        },
+        {
+          "label": "Backends",
+          "title": "Backends, APIs e integraciones",
+          "desc": "Conectamos los sistemas que ya usas y construimos la ingeniería que hay detrás.",
+          "items": [
+            "Backends y APIs robustos",
+            "Stripe, Google, WhatsApp, email",
+            "Sistema a sistema, sin trabajo manual"
+          ]
+        },
+        {
+          "label": "Leads y Datos",
+          "title": "Leads y Datos",
+          "desc": "Encontramos, cualificamos y entregamos leads B2B — y los datos que alimentan tus decisiones.",
+          "items": [
+            "Generación de leads B2B verificados",
+            "Enriquecimiento y limpieza de datos",
+            "Inteligencia de mercado"
+          ],
+          "linkTo": "leads"
         }
       ],
       "page": {
-        "title": "Servicios — Software a Medida en Coimbra | Matecno",
-        "description": "Software a medida, automatizaciones, webs, backends e integraciones para empresas. Escribimos el código desde cero, con stack moderno e integraciones reales. Diagnóstico gratuito.",
-        "h1": "Lo que construye Matecno",
+        "title": "Servicios — Software a Medida, Automatización y Leads B2B | Matecno",
+        "description": "Software a medida, automatización de procesos, webs, backends e integraciones — y generación de leads B2B y datos. Escribimos el código desde cero, con stack moderno. Diagnóstico gratuito.",
+        "h1": "Los servicios que entregamos",
         "paras": [
-          "Construimos lo que el software estándar no resuelve: aplicaciones a medida, automatizaciones que eliminan trabajo repetitivo, webs y plataformas, backends robustos e integraciones entre los sistemas que ya usas. Escribimos el código desde cero — no montamos plantillas.",
-          "Dominamos un stack moderno y probado: Next.js y React en el frontend, Node.js y TypeScript en el backend, PostgreSQL y Prisma en los datos, y Python para automatizaciones. Lo conectamos todo con Stripe, Google Workspace, email y WhatsApp, con APIs REST y webhooks que ponen tus sistemas a hablar entre sí.",
-          "La prueba es HoraCerta: plataforma de reservas multi-tenant, en tres idiomas y con recordatorios automáticos, en producción sobre Next.js, Prisma y Postgres. Software real, funcionando, resolviendo un problema de negocio concreto — no una demostración.",
-          "¿Tienes un proceso que debería ser automático, una idea para convertir en producto, o sistemas que no hablan entre sí? Agenda un diagnóstico gratuito — 30 minutos en los que mapeamos lo que duele y te decimos, con honestidad, si vale la pena construirlo."
+          "No vendemos horas ni plantillas. Cada servicio resuelve un problema de negocio concreto — desde el software que funciona a la medida de tu negocio hasta los leads que llenan tu pipeline."
         ],
         "cta": "Agenda un diagnóstico gratuito: WhatsApp +351 919 642 845 o geral@matecno.pt — 30 min, mapeamos el proceso y presupuestamos sin compromiso."
       }
