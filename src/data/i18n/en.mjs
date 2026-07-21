@@ -4,8 +4,8 @@
 export default {
   "seo": {
     "titleHome": "Matecno — Custom Software in Coimbra",
-    "descHome": "We build custom software, automations, websites, and backends for businesses. Code written from scratch, a modern stack, real integrations. Free assessment.",
-    "jsonldDescription": "We build custom software, automations, websites, backends, and integrations for businesses, in Coimbra and remotely. Code written from scratch, solving real problems.",
+    "descHome": "Custom software, automations, websites and backends for businesses. Code written from scratch on Next.js, Prisma and PostgreSQL — the same stack our own products run on.",
+    "jsonldDescription": "We build custom software, automations, websites, backends and integrations for businesses, in Coimbra and remotely. Code written from scratch.",
     "ownsDescription": "Multi-tenant bookings platform, in three languages with automatic reminders. In production.",
     "areaServedRemote": "Remote — Portugal and worldwide",
     "knowsAbout": [
@@ -29,7 +29,7 @@ export default {
       },
       {
         "name": "Websites",
-        "description": "Fast websites and pages, built by hand — no templates."
+        "description": "Fast websites, written by hand, with technical SEO handled from the start."
       },
       {
         "name": "Backends and integrations",
@@ -38,7 +38,7 @@ export default {
     ]
   },
   "core": {
-    "tagline": "We build custom software for businesses — and create our own products."
+    "tagline": "Custom software for businesses. And products of our own, in production."
   },
   "ui": {
     "navAria": "Main",
@@ -67,16 +67,16 @@ export default {
       },
       {
         "title": "Free 30-min assessment",
-        "body": "By call or in person. We map the process costing you time or money. No commitment."
+        "body": "By call or in person. We walk through the process in question, the systems you already use, and what costs your team time."
       },
       {
         "title": "A clear quote — or an honest no",
-        "body": "If it's worth building, you leave with a clear quote. If it doesn't make sense, we say so upfront and save you the rest."
+        "body": "If it's worth building, you leave with scope, phases and a price. If it isn't, we tell you why on the spot."
       }
     ],
     "formKicker": "Prefer to write",
     "formHeading": "Tell us what you need",
-    "formSub": "Reply within 24 hours. No commitment.",
+    "formSub": "Reply within 24 hours.",
     "labelName": "Name",
     "labelCompany": "Company",
     "labelEmail": "Email",
@@ -99,45 +99,45 @@ export default {
           "title": "Custom software",
           "desc": "Web applications and multi-tenant platforms, built from scratch for your business.",
           "items": [
-            "Web apps that hold up under real users",
-            "Platforms and management panels",
-            "The code is yours, no lock-in"
+            "Multi-tenant platforms and management panels",
+            "Authentication, payments, invoicing, notifications",
+            "The source code is yours, no lock-in"
           ]
         },
         {
           "label": "Automation",
           "title": "Process automation",
-          "desc": "We remove the repetitive work that eats your team's hours, every day.",
+          "desc": "Repetitive processes start running on their own — with logging, alerts and failure recovery.",
           "items": [
-            "Invoices, emails, reports, flows between systems",
-            "Less human error, more useful time",
-            "Runs itself, hands-off"
+            "Invoicing, emails, reports, syncing between systems",
+            "Scheduled or event-driven",
+            "Logs and alerts so you know what ran"
           ]
         },
         {
           "label": "Websites",
           "title": "Websites and platforms",
-          "desc": "Fast, hand-written sites — no templates, ready for SEO and conversion.",
+          "desc": "Fast, hand-written sites with technical SEO handled from the start.",
           "items": [
-            "Built from scratch, not assembled",
-            "Native multi-language (i18n)",
-            "Fast and SEO-optimized"
+            "Static and light — this site is one example",
+            "Native multi-language (PT · EN · ES)",
+            "Schema, hreflang and Core Web Vitals handled"
           ]
         },
         {
           "label": "Backends",
           "title": "Backends, APIs and integrations",
-          "desc": "We connect the systems you already use and build the engineering behind them.",
+          "desc": "The engineering behind the systems you already use — and the connections between them.",
           "items": [
-            "Robust backends and APIs",
-            "Stripe, Google, WhatsApp, email",
-            "System to system, no manual work"
+            "REST APIs and webhooks",
+            "Stripe, Google Workspace, WhatsApp, email",
+            "Queues, crons and system-to-system syncing"
           ]
         },
         {
           "label": "Leads & Data",
           "title": "Leads & Data",
-          "desc": "We find, qualify and deliver B2B leads — and the data that drives your decisions.",
+          "desc": "Verified B2B lists, data enrichment and market monitoring.",
           "items": [
             "Verified B2B lead generation",
             "Data enrichment and cleaning",
@@ -148,12 +148,12 @@ export default {
       ],
       "page": {
         "title": "Services — Custom Software, Automation and B2B Leads | Matecno",
-        "description": "Custom software, process automation, websites, backends and integrations — plus B2B lead generation and data. We write the code from scratch, on a modern stack. Free assessment.",
-        "h1": "The services we deliver",
+        "description": "Custom software, process automation, websites, backends and integrations — plus B2B leads and data. Code written from scratch on Next.js, Prisma and PostgreSQL.",
+        "h1": "What we build",
         "paras": [
-          "We don't sell hours or templates. Each service solves a concrete business problem — from software built around how your business runs to the leads that fill your pipeline."
+          "Five areas of work: custom software, process automation, websites, backends and B2B data. All written from scratch, on the same stack our own products run on."
         ],
-        "cta": "Book a free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, we map your process and quote with no commitment."
+        "cta": "Free 30-minute assessment — WhatsApp +351 919 642 845 or geral@matecno.pt."
       }
     },
     "leads": {
@@ -163,10 +163,10 @@ export default {
           "label": "Offer",
           "title": "What we deliver",
           "items": [
-            "B2B lead generation — verified and qualified",
+            "Verified, qualified B2B lead generation",
             "Enrichment and cleaning of lists you already have",
-            "Market intelligence — custom public data",
-            "Continuous lead generation — a monthly flow",
+            "Market intelligence — custom public-data collection",
+            "Continuous generation — a monthly flow of fresh leads",
             "All segmented by sector and region"
           ]
         },
@@ -178,32 +178,32 @@ export default {
             "Verified email — one that won't bounce",
             "Direct phone number",
             "No duplicates, always current",
-            "In clean spreadsheets, reports or feeds"
+            "Delivered in spreadsheets, reports or feeds"
           ]
         },
         {
           "label": "Trust",
           "title": "Public sources, GDPR",
           "items": [
-            "Data from public sources",
+            "Public-source data only",
             "GDPR-compliant",
-            "No bought lists of dubious origin",
+            "No bought lists",
             "No spam",
-            "Free assessment before you pay"
+            "Free market check before anything moves forward"
           ]
         }
       ],
       "page": {
         "title": "B2B Lead Generation and Data | Matecno Coimbra",
-        "description": "We find, qualify and deliver verified B2B leads — name, job title, email and phone. Data enrichment and market intelligence. Public sources, GDPR. Free assessment.",
-        "h1": "We find the customers who don't know you yet",
+        "description": "Verified B2B leads — decision-maker name, job title, email and phone. Data enrichment and market intelligence. Public sources, GDPR.",
+        "h1": "B2B leads and market data, verified",
         "paras": [
-          "We automate processes — and one of them hurts almost every company: finding customers. That's why we also build the systems that find, qualify and deliver leads, and the data that feeds your decisions.",
-          "B2B lead generation: we find and deliver qualified, verified company contacts, segmented by sector and region — name, job title, verified email and phone, ready to contact, so your sales team never runs out of people to call. And if you already have an incomplete or outdated list, we handle the enrichment and cleaning: we return complete, verified records with no duplicates — emails that won't bounce, contacts that actually exist.",
-          "Market intelligence: we collect custom public data from the web — competitor pricing, listings, monitoring, market research — delivered in clean spreadsheets, reports or automated feeds. And for those who want predictability, continuous lead generation gives you a monthly flow of new leads matched to your ideal customer: we define the profile together and handle the rest every month.",
-          "We work only with data from public sources and in compliance with GDPR — no bought lists of dubious origin, no spam. And before you pay, the assessment is free: we tell you honestly whether we can find leads in your market."
+          "We build the systems that collect, cross-reference and verify company data — and we use them to deliver qualified B2B leads and market intelligence.",
+          "Lead generation: contacts segmented by sector and region, with the decision-maker's name and job title, a verified email and a direct phone number. If you already have a list, we enrich and clean it: complete records, no duplicates, emails that won't bounce.",
+          "Market intelligence: custom public-data collection — competitor pricing, listings, continuous monitoring — delivered in spreadsheets, reports or automated feeds. If you need a steady flow, continuous generation delivers fresh leads every month against an ideal-customer profile defined with you.",
+          "We work only with public sources, in compliance with GDPR — no bought lists, no spam. Before anything moves forward, we check whether your market has the volume; that check is free."
         ],
-        "cta": "Free assessment: before you pay, we tell you honestly whether we can find leads in your market — WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "Ask for the free check of your market — WhatsApp +351 919 642 845 or geral@matecno.pt."
       }
     },
     "produtos": {
@@ -213,11 +213,11 @@ export default {
           "label": "HoraCerta",
           "title": "The product, in production",
           "items": [
-            "HoraCerta — a bookings platform running every day",
+            "HoraCerta — an online bookings platform",
             "Multi-tenant: many businesses, one platform, isolated data",
             "PT · EN · ES with native i18n",
             "Automatic reminders on every booking",
-            "Real users and appointments — not a demo"
+            "Hundreds of bookings managed every month"
           ]
         },
         {
@@ -225,7 +225,7 @@ export default {
           "title": "The engineering behind it",
           "items": [
             "Next.js — application and frontend",
-            "Prisma + Postgres — a solid data model",
+            "Prisma + Postgres — the data model",
             "Per-tenant data isolation, designed from scratch",
             "Custom backends and integrations",
             "Our own code, end to end"
@@ -237,23 +237,22 @@ export default {
           "items": [
             "HoraCerta is our first in-house product",
             "Next up: a product for marketing",
-            "Each product lands here only when it runs for real",
-            "We show what already works, not promises",
-            "Software that holds up in production — zero vaporware"
+            "Each product lands on this page after it's in production",
+            "The same stack as our client work"
           ]
         }
       ],
       "page": {
         "title": "Products — HoraCerta and the Matecno line | Coimbra",
-        "description": "HoraCerta: a multi-tenant bookings platform in production (Next.js, Prisma, Postgres, PT/EN/ES). Proof that Matecno builds software that handles real users.",
+        "description": "HoraCerta: a multi-tenant bookings platform in production — Next.js, Prisma, Postgres, PT/EN/ES. Matecno's own software.",
         "h1": "Our products",
         "paras": [
-          "We build custom software for clients — and launch our own products. The first is HoraCerta: a bookings platform managing real appointments, today, in production.",
-          "It's multi-tenant — many businesses on the same platform, each with its data isolated — in three languages (PT, EN, ES) and with automatic reminders on every booking. Built custom on Next.js, Prisma, and Postgres. Proof that what we make holds up with real users, and not just a demo.",
-          "HoraCerta opens a line that will grow, starting with a product for marketing. Each product is built with the same rigor and only lands here when it runs for real. We show what already works — no vaporware.",
-          "The same engineering that built HoraCerta can build your product. In a free 30-minute assessment we map the idea and tell you, plainly, whether it's worth building — a quote with no commitment. Coimbra or remote, with direct access and no middlemen."
+          "We build custom software for clients — and launch products of our own. The first is HoraCerta: a bookings platform in production, managing hundreds of bookings a month.",
+          "It's multi-tenant — many businesses on one platform, each with isolated data — in three languages, with automatic reminders on every booking. Next.js on the application, Prisma and Postgres on the data model, with per-tenant isolation designed from scratch.",
+          "The line will grow — the next product is for marketing — and each one lands on this page after it's in production.",
+          "HoraCerta is also our calling card: before we build for you, you can see what we built for ourselves. If you have a product in mind, the free 30-minute assessment is where we map it — Coimbra or remote."
         ],
-        "cta": "Book your free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "Book a free assessment — WhatsApp +351 919 642 845 or geral@matecno.pt."
       }
     },
     "method": {
@@ -263,9 +262,9 @@ export default {
           "label": "Phases",
           "title": "From assessment to delivery",
           "items": [
-            "Free assessment — 30 min mapping the process that hurts, before any quote",
-            "Architecture — we design data, flows, and integrations, and validate with you before writing code",
-            "Building in short cycles — you see the software running at each phase, no months of silence",
+            "Assessment — 30 minutes on the process and the systems already in place, before any quote",
+            "Architecture — data, flows and integrations, designed and validated with you before code is written",
+            "Building in short cycles — you see the software running at every phase",
             "Delivery — in production, with deploy, tests, and documentation"
           ]
         },
@@ -273,34 +272,34 @@ export default {
           "label": "Deliverables",
           "title": "What you keep",
           "items": [
-            "Your source code, in your repository — zero template lock-in",
-            "Documentation on how it runs, how to change it, and how to deploy",
+            "Source code in your repository",
+            "Documentation: how it runs, how to change it, how to deploy it",
             "Access, environment, database, and deploy in your hands",
-            "Flows, integrations, and APIs ready to use and scale"
+            "Flows, integrations and APIs ready to scale"
           ]
         },
         {
           "label": "Support",
           "title": "After delivery",
           "items": [
-            "Direct, accountable support from those who know your code",
-            "Fixes and response times agreed in writing upfront",
-            "Evolution in phases, at your pace and budget",
+            "Support from the people who wrote the code",
+            "Response times agreed in writing upfront",
+            "Evolution in phases, at your pace",
             "Direct WhatsApp — +351 919 642 845"
           ]
         }
       ],
       "page": {
         "title": "The Matecno Method — from assessment to delivery",
-        "description": "How we build custom software: free assessment, architecture, building in cycles, and delivery with your code. HoraCerta was born from this method. Book yours.",
+        "description": "How we build custom software: assessment, validated architecture, building in short cycles and delivery in production with the code in your repository.",
         "h1": "How we work — from assessment to delivery",
         "paras": [
-          "We don't sell hours or templates. We start with a free 30-minute assessment: we map the process costing you time or money and tell you honestly whether it's worth building. Only then do we talk scope and price — no quote pulled out of thin air.",
-          "We design the architecture — data, flows, integrations — and validate it with you before the first line of code. Then we build in short cycles, with working software you can see at every step, so you validate early instead of waiting for a surprise delivery. In the end it goes into production, documented, and the code is yours: no depending on anyone to change it.",
-          "This is the method that produced HoraCerta — our multi-tenant bookings platform, in three languages and with automatic reminders, today in production on Next.js, Prisma, and Postgres. It's not a slide: it's real software, handling real users every day. We build yours with the same engineering rigor.",
-          "Support is direct and accountable: you talk directly with those who know the code, with fixes and evolution agreed in writing upfront. And the first phase, the assessment, costs you nothing: 30 minutes, no commitment, to map together what's worth building. Message +351 919 642 845 (WhatsApp) or geral@matecno.pt."
+          "Four phases: assessment, architecture, building in short cycles, delivery in production. The quote comes after the assessment — once the scope is clear to both sides.",
+          "The architecture — data, flows, integrations — is designed and validated with you before the first line of code. Building runs in short cycles, with working software in view at every phase. It ends in production, documented, in your repository.",
+          "This method produced HoraCerta: a multi-tenant bookings platform, in three languages, with automatic reminders, in production on Next.js, Prisma and Postgres.",
+          "After delivery, support comes from the people who wrote the code, with response times agreed in writing. Evolution lands in phases, at your pace. Book the assessment by WhatsApp (+351 919 642 845) or email (geral@matecno.pt)."
         ],
-        "cta": "Book your free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, no commitment."
+        "cta": "Start with the assessment: 30 minutes, free — WhatsApp +351 919 642 845 or geral@matecno.pt."
       }
     },
     "about": {
@@ -312,9 +311,9 @@ export default {
           "items": [
             "Custom software, from data model to deploy",
             "Next.js, Node.js, and TypeScript — app and backend",
-            "Prisma and PostgreSQL — solid, scalable data",
+            "Prisma and PostgreSQL — the data model",
             "Python for automations and integrations",
-            "No templates: every line built for the problem"
+            "Integrations with Stripe, Google Workspace, WhatsApp and email"
           ]
         },
         {
@@ -323,34 +322,33 @@ export default {
           "items": [
             "Based in Coimbra, on-site across the Centro region",
             "Remote across all of Portugal and beyond",
-            "Direct access, no middlemen",
+            "Direct access to the people who build",
             "WhatsApp and email — reply within 24h",
             "Assessment by call or in person"
           ]
         },
         {
           "label": "Principles",
-          "title": "We only promise what we deliver",
+          "title": "What goes in writing",
           "items": [
-            "Zero vaporware: HoraCerta is in production",
-            "The source code stays yours, no lock-in",
-            "Technical honesty, from quote to delivery",
-            "We say no when it isn't worth building",
-            "We talk about what runs for real, not slides"
+            "The source code stays yours, in your repository",
+            "Scope, deadlines and support in writing",
+            "HoraCerta in production is the public reference",
+            "A clear no when it isn't worth building"
           ]
         }
       ],
       "page": {
         "title": "About Matecno — Custom Software Engineering in Coimbra",
-        "description": "Matecno writes software from scratch — Next.js, Prisma, PostgreSQL — in Coimbra and remotely nationwide. HoraCerta is in production as proof. Free 30-min assessment.",
-        "h1": "We write the software your business needs",
+        "description": "Matecno writes software from scratch — Next.js, Prisma, PostgreSQL — in Coimbra and remotely nationwide. HoraCerta, in production, is the reference.",
+        "h1": "Software engineering, made in Coimbra",
         "paras": [
-          "Matecno builds custom software: web applications, automations, websites, backends, and integrations. We write the code from scratch — we don't buy the template — in Next.js, Node.js, TypeScript, Prisma, and PostgreSQL, with Python for automations, and we connect it all to Stripe, Google Workspace, email, and WhatsApp. And we don't only build for clients: we also launch our own products.",
-          "The proof is in production. HoraCerta is our multi-tenant bookings platform — many businesses on the same platform, each with its data isolated — in three languages (PT, EN, ES) and with automatic reminders, managing real appointments every day on Next.js, Prisma, and Postgres. It's not a demo: it's software handling real users, with the same rigor we bring to client work.",
-          "We're guided by simple principles: we write from scratch and the source code stays yours, with no vendor or template lock-in; we only promise what we already know how to deliver; and we tell you honestly when something isn't worth building. We talk about what runs for real — not slides or vaporware.",
-          "We're in Coimbra and work remotely nationwide, with direct access and no middlemen. The first step is a free 30-minute assessment: we map the process that hurts and tell you, plainly, whether it's worth building — with a quote and no commitment."
+          "Matecno builds custom software — web applications, automations, websites, backends and integrations — in Next.js, Node.js, TypeScript, Prisma and PostgreSQL, with Python on the automations. We integrate Stripe, Google Workspace, email and WhatsApp. And we build products of our own.",
+          "HoraCerta is the reference: a multi-tenant bookings platform, three languages, automatic reminders, hundreds of bookings managed every month, in production on Next.js, Prisma and Postgres. This site is another example — static, trilingual, with the 3D graph written from scratch.",
+          "The source code stays with the client, in the client's repository. Scope, deadlines and support go in writing. And when a project isn't worth building, we say so at the assessment — before it costs anyone money.",
+          "Based in Coimbra, on-site across the Centro region and remote nationwide. The first step is a free 30-minute assessment, by call or in person."
         ],
-        "cta": "Book your free assessment: WhatsApp +351 919 642 845 or geral@matecno.pt — 30 min, we map the problem and tell you honestly whether it's worth building."
+        "cta": "Talk to us — WhatsApp +351 919 642 845 or geral@matecno.pt."
       }
     },
     "contact": {
@@ -364,7 +362,7 @@ export default {
             "mauro@matecno.pt — direct line",
             "geral@matecno.pt",
             "Coimbra · remote nationwide",
-            "No middlemen between you and the code"
+            "You talk to the people who build"
           ]
         },
         {
@@ -373,34 +371,32 @@ export default {
           "items": [
             "Email answered within 24h",
             "WhatsApp during the working day",
-            "Portuguese or English, whichever you prefer",
+            "Portuguese or English",
             "From first contact to deploy, one conversation",
-            "You're answered by the people who know the stack"
+            "Answered by the people who write the code"
           ]
         },
         {
           "label": "Step",
           "title": "Free assessment — 30 min",
           "items": [
-            "We map the process costing you time",
-            "We tell you honestly whether it's worth building",
-            "A clear quote, no commitment",
-            "If it doesn't make sense, we say so upfront",
+            "30 minutes, by call or in person",
+            "We walk through the process and the current systems",
+            "You leave with scope and a quote — or a clear no",
             "Book by WhatsApp or email"
           ]
         }
       ],
       "page": {
         "title": "Contact — Free Assessment | Matecno Coimbra",
-        "description": "Talk directly with the people who build your software. Free 30-min assessment: we map the process that hurts and tell you honestly whether it's worth building. Reply within 24h.",
+        "description": "Talk directly with the people who build your software. Free 30-minute assessment, reply within 24 hours.",
         "h1": "Let's talk about your project",
         "paras": [
-          "You talk directly with engineering — no middlemen, no layers before a technical answer. A direct line to the people who build it and get their hands on the code.",
-          "The first step is a free 30-minute conversation. We map the process costing you time or money and tell you honestly whether it's worth building. If it doesn't make sense, we say so upfront and save you the rest. If it does, you leave with a clear quote and no commitment.",
-          "HoraCerta — our multi-tenant bookings platform, in three languages and in production on Next.js, Prisma, and Postgres — was born exactly this way: from a concrete problem and a direct conversation. Real software, handling real users every day. Your project could be next.",
-          "Book the assessment now: WhatsApp +351 919 642 845 or email geral@matecno.pt. We reply within 24 hours, in Portuguese or English."
+          "You talk directly with the people who build — no account managers, no layers before a technical answer.",
+          "The first conversation is 30 minutes, free: we walk through the process or the idea and the systems you already use. You leave with a scoped quote — or a reasoned no, on the spot.",
+          "Write on WhatsApp (+351 919 642 845) or email (geral@matecno.pt). We reply within 24 hours, in Portuguese or English."
         ],
-        "cta": "Book a free assessment — WhatsApp +351 919 642 845 or geral@matecno.pt"
+        "cta": "WhatsApp +351 919 642 845 · geral@matecno.pt — reply within 24 hours"
       }
     }
   }
