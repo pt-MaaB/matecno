@@ -1,17 +1,19 @@
 // ---------------------------------------------------------------------------
 // i18n/pt.mjs — Portuguese (pt-PT) string pack. Default locale.
 // Shape is shared by en.mjs and es.mjs. Merged with structure.mjs in site.mjs.
+// Voice: plain, factual, showcase-first. No em-dashes in prose, no colon-frame
+// openers, no negation-sell formulas. Em-dashes allowed only in <title> tags.
 // ---------------------------------------------------------------------------
 export default {
   seo: {
     titleHome: 'Matecno — Software à Medida em Coimbra',
     descHome:
-      'Software à medida, automações, websites e backends para empresas. Código escrito de raiz sobre Next.js, Prisma e PostgreSQL — a mesma stack dos nossos produtos em produção.',
+      'Software à medida, automações, websites e backends para empresas. Código escrito de raiz com Next.js, Prisma e PostgreSQL, a mesma stack dos nossos produtos em produção.',
     jsonldDescription:
       'Construímos software à medida, automações, websites, backends e integrações para empresas, em Coimbra e remoto. Código escrito de raiz.',
     ownsDescription:
       'Plataforma de marcações multi-tenant, com três idiomas e lembretes automáticos. Em produção.',
-    areaServedRemote: 'Remoto — Portugal e resto do mundo',
+    areaServedRemote: 'Remoto: Portugal e resto do mundo',
     knowsAbout: [
       'Desenvolvimento de software à medida',
       'Automação de processos',
@@ -25,17 +27,17 @@ export default {
     makesOffer: [
       { name: 'Software à medida', description: 'Aplicações web e plataformas construídas de raiz para o teu negócio.' },
       { name: 'Automações', description: 'Automatização de tarefas e fluxos de trabalho para PMEs.' },
-      { name: 'Websites', description: 'Websites rápidos, escritos à mão, com SEO técnico tratado de origem.' },
+      { name: 'Websites', description: 'Websites rápidos, escritos à mão, com o SEO técnico resolvido desde o início.' },
       { name: 'Backends e integrações', description: 'Backends, APIs e integrações entre as ferramentas que já usas.' },
     ],
   },
   core: {
-    tagline: 'Software à medida para empresas. E produtos próprios, em produção.',
+    tagline: 'Software à medida para empresas. Produtos próprios em produção.',
   },
   ui: {
     navAria: 'Principal',
     back: 'voltar ao sistema',
-    hint: 'arrasta — orbitar · scroll — zoom · passa o rato — caminho até ao núcleo · clica — dissecar',
+    hint: 'arrasta para orbitar · scroll para zoom · clica num nó para explorar',
     detailLabel: 'Detalhe',
     dissected: 'nó dissecado',
     viewPage: 'ver página {label}',
@@ -55,15 +57,15 @@ export default {
     steps: [
       {
         title: 'Respondemos em menos de 24h',
-        body: 'Escreve por WhatsApp ou email. Responde uma pessoa — o Mauro ou a equipa — não um bot nem um comercial.',
+        body: 'Escreve por WhatsApp ou email. Quem responde é o Mauro ou alguém da equipa.',
       },
       {
         title: 'Diagnóstico gratuito de 30 min',
-        body: 'Por chamada ou pessoalmente. Percorremos o processo em causa, os sistemas que já usas e o que custa tempo à equipa.',
+        body: 'Por chamada ou pessoalmente. Vemos contigo o processo em causa e os sistemas que já usas.',
       },
       {
-        title: 'Orçamento claro — ou um não honesto',
-        body: 'Se vale a pena construir, sais com âmbito, fases e preço. Se não vale, dizemos porquê na hora.',
+        title: 'Orçamento claro, ou um não honesto',
+        body: 'Se fizer sentido avançar, sais com âmbito, fases e preço. Se não fizer, explicamos porquê.',
       },
     ],
     formKicker: 'Preferes escrever',
@@ -92,38 +94,38 @@ export default {
           desc: 'Aplicações web e plataformas multi-tenant, construídas de raiz para o teu negócio.',
           items: [
             'Plataformas multi-tenant e painéis de gestão',
-            'Autenticação, pagamentos, faturação, notificações',
-            'O código-fonte é teu, sem lock-in',
+            'Autenticação, pagamentos, faturação e notificações',
+            'O código-fonte fica teu',
           ],
         },
         {
           label: 'Automação',
           title: 'Automação de processos',
-          desc: 'Processos repetitivos passam a correr sozinhos — com registo, alertas e recuperação de falhas.',
+          desc: 'Processos repetitivos passam a correr sem intervenção, com registo e alertas.',
           items: [
-            'Faturação, emails, relatórios, sincronização entre sistemas',
-            'Agendada ou disparada por eventos',
-            'Logs e alertas para saberes o que correu',
+            'Faturação, emails, relatórios e sincronização entre sistemas',
+            'Execução agendada ou por eventos',
+            'Logs e alertas quando algo falha',
           ],
         },
         {
           label: 'Websites',
           title: 'Websites e plataformas',
-          desc: 'Sites rápidos, escritos à mão, com SEO técnico tratado de origem.',
+          desc: 'Sites rápidos, escritos à mão, com o SEO técnico resolvido desde o início.',
           items: [
-            'Estáticos e leves — este site é um exemplo',
-            'Multi-idioma nativo (PT · EN · ES)',
-            'Schema, hreflang e Core Web Vitals tratados',
+            'Páginas estáticas e leves, como este site',
+            'Três idiomas com i18n nativo',
+            'Schema, hreflang e Core Web Vitals',
           ],
         },
         {
           label: 'Backends',
           title: 'Backends, APIs e integrações',
-          desc: 'A engenharia por trás dos sistemas que já usas — e as ligações entre eles.',
+          desc: 'APIs, integrações e a engenharia que liga os sistemas que já usas.',
           items: [
             'APIs REST e webhooks',
-            'Stripe, Google Workspace, WhatsApp, email',
-            'Filas, crons e sincronização entre sistemas',
+            'Stripe, Google Workspace, WhatsApp e email',
+            'Filas, crons e sincronização de dados',
           ],
         },
         {
@@ -141,12 +143,12 @@ export default {
       page: {
         title: 'Serviços — Software à Medida, Automação e Leads B2B | Matecno',
         description:
-          'Software à medida, automação de processos, websites, backends e integrações — e leads B2B e dados. Código escrito de raiz, sobre Next.js, Prisma e PostgreSQL.',
+          'Software à medida, automação de processos, websites, backends e integrações, e ainda leads B2B e dados. Código escrito de raiz com Next.js, Prisma e PostgreSQL.',
         h1: 'O que construímos',
         paras: [
-          'Cinco áreas de trabalho: software à medida, automação de processos, websites, backends e dados B2B. Tudo escrito de raiz, sobre a mesma stack que corre nos nossos próprios produtos.',
+          'Trabalhamos em cinco áreas: software à medida, automação de processos, websites, backends e dados B2B. Usamos a mesma stack em tudo o que fazemos, incluindo nos nossos próprios produtos.',
         ],
-        cta: 'Diagnóstico gratuito de 30 minutos — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+        cta: 'Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 ou geral@matecno.pt.',
       },
     },
     leads: {
@@ -157,10 +159,10 @@ export default {
           title: 'O que entregamos',
           items: [
             'Geração de leads B2B verificadas e qualificadas',
-            'Enriquecimento e limpeza de listas que já tens',
-            'Inteligência de mercado — recolha de dados públicos à medida',
-            'Geração contínua — fluxo mensal de leads novas',
-            'Tudo segmentado por setor e região',
+            'Enriquecimento e limpeza de listas existentes',
+            'Recolha de dados públicos à medida',
+            'Fluxo mensal de leads novas',
+            'Segmentação por setor e região',
           ],
         },
         {
@@ -168,10 +170,10 @@ export default {
           title: 'Cada contacto, completo',
           items: [
             'Nome e cargo do decisor',
-            'Email verificado — que não volta',
+            'Email verificado antes da entrega',
             'Telefone direto',
-            'Sem duplicados, sempre atualizado',
-            'Entregue em folhas de cálculo, relatórios ou feeds',
+            'Sem duplicados',
+            'Entregue em folha de cálculo, relatório ou feed',
           ],
         },
         {
@@ -189,15 +191,15 @@ export default {
       page: {
         title: 'Geração de Leads B2B e Dados | Matecno Coimbra',
         description:
-          'Leads B2B verificadas — nome, cargo, email e telefone do decisor. Enriquecimento de dados e inteligência de mercado. Fontes públicas, RGPD.',
-        h1: 'Leads B2B e dados de mercado, verificados',
+          'Leads B2B verificadas com nome, cargo, email e telefone do decisor. Enriquecimento de dados e inteligência de mercado. Fontes públicas, RGPD.',
+        h1: 'Leads B2B e dados de mercado',
         paras: [
-          'Construímos os sistemas que recolhem, cruzam e verificam dados de empresas — e usamo-los para entregar leads B2B qualificadas e inteligência de mercado.',
-          'Geração de leads: contactos segmentados por setor e região, com nome e cargo do decisor, email verificado e telefone direto. Se já tens uma lista, enriquecemos e limpamos: registos completos, sem duplicados, com emails que não voltam.',
-          'Inteligência de mercado: recolha de dados públicos à medida — preços da concorrência, listagens, monitorização contínua — entregue em folhas de cálculo, relatórios ou feeds automáticos. Para quem precisa de fluxo regular, a geração contínua entrega leads novas todos os meses, sobre um perfil de cliente ideal definido contigo.',
-          'Trabalhamos só com fontes públicas, em conformidade com o RGPD — sem listas compradas, sem spam. Antes de avançar, verificamos se existe volume no teu mercado; essa análise é gratuita.',
+          'Construímos sistemas que recolhem, cruzam e verificam dados de empresas. São os mesmos sistemas que usamos para entregar leads B2B qualificadas e estudos de mercado a clientes.',
+          'Na geração de leads entregamos contactos segmentados por setor e região, com nome e cargo do decisor, email verificado e telefone direto. Se já tens uma lista, tratamos do enriquecimento e da limpeza, e devolvemos registos completos, sem duplicados e com emails verificados.',
+          'Também recolhemos dados públicos à medida, como preços da concorrência, listagens e monitorização contínua, entregues em folha de cálculo, relatório ou feed automático. Para quem precisa de fluxo regular, definimos um perfil de cliente ideal e entregamos leads novas todos os meses.',
+          'Trabalhamos apenas com fontes públicas e em conformidade com o RGPD. Não compramos listas nem enviamos spam. Antes de avançar, verificamos gratuitamente se existe volume suficiente no teu mercado.',
         ],
-        cta: 'Pede a análise gratuita do teu mercado — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+        cta: 'Pede uma análise gratuita do teu mercado. WhatsApp +351 919 642 845 ou geral@matecno.pt.',
       },
     },
     produtos: {
@@ -205,11 +207,11 @@ export default {
       aspects: [
         {
           label: 'HoraCerta',
-          title: 'O produto, em produção',
+          title: 'O produto em produção',
           items: [
-            'HoraCerta — plataforma de marcações online',
-            'Multi-tenant: vários negócios, uma base, dados isolados',
-            'PT · EN · ES com i18n nativo',
+            'HoraCerta, plataforma de marcações online',
+            'Multi-tenant, com dados isolados por negócio',
+            'Três idiomas com i18n nativo',
             'Lembretes automáticos em cada marcação',
             'Centenas de marcações geridas por mês',
           ],
@@ -218,36 +220,36 @@ export default {
           label: 'Stack',
           title: 'A engenharia por trás',
           items: [
-            'Next.js — aplicação e frontend',
-            'Prisma + Postgres — modelo de dados',
-            'Isolamento de dados por tenant, desenhado de raiz',
+            'Next.js na aplicação e no frontend',
+            'Prisma e Postgres no modelo de dados',
+            'Isolamento de dados por tenant desenhado de raiz',
             'Backends e integrações à medida',
-            'Código nosso, ponta a ponta',
+            'Código nosso de ponta a ponta',
           ],
         },
         {
           label: 'A linha',
           title: 'A linha vai crescer',
           items: [
-            'HoraCerta é o primeiro produto próprio',
-            'Próximo passo: um produto para marketing',
-            'Cada produto entra nesta página depois de estar em produção',
-            'Sobre a mesma stack do trabalho para clientes',
+            'O HoraCerta é o primeiro produto próprio',
+            'O próximo produto será para marketing',
+            'Cada produto entra nesta página quando está em produção',
+            'A stack é a mesma do trabalho para clientes',
           ],
         },
       ],
       page: {
         title: 'Produtos — HoraCerta e a linha Matecno | Coimbra',
         description:
-          'HoraCerta: plataforma de marcações multi-tenant em produção — Next.js, Prisma, Postgres, PT/EN/ES. O software próprio da Matecno.',
+          'HoraCerta, plataforma de marcações multi-tenant em produção com Next.js, Prisma e Postgres, em três idiomas. O software próprio da Matecno.',
         h1: 'Os nossos produtos',
         paras: [
-          'Construímos software à medida para clientes — e lançamos os nossos próprios produtos. O primeiro é o HoraCerta: uma plataforma de marcações em produção, a gerir centenas de marcações por mês.',
-          'É multi-tenant — vários negócios sobre a mesma base, cada um com os dados isolados — em três idiomas e com lembretes automáticos em cada marcação. Next.js na aplicação, Prisma e Postgres no modelo de dados, com o isolamento por tenant desenhado de raiz.',
-          'A linha vai crescer — o próximo produto é para marketing — e cada um entra nesta página depois de estar em produção.',
-          'O HoraCerta é também o nosso cartão de visita: antes de construirmos para ti, podes ver o que construímos para nós. Se tens um produto em mente, o diagnóstico gratuito de 30 minutos serve para o mapear — Coimbra ou remoto.',
+          'Além do trabalho para clientes, lançamos os nossos próprios produtos. O primeiro é o HoraCerta, uma plataforma de marcações em produção que gere centenas de marcações por mês.',
+          'É multi-tenant, com vários negócios sobre a mesma base e dados isolados por tenant, em três idiomas e com lembretes automáticos em cada marcação. A aplicação corre em Next.js, com Prisma e Postgres no modelo de dados.',
+          'A linha vai crescer. O próximo produto será para marketing, e cada um entra nesta página quando estiver em produção.',
+          'O HoraCerta é também o nosso cartão de visita. É a forma mais direta de avaliar o nosso trabalho antes de nos contratar. Se tens um produto em mente, o diagnóstico gratuito de 30 minutos serve para o mapear, em Coimbra ou remoto.',
         ],
-        cta: 'Marca um diagnóstico gratuito — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+        cta: 'Marca um diagnóstico gratuito. WhatsApp +351 919 642 845 ou geral@matecno.pt.',
       },
     },
     method: {
@@ -257,10 +259,10 @@ export default {
           label: 'Fases',
           title: 'Do diagnóstico à entrega',
           items: [
-            'Diagnóstico — 30 minutos sobre o processo e os sistemas que já existem, antes de qualquer orçamento',
-            'Arquitetura — dados, fluxos e integrações, desenhados e validados contigo antes de escrever código',
-            'Construção em ciclos curtos — vês o software a correr a cada fase',
-            'Entrega — em produção, com deploy, testes e documentação',
+            'Diagnóstico de 30 minutos sobre o processo e os sistemas atuais, antes de qualquer orçamento',
+            'Arquitetura de dados, fluxos e integrações, validada contigo antes de escrevermos código',
+            'Construção em ciclos curtos, com o software a correr em cada fase',
+            'Entrega em produção, com deploy, testes e documentação',
           ],
         },
         {
@@ -268,8 +270,8 @@ export default {
           title: 'O que fica contigo',
           items: [
             'Código-fonte num repositório teu',
-            'Documentação: como corre, como se altera, como se faz deploy',
-            'Acessos, ambiente, base de dados e deploy nas tuas mãos',
+            'Documentação de como corre, como se altera e como se faz deploy',
+            'Acessos, ambiente e base de dados nas tuas mãos',
             'Fluxos, integrações e APIs prontos a escalar',
           ],
         },
@@ -277,10 +279,10 @@ export default {
           label: 'Suporte',
           title: 'Depois de entregar',
           items: [
-            'Suporte feito por quem escreveu o código',
-            'Prazos de resposta combinados por escrito à partida',
+            'Suporte dado por quem escreveu o código',
+            'Prazos de resposta combinados por escrito',
             'Evoluções por fases, ao teu ritmo',
-            'WhatsApp direto — +351 919 642 845',
+            'WhatsApp direto: +351 919 642 845',
           ],
         },
       ],
@@ -288,14 +290,14 @@ export default {
         title: 'Método Matecno — do diagnóstico à entrega',
         description:
           'Como construímos software à medida: diagnóstico, arquitetura validada, construção em ciclos curtos e entrega em produção com o código no teu repositório.',
-        h1: 'Como trabalhamos — do diagnóstico à entrega',
+        h1: 'Como trabalhamos, do diagnóstico à entrega',
         paras: [
-          'Quatro fases: diagnóstico, arquitetura, construção em ciclos curtos e entrega em produção. O orçamento aparece depois do diagnóstico — quando o âmbito está claro para os dois lados.',
-          'A arquitetura — dados, fluxos, integrações — é desenhada e validada contigo antes da primeira linha de código. A construção corre em ciclos curtos, com o software a funcionar à vista a cada fase. No fim fica em produção, documentado, num repositório teu.',
-          'Foi este método que produziu o HoraCerta: plataforma de marcações multi-tenant, em três idiomas, com lembretes automáticos, em produção sobre Next.js, Prisma e Postgres.',
-          'Depois da entrega, o suporte é feito por quem escreveu o código, com prazos de resposta combinados por escrito. Evoluções entram por fases, ao teu ritmo. O diagnóstico marca-se por WhatsApp (+351 919 642 845) ou email (geral@matecno.pt).',
+          'São quatro fases: diagnóstico, arquitetura, construção em ciclos curtos e entrega em produção. O orçamento aparece depois do diagnóstico, quando o âmbito está claro para os dois lados.',
+          'A arquitetura de dados, fluxos e integrações é desenhada e validada contigo antes da primeira linha de código. A construção avança em ciclos curtos e vais vendo o software a correr em cada fase. No fim fica em produção, documentado, num repositório teu.',
+          'Foi este método que produziu o HoraCerta, a nossa plataforma de marcações multi-tenant em três idiomas, hoje em produção sobre Next.js, Prisma e Postgres.',
+          'Depois da entrega, o suporte é dado por quem escreveu o código, com prazos de resposta combinados por escrito. As evoluções entram por fases, ao teu ritmo. Para marcar o diagnóstico, escreve para o +351 919 642 845 (WhatsApp) ou geral@matecno.pt.',
         ],
-        cta: 'Começa pelo diagnóstico: 30 minutos, gratuito — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+        cta: 'O diagnóstico são 30 minutos, gratuitos. WhatsApp +351 919 642 845 ou geral@matecno.pt.',
       },
     },
     about: {
@@ -306,20 +308,20 @@ export default {
           title: 'Código escrito de raiz',
           items: [
             'Software à medida, do modelo de dados ao deploy',
-            'Next.js, Node.js e TypeScript — app e backend',
-            'Prisma e PostgreSQL — modelo de dados',
-            'Python para automações e integrações',
-            'Integrações com Stripe, Google Workspace, WhatsApp e email',
+            'Next.js, Node.js e TypeScript na app e no backend',
+            'Prisma e PostgreSQL no modelo de dados',
+            'Python nas automações e integrações',
+            'Stripe, Google Workspace, WhatsApp e email nas integrações',
           ],
         },
         {
           label: 'Onde',
           title: 'Coimbra e remoto para o país',
           items: [
-            'Base em Coimbra, região Centro presencial',
-            'Remoto para todo o Portugal e além',
+            'Base em Coimbra, com presença na região Centro',
+            'Remoto para todo o país',
             'Acesso direto a quem constrói',
-            'WhatsApp e email — resposta em menos de 24h',
+            'Resposta em menos de 24h por WhatsApp e email',
             'Diagnóstico por chamada ou pessoalmente',
           ],
         },
@@ -329,23 +331,23 @@ export default {
           items: [
             'O código-fonte fica teu, num repositório teu',
             'Âmbito, prazos e suporte por escrito',
-            'O HoraCerta em produção é a referência pública',
-            'Um não claro quando não vale a pena construir',
+            'O HoraCerta em produção como referência pública',
+            'Um não claro quando o projeto não se justifica',
           ],
         },
       ],
       page: {
         title: 'Sobre a Matecno — Engenharia de Software à Medida em Coimbra',
         description:
-          'A Matecno escreve software de raiz — Next.js, Prisma, PostgreSQL — em Coimbra e remoto para todo o país. O HoraCerta, em produção, é a referência.',
-        h1: 'Engenharia de software, feita em Coimbra',
+          'A Matecno escreve software de raiz com Next.js, Prisma e PostgreSQL, em Coimbra e remoto para todo o país. O nosso produto HoraCerta está em produção.',
+        h1: 'Engenharia de software feita em Coimbra',
         paras: [
-          'A Matecno constrói software à medida — aplicações web, automações, websites, backends e integrações — em Next.js, Node.js, TypeScript, Prisma e PostgreSQL, com Python nas automações. Integramos Stripe, Google Workspace, email e WhatsApp. E construímos também produtos próprios.',
-          'O HoraCerta é a referência: plataforma de marcações multi-tenant, três idiomas, lembretes automáticos, centenas de marcações geridas por mês, em produção sobre Next.js, Prisma e Postgres. Este site é outro exemplo — estático, trilingue, com o grafo 3D escrito de raiz.',
-          'O código-fonte fica do cliente, num repositório do cliente. Âmbito, prazos e suporte ficam por escrito. E quando um projeto não vale a pena, dizemo-lo no diagnóstico — antes de custar dinheiro a alguém.',
-          'Base em Coimbra, trabalho presencial na região Centro e remoto para todo o país. O primeiro passo é um diagnóstico gratuito de 30 minutos, por chamada ou pessoalmente.',
+          'A Matecno desenvolve aplicações web, automações, websites, backends e integrações. Trabalhamos com Next.js, Node.js, TypeScript, Prisma e PostgreSQL, e usamos Python nas automações. Ligamos os sistemas a Stripe, Google Workspace, email e WhatsApp. Além do trabalho para clientes, temos produtos próprios.',
+          'O nosso principal produto é o HoraCerta, uma plataforma de marcações multi-tenant em três idiomas, com lembretes automáticos, que gere centenas de marcações por mês em produção. Este site também é trabalho nosso, incluindo o grafo 3D da página inicial.',
+          'O código-fonte fica no repositório do cliente. Âmbito, prazos e suporte ficam definidos por escrito antes de começarmos. Quando achamos que um projeto não se justifica, dizemos isso logo no diagnóstico.',
+          'Estamos em Coimbra e trabalhamos presencialmente na região Centro e remoto para o resto do país. O primeiro passo é um diagnóstico gratuito de 30 minutos, por chamada ou pessoalmente.',
         ],
-        cta: 'Fala connosco — WhatsApp +351 919 642 845 ou geral@matecno.pt.',
+        cta: 'Fala connosco pelo WhatsApp +351 919 642 845 ou por geral@matecno.pt.',
       },
     },
     contact: {
@@ -355,10 +357,10 @@ export default {
           label: 'Direto',
           title: 'Linha direta',
           items: [
-            'WhatsApp — +351 919 642 845',
-            'mauro@matecno.pt — linha direta',
+            'WhatsApp: +351 919 642 845',
+            'mauro@matecno.pt para contacto direto',
             'geral@matecno.pt',
-            'Coimbra · remoto para todo o país',
+            'Coimbra, e remoto para todo o país',
             'Falas com quem constrói',
           ],
         },
@@ -367,34 +369,34 @@ export default {
           title: 'Resposta em menos de 24h',
           items: [
             'Email respondido em menos de 24h',
-            'WhatsApp durante o dia de trabalho',
+            'WhatsApp durante o horário de trabalho',
             'Português ou inglês',
-            'Do primeiro contacto ao deploy, uma só conversa',
+            'Uma só conversa, do primeiro contacto ao deploy',
             'Responde quem escreve o código',
           ],
         },
         {
           label: 'Passo',
-          title: 'Diagnóstico gratuito — 30 min',
+          title: 'Diagnóstico gratuito de 30 min',
           items: [
             '30 minutos, por chamada ou pessoalmente',
-            'Percorremos o processo e os sistemas atuais',
-            'Sais com âmbito e orçamento — ou com um não claro',
-            'Marcas por WhatsApp ou email',
+            'Vemos o processo e os sistemas atuais',
+            'Sais com âmbito e orçamento, ou com um não claro',
+            'Marca por WhatsApp ou email',
           ],
         },
       ],
       page: {
         title: 'Contacto — Diagnóstico Gratuito | Matecno Coimbra',
         description:
-          'Fala direto com quem constrói o teu software. Diagnóstico gratuito de 30 minutos, resposta em menos de 24 horas.',
+          'Fala direto com quem constrói o teu software. Diagnóstico gratuito de 30 minutos e resposta em menos de 24 horas.',
         h1: 'Vamos falar do teu projeto',
         paras: [
-          'Falas diretamente com quem constrói — sem gestores de conta, sem camadas até uma resposta técnica.',
-          'A primeira conversa são 30 minutos, gratuitos: percorremos o processo ou a ideia e os sistemas que já usas. No fim tens um orçamento com âmbito claro — ou um não fundamentado, na hora.',
+          'Falas diretamente com quem constrói, sem gestores de conta pelo meio.',
+          'A primeira conversa são 30 minutos, gratuitos. Vemos o processo ou a ideia e os sistemas que já usas. No fim tens um orçamento com âmbito definido, ou um não com explicação.',
           'Escreve por WhatsApp (+351 919 642 845) ou email (geral@matecno.pt). Respondemos em menos de 24 horas, em português ou inglês.',
         ],
-        cta: 'WhatsApp +351 919 642 845 · geral@matecno.pt — resposta em menos de 24 horas',
+        cta: 'WhatsApp +351 919 642 845 · geral@matecno.pt · resposta em menos de 24 horas',
       },
     },
   },
