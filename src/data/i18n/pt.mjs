@@ -32,7 +32,7 @@ export default {
     ],
   },
   core: {
-    tagline: 'Software à medida para empresas. Produtos próprios em produção.',
+    tagline: 'O teu concorrente aparece primeiro no Google. Nós tratamos disso.',
   },
   ui: {
     navAria: 'Principal',
@@ -46,7 +46,7 @@ export default {
     nextStep: 'Próximo passo',
     otherNodes: 'Outros nós',
     backToGraph: 'voltar ao grafo',
-    waMessage: 'Olá, gostaria de agendar um diagnóstico gratuito',
+    waMessage: 'Olá, gostaria de marcar a minha avaliação gratuita',
     floatingWaAria: 'Fale connosco no WhatsApp',
     floatingWaMessage: 'Olá, gostaria de saber mais sobre os vossos serviços',
   },

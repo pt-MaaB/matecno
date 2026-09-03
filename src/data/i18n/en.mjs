@@ -39,7 +39,7 @@ export default {
     ]
   },
   "core": {
-    "tagline": "Custom software for businesses. Our own products in production."
+    "tagline": "Your competitor shows up first on Google. We take care of that."
   },
   "ui": {
     "navAria": "Main",
@@ -53,7 +53,7 @@ export default {
     "nextStep": "Next step",
     "otherNodes": "Other nodes",
     "backToGraph": "back to the graph",
-    "waMessage": "Hi, I'd like to book a free assessment",
+    "waMessage": "Hi, I'd like to book my free assessment",
     "floatingWaAria": "Message us on WhatsApp",
     "floatingWaMessage": "Hi, I'd like to know more about your services"
   },
