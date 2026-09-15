@@ -59,12 +59,12 @@ export default {
   },
   "contact": {
     "ctaKicker": "Talk to us",
-    "ctaSub": "Reply within 24 hours · PT or EN · Coimbra and remote nationwide",
+    "ctaSub": "A direct reply from the people who build · PT or EN · Coimbra and remote nationwide",
     "stepsHeading": "What happens next",
     "steps": [
       {
-        "title": "We reply within 24h",
-        "body": "Reach out by WhatsApp or email. Mauro or someone on the team replies."
+        "title": "You write, we answer",
+        "body": "By WhatsApp or email. Mauro or someone on the team replies, not an automated form."
       },
       {
         "title": "Free 30-min assessment",
@@ -77,7 +77,7 @@ export default {
     ],
     "formKicker": "Prefer to write",
     "formHeading": "Tell us what you need",
-    "formSub": "Reply within 24 hours.",
+    "formSub": "Read by the people who build.",
     "labelName": "Name",
     "labelCompany": "Company",
     "labelEmail": "Email",
@@ -89,7 +89,7 @@ export default {
     "phPhone": "+351 9xx xxx xxx",
     "phMessage": "Briefly describe the problem or idea...",
     "submit": "Send message",
-    "formFootnote": "We always reply within 24 hours"
+    "formFootnote": "We always reply, in Portuguese or English"
   },
   "hubs": {
     "serv": {
@@ -153,7 +153,7 @@ export default {
         "paras": [
           "We work in five areas: custom software, process automation, websites, backends and integrations, and B2B leads. The same stack in everything we do, including our own products."
         ],
-        "cta": "Free 30-minute assessment. WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "Free 30-minute assessment. WhatsApp +351 919 642 845 or mauro@matecno.pt."
       }
     },
     "leads": {
@@ -200,7 +200,7 @@ export default {
           "We also collect custom public data, such as competitor pricing, listings and continuous monitoring, delivered as a spreadsheet, report or automated feed. If you need a steady flow, we define an ideal-customer profile and deliver fresh leads every month.",
           "We work only with public sources and in compliance with GDPR. We don't buy lists or send spam. Before moving forward, we check for free whether your market has enough volume."
         ],
-        "cta": "Ask for a free check of your market. WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "Ask for a free check of your market. WhatsApp +351 919 642 845 or mauro@matecno.pt."
       }
     },
     "produtos": {
@@ -247,7 +247,7 @@ export default {
           "The line will grow. The next product will be for marketing, and each one lands on this page once it's in production.",
           "HoraCerta is also our calling card. It's the most direct way to judge our work before hiring us. If you have a product in mind, the free 30-minute assessment is where we map it out, in Coimbra or remotely."
         ],
-        "cta": "Book a free assessment. WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "Book a free assessment. WhatsApp +351 919 642 845 or mauro@matecno.pt."
       }
     },
     "method": {
@@ -292,9 +292,9 @@ export default {
           "There are four phases: assessment, architecture, building in short cycles and delivery in production. The quote comes after the assessment, once the scope is clear to both sides.",
           "The architecture for data, flows and integrations is designed and validated with you before the first line of code. Building moves in short cycles and you see the software running at every phase. It ends up in production, documented, in your repository.",
           "This method produced HoraCerta, our multi-tenant bookings platform in three languages, in production today on Next.js, Prisma and Postgres.",
-          "After delivery, support is given by the people who wrote the code, with response times agreed in writing. Evolution lands in phases, at your pace. To book the assessment, write to +351 919 642 845 (WhatsApp) or geral@matecno.pt."
+          "After delivery, support is given by the people who wrote the code, with response times agreed in writing. Evolution lands in phases, at your pace. To book the assessment, write to +351 919 642 845 (WhatsApp) or mauro@matecno.pt."
         ],
-        "cta": "The assessment takes 30 minutes and is free. WhatsApp +351 919 642 845 or geral@matecno.pt."
+        "cta": "The assessment takes 30 minutes and is free. WhatsApp +351 919 642 845 or mauro@matecno.pt."
       }
     },
     "about": {
@@ -316,7 +316,7 @@ export default {
           "desc": "Based in Coimbra, working remotely across Portugal, and you always talk to whoever builds.",
           "items": [
             {"k": "Where we are", "v": "Based in Coimbra with presence across the Centro region; remote for the whole country."},
-            {"k": "How you reach us", "v": "Reply within 24h by WhatsApp and email; diagnosis by call or in person."},
+            {"k": "How you reach us", "v": "WhatsApp and email answered by the people who build; assessment by call or in person."},
             {"k": "Advantage", "v": "Direct access to the people who build, with no account managers in between."}
           ]
         },
@@ -341,7 +341,7 @@ export default {
           "The source code stays in the client's repository. Scope, deadlines and support are set down in writing before we start. When we think a project isn't justified, we say so at the assessment.",
           "We are in Coimbra and work on-site across the Centro region and remotely for the rest of the country. The first step is a free 30-minute assessment, by call or in person."
         ],
-        "cta": "Talk to us on WhatsApp +351 919 642 845 or at geral@matecno.pt."
+        "cta": "Talk to us on WhatsApp +351 919 642 845 or at mauro@matecno.pt."
       }
     },
     "contact": {
@@ -352,17 +352,17 @@ export default {
           "title": "Direct line",
           "desc": "One contact, one person: you talk to whoever builds.",
           "items": [
-            {"k": "How you reach us", "v": "WhatsApp +351 919 642 845; mauro@matecno.pt for direct contact; geral@matecno.pt."},
+            {"k": "How you reach us", "v": "WhatsApp +351 919 642 845 or mauro@matecno.pt."},
             {"k": "Where", "v": "Coimbra, and remote across Portugal."},
             {"k": "Advantage", "v": "No forms nobody reads. Your message reaches the person who writes the code."}
           ]
         },
         {
           "label": "Response",
-          "title": "Reply within 24h",
-          "desc": "Email answered within 24h; WhatsApp during working hours.",
+          "title": "A reply from the people who build",
+          "desc": "Email and WhatsApp answered by the people who write the code, in Portuguese or English.",
           "items": [
-            {"k": "How we reply", "v": "Email within 24h, WhatsApp in working hours, in Portuguese or English."},
+            {"k": "How we reply", "v": "By email or WhatsApp, in working hours, in Portuguese or English."},
             {"k": "Who replies", "v": "The person who writes the code, in one conversation from first contact to deploy."},
             {"k": "Advantage", "v": "You never repeat the context to a second person."}
           ]
@@ -380,14 +380,14 @@ export default {
       ],
       "page": {
         "title": "Contact — Free Assessment | Matecno Coimbra",
-        "description": "Talk directly with the people who build your software. Free 30-minute assessment and a reply within 24 hours.",
+        "description": "Talk directly with the people who build your software. Free 30-minute assessment, by WhatsApp or email.",
         "h1": "Let's talk about your project",
         "paras": [
           "You talk directly with the people who build, with no account managers in between.",
           "The first conversation takes 30 minutes and is free. We go over the process or the idea and the systems you already use. At the end you have a quote with a defined scope, or a no with an explanation.",
-          "Write on WhatsApp (+351 919 642 845) or email (geral@matecno.pt). We reply within 24 hours, in Portuguese or English."
+          "Write on WhatsApp (+351 919 642 845) or email (mauro@matecno.pt). We reply in Portuguese or English."
         ],
-        "cta": "WhatsApp +351 919 642 845 · geral@matecno.pt · reply within 24 hours"
+        "cta": "WhatsApp +351 919 642 845 · mauro@matecno.pt · PT or EN"
       }
     }
   }

@@ -59,12 +59,12 @@ export default {
   },
   "contact": {
     "ctaKicker": "Habla con nosotros",
-    "ctaSub": "Respuesta en menos de 24 horas · ES o EN · Coimbra y remoto para todo el país",
+    "ctaSub": "Respuesta directa de quien construye · ES o EN · Coimbra y remoto para todo el país",
     "stepsHeading": "Qué pasa a continuación",
     "steps": [
       {
-        "title": "Respondemos en menos de 24h",
-        "body": "Escribe por WhatsApp o email. Responde Mauro o alguien del equipo."
+        "title": "Escribes, respondemos nosotros",
+        "body": "Por WhatsApp o email. Responde Mauro o alguien del equipo, no un formulario automático."
       },
       {
         "title": "Diagnóstico gratuito de 30 min",
@@ -77,7 +77,7 @@ export default {
     ],
     "formKicker": "Prefieres escribir",
     "formHeading": "Cuéntanos qué necesitas",
-    "formSub": "Respuesta en menos de 24 horas.",
+    "formSub": "Lo lee quien construye.",
     "labelName": "Nombre",
     "labelCompany": "Empresa",
     "labelEmail": "Email",
@@ -89,7 +89,7 @@ export default {
     "phPhone": "+351 9xx xxx xxx",
     "phMessage": "Describe brevemente el problema o la idea...",
     "submit": "Enviar mensaje",
-    "formFootnote": "Respondemos siempre en menos de 24 horas"
+    "formFootnote": "Respondemos siempre, en español o inglés"
   },
   "hubs": {
     "serv": {
@@ -153,7 +153,7 @@ export default {
         "paras": [
           "Trabajamos en cinco áreas: software a medida, automatización de procesos, webs, backends e integraciones, y leads B2B. El mismo stack en todo lo que hacemos, incluidos nuestros propios productos."
         ],
-        "cta": "Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 o geral@matecno.pt."
+        "cta": "Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 o mauro@matecno.pt."
       }
     },
     "leads": {
@@ -200,7 +200,7 @@ export default {
           "También recogemos datos públicos a medida, como precios de la competencia, listados y monitorización continua, entregados en hoja de cálculo, informe o feed automático. Si necesitas un flujo regular, definimos un perfil de cliente ideal y entregamos leads nuevos cada mes.",
           "Trabajamos solo con fuentes públicas y conforme al RGPD. No compramos listas ni enviamos spam. Antes de avanzar, comprobamos gratis si existe volumen suficiente en tu mercado."
         ],
-        "cta": "Pide un análisis gratuito de tu mercado. WhatsApp +351 919 642 845 o geral@matecno.pt."
+        "cta": "Pide un análisis gratuito de tu mercado. WhatsApp +351 919 642 845 o mauro@matecno.pt."
       }
     },
     "produtos": {
@@ -247,7 +247,7 @@ export default {
           "La línea va a crecer. El próximo producto será para marketing, y cada uno entra en esta página cuando esté en producción.",
           "HoraCerta es también nuestra carta de presentación. Es la forma más directa de valorar nuestro trabajo antes de contratarnos. Si tienes un producto en mente, el diagnóstico gratuito de 30 minutos sirve para mapearlo, en Coimbra o en remoto."
         ],
-        "cta": "Agenda un diagnóstico gratuito. WhatsApp +351 919 642 845 o geral@matecno.pt."
+        "cta": "Agenda un diagnóstico gratuito. WhatsApp +351 919 642 845 o mauro@matecno.pt."
       }
     },
     "method": {
@@ -292,9 +292,9 @@ export default {
           "Son cuatro fases: diagnóstico, arquitectura, construcción en ciclos cortos y entrega en producción. El presupuesto aparece después del diagnóstico, cuando el alcance está claro para las dos partes.",
           "La arquitectura de datos, flujos e integraciones se diseña y se valida contigo antes de la primera línea de código. La construcción avanza en ciclos cortos y vas viendo el software funcionar en cada fase. Al final queda en producción, documentado, en un repositorio tuyo.",
           "Este método produjo HoraCerta, nuestra plataforma de reservas multi-tenant en tres idiomas, hoy en producción sobre Next.js, Prisma y Postgres.",
-          "Después de la entrega, el soporte lo da quien escribió el código, con plazos de respuesta acordados por escrito. Las evoluciones entran por fases, a tu ritmo. Para agendar el diagnóstico, escribe al +351 919 642 845 (WhatsApp) o a geral@matecno.pt."
+          "Después de la entrega, el soporte lo da quien escribió el código, con plazos de respuesta acordados por escrito. Las evoluciones entran por fases, a tu ritmo. Para agendar el diagnóstico, escribe al +351 919 642 845 (WhatsApp) o a mauro@matecno.pt."
         ],
-        "cta": "El diagnóstico son 30 minutos, gratuitos. WhatsApp +351 919 642 845 o geral@matecno.pt."
+        "cta": "El diagnóstico son 30 minutos, gratuitos. WhatsApp +351 919 642 845 o mauro@matecno.pt."
       }
     },
     "about": {
@@ -316,7 +316,7 @@ export default {
           "desc": "Base en Coimbra, trabajo remoto para todo Portugal, y siempre hablas con quien construye.",
           "items": [
             {"k": "Dónde estamos", "v": "Base en Coimbra, con presencia en la región Centro; remoto para todo el país."},
-            {"k": "Cómo llegas", "v": "Respuesta en menos de 24h por WhatsApp y email; diagnóstico por llamada o en persona."},
+            {"k": "Cómo llegas", "v": "WhatsApp y email respondidos por quien construye; diagnóstico por llamada o en persona."},
             {"k": "Ventaja", "v": "Acceso directo a quien construye, sin gestores de cuenta en medio."}
           ]
         },
@@ -341,7 +341,7 @@ export default {
           "El código fuente se queda en el repositorio del cliente. Alcance, plazos y soporte quedan definidos por escrito antes de empezar. Cuando pensamos que un proyecto no se justifica, lo decimos en el diagnóstico.",
           "Estamos en Coimbra y trabajamos en persona en la región Centro y en remoto para el resto del país. El primer paso es un diagnóstico gratuito de 30 minutos, por llamada o en persona."
         ],
-        "cta": "Habla con nosotros por WhatsApp +351 919 642 845 o en geral@matecno.pt."
+        "cta": "Habla con nosotros por WhatsApp +351 919 642 845 o en mauro@matecno.pt."
       }
     },
     "contact": {
@@ -352,17 +352,17 @@ export default {
           "title": "Línea directa",
           "desc": "Un contacto, una persona: hablas con quien construye.",
           "items": [
-            {"k": "Cómo llegas", "v": "WhatsApp +351 919 642 845; mauro@matecno.pt para contacto directo; geral@matecno.pt."},
+            {"k": "Cómo llegas", "v": "WhatsApp +351 919 642 845 o mauro@matecno.pt."},
             {"k": "Dónde", "v": "Coimbra, y remoto para todo Portugal."},
             {"k": "Ventaja", "v": "Sin formularios que nadie lee. El mensaje llega a quien escribe el código."}
           ]
         },
         {
           "label": "Respuesta",
-          "title": "Respuesta en menos de 24h",
-          "desc": "Email respondido en menos de 24h; WhatsApp en horario laboral.",
+          "title": "Respuesta de quien construye",
+          "desc": "Email y WhatsApp respondidos por quien escribe el código, en portugués o inglés.",
           "items": [
-            {"k": "Cómo respondemos", "v": "Email en menos de 24h, WhatsApp en horario laboral, en portugués o inglés."},
+            {"k": "Cómo respondemos", "v": "Por email o WhatsApp, en horario laboral, en portugués o inglés."},
             {"k": "Quién responde", "v": "Quien escribe el código, en una sola conversación del primer contacto al deploy."},
             {"k": "Ventaja", "v": "Nunca repites el contexto a una segunda persona."}
           ]
@@ -380,14 +380,14 @@ export default {
       ],
       "page": {
         "title": "Contacto — Diagnóstico Gratuito | Matecno Coimbra",
-        "description": "Habla directo con quien construye tu software. Diagnóstico gratuito de 30 minutos y respuesta en menos de 24 horas.",
+        "description": "Habla directo con quien construye tu software. Diagnóstico gratuito de 30 minutos, por WhatsApp o email.",
         "h1": "Hablemos de tu proyecto",
         "paras": [
           "Hablas directamente con quien construye, sin gestores de cuenta de por medio.",
           "La primera conversación son 30 minutos, gratuitos. Repasamos el proceso o la idea y los sistemas que ya usas. Al final tienes un presupuesto con alcance definido, o un no con explicación.",
-          "Escribe por WhatsApp (+351 919 642 845) o email (geral@matecno.pt). Respondemos en menos de 24 horas, en español o inglés."
+          "Escribe por WhatsApp (+351 919 642 845) o email (mauro@matecno.pt). Respondemos en español o inglés."
         ],
-        "cta": "WhatsApp +351 919 642 845 · geral@matecno.pt · respuesta en menos de 24 horas"
+        "cta": "WhatsApp +351 919 642 845 · mauro@matecno.pt · ES o EN"
       }
     }
   }

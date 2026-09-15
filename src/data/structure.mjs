@@ -90,7 +90,7 @@ export const JSONLD_BASE = {
   '@id': 'https://matecno.pt/#organization',
   name: 'Matecno',
   alternateName: 'Matecno IT Services',
-  email: 'geral@matecno.pt',
+  email: 'mauro@matecno.pt',
   telephone: '+351919642845',
   priceRange: '€€',
   image: 'https://matecno.pt/og.png',
