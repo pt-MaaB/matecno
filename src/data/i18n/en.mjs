@@ -162,34 +162,31 @@ export default {
         {
           "label": "Offer",
           "title": "What we deliver",
+          "desc": "Verified B2B leads, delivered every month and segmented for your sales team.",
           "items": [
-            "Verified, qualified B2B lead generation",
-            "Enrichment and cleaning of existing lists",
-            "Custom public-data collection",
-            "A monthly flow of fresh leads",
-            "Segmentation by sector and region"
+            {"k": "What we deliver", "v": "Qualified B2B lead generation, enrichment and cleaning of existing lists, custom public-data collection."},
+            {"k": "How we deliver", "v": "A monthly flow of new leads, segmented by sector and region, in the format you use: spreadsheet, report or feed."},
+            {"k": "Advantage", "v": "Your team starts every month with fresh, qualified contacts and no time lost hunting."}
           ]
         },
         {
-          "label": "Every lead",
+          "label": "Each lead",
           "title": "Every contact, complete",
+          "desc": "A contact only makes the list when you can call and write today.",
           "items": [
-            "Decision-maker's name and job title",
-            "Email verified before delivery",
-            "Direct phone number",
-            "No duplicates",
-            "Delivered as a spreadsheet, report or feed"
+            {"k": "What's included", "v": "Decision-maker name and role, direct phone, and an email verified before delivery."},
+            {"k": "How we guarantee it", "v": "Email verification before delivery and de-duplication across the whole list."},
+            {"k": "Advantage", "v": "Zero bounces and zero repeat calls to the same business."}
           ]
         },
         {
           "label": "Trust",
           "title": "Public sources, GDPR",
+          "desc": "Data from public sources, handled within GDPR, no purchased lists.",
           "items": [
-            "Public-source data only",
-            "GDPR-compliant",
-            "No bought lists",
-            "No spam",
-            "Free market check before moving forward"
+            {"k": "Where it comes from", "v": "Public sources only; no purchased lists, no resold contacts."},
+            {"k": "How we work", "v": "GDPR compliance and a free market analysis before you commit."},
+            {"k": "Advantage", "v": "You reach out legitimately and know the size of the market before you pay."}
           ]
         }
       ],
@@ -212,33 +209,31 @@ export default {
         {
           "label": "HoraCerta",
           "title": "The product in production",
+          "desc": "An online booking platform, in production, with real businesses using it every day.",
           "items": [
-            "HoraCerta, an online bookings platform",
-            "Multi-tenant, with data isolated per business",
-            "Three languages with native i18n",
-            "Automatic reminders on every booking",
-            "Hundreds of bookings managed every month"
+            {"k": "What it is", "v": "Multi-tenant online booking, data isolated per business, automatic reminders and three native languages."},
+            {"k": "In production", "v": "Hundreds of bookings managed per month."},
+            {"k": "Advantage", "v": "You see what we build running before you trust us with your project."}
           ]
         },
         {
           "label": "Stack",
           "title": "The engineering behind it",
+          "desc": "The same stack we use on client projects, proving itself in a product of our own.",
           "items": [
-            "Next.js on the application and frontend",
-            "Prisma and Postgres on the data model",
-            "Per-tenant data isolation designed from scratch",
-            "Custom backends and integrations",
-            "Our own code end to end"
+            {"k": "What we use", "v": "Next.js in the application, Prisma and PostgreSQL in the data model, custom backends and integrations."},
+            {"k": "How it's built", "v": "Per-tenant data isolation designed from scratch; our code end to end."},
+            {"k": "Advantage", "v": "No technical decision on your project is theory: we've already made it in a product in production."}
           ]
         },
         {
           "label": "The line",
           "title": "The line will grow",
+          "desc": "HoraCerta is the first; each next product lands here when it is in production.",
           "items": [
-            "HoraCerta is our first in-house product",
-            "The next product will be for marketing",
-            "Each product lands on this page once it's in production",
-            "The stack is the same as our client work"
+            {"k": "What's next", "v": "The next product will be for marketing, on the same stack."},
+            {"k": "How it qualifies", "v": "It only appears on this page once in production with real users."},
+            {"k": "Advantage", "v": "This page shows what works, not what's planned."}
           ]
         }
       ],
@@ -260,32 +255,32 @@ export default {
       "aspects": [
         {
           "label": "Phases",
-          "title": "From assessment to delivery",
+          "title": "From diagnosis to delivery",
+          "desc": "Four phases, with software running from the second.",
           "items": [
-            "A 30-minute assessment of the process and the current systems, before any quote",
-            "Architecture for data, flows and integrations, validated with you before we write code",
-            "Building in short cycles, with the software running at every phase",
-            "Delivery in production, with deploy, tests and documentation"
+            {"k": "How it starts", "v": "A 30-minute diagnosis of your process and current systems, before any quote."},
+            {"k": "How we build", "v": "Data architecture and integrations validated with you; short cycles with software running in every phase; delivery to production with deploy, tests and documentation."},
+            {"k": "Advantage", "v": "You see real progress every cycle, and the quote rests on a diagnosis, not a blind estimate."}
           ]
         },
         {
           "label": "Deliverables",
-          "title": "What you keep",
+          "title": "What stays with you",
+          "desc": "At the end the project is entirely yours, with no dependency on us.",
           "items": [
-            "Source code in your repository",
-            "Documentation on how it runs, how to change it and how to deploy it",
-            "Access, environment and database in your hands",
-            "Flows, integrations and APIs ready to scale"
+            {"k": "What you get", "v": "Source code in your own repository; documentation of how it runs, how to change it and how to deploy it."},
+            {"k": "How it's left", "v": "Access, environment and database in your hands; flows, integrations and APIs ready to scale."},
+            {"k": "Advantage", "v": "Continue with us or with any other team. The choice is yours."}
           ]
         },
         {
           "label": "Support",
           "title": "After delivery",
+          "desc": "Support from the people who wrote the code, on response times agreed in writing.",
           "items": [
-            "Support given by the people who wrote the code",
-            "Response times agreed in writing",
-            "Evolution in phases, at your pace",
-            "Direct WhatsApp: +351 919 642 845"
+            {"k": "What's included", "v": "Written response times and evolution in phases, at your pace."},
+            {"k": "How it works", "v": "Direct WhatsApp, +351 919 642 845, to whoever built the system."},
+            {"k": "Advantage", "v": "You never explain your system to someone who doesn't know it."}
           ]
         }
       ],
@@ -308,33 +303,31 @@ export default {
         {
           "label": "Engineering",
           "title": "Code written from scratch",
+          "desc": "Custom software, from data model to deploy, with no off-the-shelf platform underneath.",
           "items": [
-            "Custom software, from data model to deploy",
-            "Next.js, Node.js and TypeScript on the app and backend",
-            "Prisma and PostgreSQL on the data model",
-            "Python on automations and integrations",
-            "Stripe, Google Workspace, WhatsApp and email on integrations"
+            {"k": "What we do", "v": "Custom software, automations and integrations, from data model to deploy."},
+            {"k": "With what", "v": "Next.js, Node.js and TypeScript in the app and backend; Prisma and PostgreSQL in the data model; Python for automations; Stripe, Google Workspace, WhatsApp and email for integrations."},
+            {"k": "Advantage", "v": "One stack, mastered end to end, with no layers nobody on the team can maintain."}
           ]
         },
         {
           "label": "Where",
-          "title": "Coimbra and remote nationwide",
+          "title": "Coimbra, and remote across the country",
+          "desc": "Based in Coimbra, working remotely across Portugal, and you always talk to whoever builds.",
           "items": [
-            "Based in Coimbra, with a presence across the Centro region",
-            "Remote nationwide",
-            "Direct access to the people who build",
-            "Reply within 24h by WhatsApp and email",
-            "Assessment by call or in person"
+            {"k": "Where we are", "v": "Based in Coimbra with presence across the Centro region; remote for the whole country."},
+            {"k": "How you reach us", "v": "Reply within 24h by WhatsApp and email; diagnosis by call or in person."},
+            {"k": "Advantage", "v": "Direct access to the people who build, with no account managers in between."}
           ]
         },
         {
           "label": "Principles",
-          "title": "What gets agreed",
+          "title": "What we agree",
+          "desc": "Four commitments, in writing, on every project.",
           "items": [
-            "The source code stays yours, in your repository",
-            "Scope, deadlines and support in writing",
-            "HoraCerta in production as the public reference",
-            "A clear no when the project isn't justified"
+            {"k": "What we promise", "v": "The source code is yours, in your own repository; scope, deadlines and support in writing."},
+            {"k": "What we show", "v": "HoraCerta in production as a public reference."},
+            {"k": "Advantage", "v": "A clear no when the project isn't worth it. You keep the money and the time."}
           ]
         }
       ],
@@ -357,33 +350,31 @@ export default {
         {
           "label": "Direct",
           "title": "Direct line",
+          "desc": "One contact, one person: you talk to whoever builds.",
           "items": [
-            "WhatsApp: +351 919 642 845",
-            "mauro@matecno.pt for direct contact",
-            "geral@matecno.pt",
-            "Coimbra, and remote nationwide",
-            "You talk to the people who build"
+            {"k": "How you reach us", "v": "WhatsApp +351 919 642 845; mauro@matecno.pt for direct contact; geral@matecno.pt."},
+            {"k": "Where", "v": "Coimbra, and remote across Portugal."},
+            {"k": "Advantage", "v": "No forms nobody reads. Your message reaches the person who writes the code."}
           ]
         },
         {
-          "label": "Reply",
+          "label": "Response",
           "title": "Reply within 24h",
+          "desc": "Email answered within 24h; WhatsApp during working hours.",
           "items": [
-            "Email answered within 24h",
-            "WhatsApp during working hours",
-            "Portuguese or English",
-            "One conversation, from first contact to deploy",
-            "Answered by the people who write the code"
+            {"k": "How we reply", "v": "Email within 24h, WhatsApp in working hours, in Portuguese or English."},
+            {"k": "Who replies", "v": "The person who writes the code, in one conversation from first contact to deploy."},
+            {"k": "Advantage", "v": "You never repeat the context to a second person."}
           ]
         },
         {
-          "label": "Step",
-          "title": "Free 30-min assessment",
+          "label": "Next step",
+          "title": "Free 30-minute diagnosis",
+          "desc": "Thirty minutes on your process and systems, no commitment.",
           "items": [
-            "30 minutes, by call or in person",
-            "We go over the process and the current systems",
-            "You leave with scope and a quote, or a clear no",
-            "Book by WhatsApp or email"
+            {"k": "What we do", "v": "We look at your process and current systems, by call or in person."},
+            {"k": "What you leave with", "v": "A scope and a quote, or a clear no."},
+            {"k": "Advantage", "v": "You decide with a concrete plan in hand, not a promise."}
           ]
         }
       ],

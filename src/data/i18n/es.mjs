@@ -161,35 +161,32 @@ export default {
       "aspects": [
         {
           "label": "Oferta",
-          "title": "Lo que entregamos",
+          "title": "Qué entregamos",
+          "desc": "Leads B2B verificados, entregados cada mes y segmentados para tu equipo comercial.",
           "items": [
-            "Generación de leads B2B verificados y cualificados",
-            "Enriquecimiento y limpieza de listas existentes",
-            "Recogida de datos públicos a medida",
-            "Flujo mensual de leads nuevos",
-            "Segmentación por sector y región"
+            {"k": "Qué entregamos", "v": "Generación de leads B2B cualificados, enriquecimiento y limpieza de listas existentes, recogida de datos públicos a medida."},
+            {"k": "Cómo entregamos", "v": "Flujo mensual de leads nuevos, segmentado por sector y región, en el formato que usas: hoja de cálculo, informe o feed."},
+            {"k": "Ventaja", "v": "Tu equipo empieza cada mes con contactos nuevos y cualificados, sin perder tiempo buscando."}
           ]
         },
         {
           "label": "Cada lead",
           "title": "Cada contacto, completo",
+          "desc": "Un contacto solo entra en la lista cuando se puede llamar y escribir hoy.",
           "items": [
-            "Nombre y cargo del decisor",
-            "Email verificado antes de la entrega",
-            "Teléfono directo",
-            "Sin duplicados",
-            "Entregado en hoja de cálculo, informe o feed"
+            {"k": "Qué incluye", "v": "Nombre y cargo del decisor, teléfono directo y email verificado antes de la entrega."},
+            {"k": "Cómo lo garantizamos", "v": "Verificación de email antes de entregar y deduplicación en toda la lista."},
+            {"k": "Ventaja", "v": "Cero rebotes y cero llamadas repetidas al mismo negocio."}
           ]
         },
         {
           "label": "Confianza",
           "title": "Fuentes públicas, RGPD",
+          "desc": "Datos de fuentes públicas, tratados dentro del RGPD, sin listas compradas.",
           "items": [
-            "Solo datos de fuentes públicas",
-            "Conforme al RGPD",
-            "Sin listas compradas",
-            "Sin spam",
-            "Análisis de mercado gratuito antes de avanzar"
+            {"k": "De dónde vienen", "v": "Solo fuentes públicas; sin listas compradas ni reventa de contactos."},
+            {"k": "Cómo trabajamos", "v": "Cumplimiento del RGPD y un análisis de mercado gratuito antes de avanzar."},
+            {"k": "Ventaja", "v": "Contactas con legitimidad y conoces el tamaño del mercado antes de pagar."}
           ]
         }
       ],
@@ -212,33 +209,31 @@ export default {
         {
           "label": "HoraCerta",
           "title": "El producto en producción",
+          "desc": "Plataforma de reservas online, en producción, con negocios reales usándola cada día.",
           "items": [
-            "HoraCerta, plataforma de reservas online",
-            "Multi-tenant, con datos aislados por negocio",
-            "Tres idiomas con i18n nativo",
-            "Recordatorios automáticos en cada reserva",
-            "Cientos de reservas gestionadas al mes"
+            {"k": "Qué es", "v": "Reservas online multi-tenant, con datos aislados por negocio, recordatorios automáticos y tres idiomas nativos."},
+            {"k": "En producción", "v": "Cientos de reservas gestionadas al mes."},
+            {"k": "Ventaja", "v": "Ves lo que construimos funcionando antes de confiarnos tu proyecto."}
           ]
         },
         {
           "label": "Stack",
           "title": "La ingeniería detrás",
+          "desc": "El mismo stack que usamos en los proyectos para clientes, probándose en un producto propio.",
           "items": [
-            "Next.js en la aplicación y el frontend",
-            "Prisma y Postgres en el modelo de datos",
-            "Aislamiento de datos por tenant diseñado desde cero",
-            "Backends e integraciones a medida",
-            "Código nuestro de punta a punta"
+            {"k": "Qué usamos", "v": "Next.js en la aplicación, Prisma y PostgreSQL en el modelo de datos, backends e integraciones a medida."},
+            {"k": "Cómo está hecho", "v": "Aislamiento de datos por tenant diseñado desde cero; código nuestro de principio a fin."},
+            {"k": "Ventaja", "v": "Ninguna decisión técnica en tu proyecto es teoría: ya la tomamos en un producto en producción."}
           ]
         },
         {
           "label": "La línea",
           "title": "La línea va a crecer",
+          "desc": "HoraCerta es el primero; cada producto siguiente entra aquí cuando está en producción.",
           "items": [
-            "HoraCerta es el primer producto propio",
-            "El próximo producto será para marketing",
-            "Cada producto entra en esta página cuando está en producción",
-            "El stack es el mismo del trabajo para clientes"
+            {"k": "Qué viene", "v": "El próximo producto será para marketing, en el mismo stack."},
+            {"k": "Cómo entra", "v": "Solo aparece en esta página cuando está en producción con usuarios reales."},
+            {"k": "Ventaja", "v": "Esta página muestra lo que funciona, no lo que está planeado."}
           ]
         }
       ],
@@ -261,31 +256,31 @@ export default {
         {
           "label": "Fases",
           "title": "Del diagnóstico a la entrega",
+          "desc": "Cuatro fases, con software funcionando desde la segunda.",
           "items": [
-            "Diagnóstico de 30 minutos sobre el proceso y los sistemas actuales, antes de cualquier presupuesto",
-            "Arquitectura de datos, flujos e integraciones, validada contigo antes de escribir código",
-            "Construcción en ciclos cortos, con el software funcionando en cada fase",
-            "Entrega en producción, con deploy, pruebas y documentación"
+            {"k": "Cómo empieza", "v": "Diagnóstico de 30 minutos sobre el proceso y los sistemas actuales, antes de cualquier presupuesto."},
+            {"k": "Cómo construimos", "v": "Arquitectura de datos e integraciones validada contigo; construcción en ciclos cortos con el software funcionando en cada fase; entrega en producción con deploy, tests y documentación."},
+            {"k": "Ventaja", "v": "Ves progreso real en cada ciclo, y el presupuesto se apoya en un diagnóstico, no en una estimación a ciegas."}
           ]
         },
         {
           "label": "Entregables",
-          "title": "Lo que se queda contigo",
+          "title": "Lo que queda contigo",
+          "desc": "Al final, el proyecto es tuyo por completo, sin dependencia de nosotros.",
           "items": [
-            "Código fuente en un repositorio tuyo",
-            "Documentación de cómo funciona, cómo se modifica y cómo se hace deploy",
-            "Accesos, entorno y base de datos en tus manos",
-            "Flujos, integraciones y APIs listos para escalar"
+            {"k": "Qué recibes", "v": "Código fuente en un repositorio tuyo; documentación de cómo funciona, cómo se cambia y cómo se despliega."},
+            {"k": "Cómo queda", "v": "Accesos, entorno y base de datos en tus manos; flujos, integraciones y APIs listos para escalar."},
+            {"k": "Ventaja", "v": "Puedes seguir con nosotros o con cualquier otro equipo. La elección es tuya."}
           ]
         },
         {
           "label": "Soporte",
           "title": "Después de entregar",
+          "desc": "El soporte lo da quien escribió el código, con plazos acordados por escrito.",
           "items": [
-            "Soporte dado por quien escribió el código",
-            "Plazos de respuesta acordados por escrito",
-            "Evoluciones por fases, a tu ritmo",
-            "WhatsApp directo: +351 919 642 845"
+            {"k": "Qué incluye", "v": "Plazos de respuesta por escrito y evoluciones por fases, a tu ritmo."},
+            {"k": "Cómo funciona", "v": "WhatsApp directo, +351 919 642 845, con quien construyó el sistema."},
+            {"k": "Ventaja", "v": "Nunca explicas tu sistema a alguien que no lo conoce."}
           ]
         }
       ],
@@ -308,33 +303,31 @@ export default {
         {
           "label": "Ingeniería",
           "title": "Código escrito desde cero",
+          "desc": "Software a medida, del modelo de datos al deploy, sin plataformas prefabricadas debajo.",
           "items": [
-            "Software a medida, del modelo de datos al deploy",
-            "Next.js, Node.js y TypeScript en la app y el backend",
-            "Prisma y PostgreSQL en el modelo de datos",
-            "Python en las automatizaciones e integraciones",
-            "Stripe, Google Workspace, WhatsApp y email en las integraciones"
+            {"k": "Qué hacemos", "v": "Software a medida, automatizaciones e integraciones, del modelo de datos al deploy."},
+            {"k": "Con qué", "v": "Next.js, Node.js y TypeScript en la app y el backend; Prisma y PostgreSQL en el modelo de datos; Python en las automatizaciones; Stripe, Google Workspace, WhatsApp y email en las integraciones."},
+            {"k": "Ventaja", "v": "Un solo stack, dominado de principio a fin, sin capas que nadie del equipo sepa mantener."}
           ]
         },
         {
           "label": "Dónde",
           "title": "Coimbra y remoto para todo el país",
+          "desc": "Base en Coimbra, trabajo remoto para todo Portugal, y siempre hablas con quien construye.",
           "items": [
-            "Base en Coimbra, con presencia en la región Centro",
-            "Remoto para todo el país",
-            "Acceso directo a quien construye",
-            "Respuesta en menos de 24h por WhatsApp y email",
-            "Diagnóstico por llamada o en persona"
+            {"k": "Dónde estamos", "v": "Base en Coimbra, con presencia en la región Centro; remoto para todo el país."},
+            {"k": "Cómo llegas", "v": "Respuesta en menos de 24h por WhatsApp y email; diagnóstico por llamada o en persona."},
+            {"k": "Ventaja", "v": "Acceso directo a quien construye, sin gestores de cuenta en medio."}
           ]
         },
         {
           "label": "Principios",
           "title": "Lo que queda acordado",
+          "desc": "Cuatro compromisos, por escrito, en todos los proyectos.",
           "items": [
-            "El código fuente se queda contigo, en un repositorio tuyo",
-            "Alcance, plazos y soporte por escrito",
-            "HoraCerta en producción como referencia pública",
-            "Un no claro cuando el proyecto no se justifica"
+            {"k": "Qué prometemos", "v": "El código fuente es tuyo, en un repositorio tuyo; alcance, plazos y soporte por escrito."},
+            {"k": "Qué mostramos", "v": "HoraCerta en producción como referencia pública."},
+            {"k": "Ventaja", "v": "Un no claro cuando el proyecto no se justifica. Ahorras el dinero y el tiempo."}
           ]
         }
       ],
@@ -357,33 +350,31 @@ export default {
         {
           "label": "Directo",
           "title": "Línea directa",
+          "desc": "Un contacto, una persona: hablas con quien construye.",
           "items": [
-            "WhatsApp: +351 919 642 845",
-            "mauro@matecno.pt para contacto directo",
-            "geral@matecno.pt",
-            "Coimbra, y remoto para todo el país",
-            "Hablas con quien construye"
+            {"k": "Cómo llegas", "v": "WhatsApp +351 919 642 845; mauro@matecno.pt para contacto directo; geral@matecno.pt."},
+            {"k": "Dónde", "v": "Coimbra, y remoto para todo Portugal."},
+            {"k": "Ventaja", "v": "Sin formularios que nadie lee. El mensaje llega a quien escribe el código."}
           ]
         },
         {
           "label": "Respuesta",
           "title": "Respuesta en menos de 24h",
+          "desc": "Email respondido en menos de 24h; WhatsApp en horario laboral.",
           "items": [
-            "Email respondido en menos de 24h",
-            "WhatsApp en horario laboral",
-            "Español o inglés",
-            "Una sola conversación, del primer contacto al deploy",
-            "Responde quien escribe el código"
+            {"k": "Cómo respondemos", "v": "Email en menos de 24h, WhatsApp en horario laboral, en portugués o inglés."},
+            {"k": "Quién responde", "v": "Quien escribe el código, en una sola conversación del primer contacto al deploy."},
+            {"k": "Ventaja", "v": "Nunca repites el contexto a una segunda persona."}
           ]
         },
         {
           "label": "Paso",
           "title": "Diagnóstico gratuito de 30 min",
+          "desc": "Treinta minutos sobre tu proceso y sistemas, sin compromiso.",
           "items": [
-            "30 minutos, por llamada o en persona",
-            "Repasamos el proceso y los sistemas actuales",
-            "Sales con alcance y presupuesto, o con un no claro",
-            "Agenda por WhatsApp o email"
+            {"k": "Qué hacemos", "v": "Vemos el proceso y los sistemas actuales, por llamada o en persona."},
+            {"k": "Con qué sales", "v": "Alcance y presupuesto, o un no claro."},
+            {"k": "Ventaja", "v": "Decides con un plan concreto en la mano, no con una promesa."}
           ]
         }
       ],

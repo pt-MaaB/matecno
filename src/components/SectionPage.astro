@@ -85,12 +85,15 @@ const mono = 'font-mono';
               <span class={`${mono} text-[11px] font-medium tracking-[0.1em]`} style={`color:${color}`}>{String(i + 1).padStart(2, '0')}</span>
               <span class="h-px flex-1 bg-gray-100"></span>
             </div>
-            <h3 class="mb-3 text-[15px] font-semibold leading-snug text-gray-900">{asp.title}</h3>
+            <h3 class="mb-2 text-[15px] font-semibold leading-snug text-gray-900">{asp.title}</h3>
+            {asp.desc && <p class="mb-4 text-[14px] leading-relaxed text-gray-500">{asp.desc}</p>}
             <ul class="space-y-2">
               {asp.items.map((it) => (
                 <li class="flex gap-2.5 text-[13.5px] leading-snug text-gray-600">
                   <span class="mt-[7px] inline-block h-1 w-1 shrink-0 rounded-full" style={`background:${color}`}></span>
-                  <span>{it}</span>
+                  {typeof it === 'string'
+                    ? <span>{it}</span>
+                    : <span><strong class="font-semibold text-gray-800">{it.k}:</strong> {it.v}</span>}
                 </li>
               ))}
             </ul>
