@@ -98,51 +98,50 @@ export default {
         {
           "label": "Software",
           "title": "Custom software",
-          "desc": "Web applications and multi-tenant platforms, built from scratch for your business.",
+          "desc": "Web platforms and internal tools built to scale your operation.",
           "items": [
-            "Multi-tenant platforms and management panels",
-            "Authentication, payments, invoicing and notifications",
-            "The source code stays yours"
+            {"k": "What we build", "v": "Management dashboards, client portals and multi-tenant SaaS applications."},
+            {"k": "How we deliver", "v": "Source code 100% yours, scalable infrastructure, authentication and payments integrated."},
+            {"k": "Advantage", "v": "Full control over the product, with no third-party licences or off-the-shelf limits."}
           ]
         },
         {
           "label": "Automation",
           "title": "Process automation",
-          "desc": "Repetitive processes start running without intervention, with logging and alerts.",
+          "desc": "Remove repetitive manual work between the tools your team already uses.",
           "items": [
-            "Invoicing, emails, reports and syncing between systems",
-            "Scheduled or event-driven runs",
-            "Logs and alerts when something fails"
+            {"k": "What we automate", "v": "Data sync, invoicing, email sends and automatic reports."},
+            {"k": "Infrastructure", "v": "Scheduled or event-driven runs, with audit logs and instant alerts if anything fails."},
+            {"k": "Advantage", "v": "Processes running 24/7 with zero human error."}
           ]
         },
         {
           "label": "Websites",
           "title": "Websites and platforms",
-          "desc": "Fast, hand-written sites with technical SEO handled from the start.",
+          "desc": "Ultra-fast, hand-built sites for maximum performance and visibility.",
           "items": [
-            "Static, light pages, like this site",
-            "Three languages with native i18n",
-            "Schema, hreflang and Core Web Vitals"
+            {"k": "What's included", "v": "Lightweight static architecture, native i18n (multi-language), Schema and optimised Core Web Vitals."},
+            {"k": "Advantage", "v": "Higher Google rankings and instant load times, with no heavy plugins to depend on."}
           ]
         },
         {
           "label": "Backends",
           "title": "Backends, APIs and integrations",
-          "desc": "APIs, integrations and the engineering that connects the systems you already use.",
+          "desc": "We connect the systems you already use so data flows without manual work.",
           "items": [
-            "REST APIs and webhooks",
-            "Stripe, Google Workspace, WhatsApp and email",
-            "Queues, crons and data syncing"
+            {"k": "What we integrate", "v": "Stripe, Google Workspace, WhatsApp, email and your ERP/CRM, via REST APIs and webhooks."},
+            {"k": "How we deliver", "v": "Queues, crons and sync with retries, monitoring and API documentation."},
+            {"k": "Advantage", "v": "One reliable data flow across tools — no more exporting and importing spreadsheets by hand."}
           ]
         },
         {
           "label": "Leads & Data",
           "title": "Leads & Data",
-          "desc": "Verified B2B lists, data enrichment and market monitoring.",
+          "desc": "Verified B2B lists and market intelligence for your sales team.",
           "items": [
-            "Verified B2B lead generation",
-            "Data enrichment and cleaning",
-            "Market intelligence"
+            {"k": "What we deliver", "v": "Verified B2B leads, list enrichment and cleaning, custom public-data collection."},
+            {"k": "How we deliver", "v": "Email verified before delivery, direct phone, no duplicates, a monthly flow segmented by sector and region."},
+            {"k": "Advantage", "v": "Your team talks to the right people instead of hunting for contacts."}
           ],
           "linkTo": "leads"
         }
@@ -152,7 +151,7 @@ export default {
         "description": "Custom software, process automation, websites, backends and integrations, plus B2B leads and data. Code written from scratch with Next.js, Prisma and PostgreSQL.",
         "h1": "What we build",
         "paras": [
-          "We work in five areas: custom software, process automation, websites, backends and B2B data. We use the same stack across everything we do, including our own products."
+          "We work in five areas: custom software, process automation, websites, backends and integrations, and B2B leads. The same stack in everything we do, including our own products."
         ],
         "cta": "Free 30-minute assessment. WhatsApp +351 919 642 845 or geral@matecno.pt."
       }

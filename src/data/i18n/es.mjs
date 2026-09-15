@@ -98,51 +98,50 @@ export default {
         {
           "label": "Software",
           "title": "Software a medida",
-          "desc": "Aplicaciones web y plataformas multi-tenant, construidas desde cero para tu negocio.",
+          "desc": "Plataformas web y herramientas internas hechas a medida para escalar tu operación.",
           "items": [
-            "Plataformas multi-tenant y paneles de gestión",
-            "Autenticación, pagos, facturación y notificaciones",
-            "El código fuente se queda contigo"
+            {"k": "Qué construimos", "v": "Paneles de gestión, portales de clientes y aplicaciones SaaS multi-tenant."},
+            {"k": "Cómo entregamos", "v": "Código fuente 100% tuyo, infraestructura escalable y autenticación/pagos integrados."},
+            {"k": "Ventaja", "v": "Control total sobre el producto, sin licencias de terceros ni límites del software prefabricado."}
           ]
         },
         {
           "label": "Automatización",
           "title": "Automatización de procesos",
-          "desc": "Los procesos repetitivos pasan a funcionar sin intervención, con registro y alertas.",
+          "desc": "Elimina el trabajo manual repetitivo entre las herramientas que tu equipo ya usa.",
           "items": [
-            "Facturación, emails, informes y sincronización entre sistemas",
-            "Ejecución programada o por eventos",
-            "Logs y alertas cuando algo falla"
+            {"k": "Qué automatizamos", "v": "Sincronización de datos, emisión de facturas, envíos de email e informes automáticos."},
+            {"k": "Infraestructura", "v": "Ejecución programada o por eventos, con logs de auditoría y alertas instantáneas si algo falla."},
+            {"k": "Ventaja", "v": "Procesos funcionando 24/7 con cero error humano."}
           ]
         },
         {
           "label": "Webs",
           "title": "Webs y plataformas",
-          "desc": "Webs rápidas, escritas a mano, con el SEO técnico resuelto desde el principio.",
+          "desc": "Sitios ultrarrápidos hechos a mano para máximo rendimiento y visibilidad.",
           "items": [
-            "Páginas estáticas y ligeras, como esta web",
-            "Tres idiomas con i18n nativo",
-            "Schema, hreflang y Core Web Vitals"
+            {"k": "Qué incluye", "v": "Arquitectura estática ligera, i18n nativo (multi-idioma), Schema y Core Web Vitals optimizados."},
+            {"k": "Ventaja", "v": "Mejor posicionamiento en Google y carga instantánea, sin depender de plugins pesados."}
           ]
         },
         {
           "label": "Backends",
           "title": "Backends, APIs e integraciones",
-          "desc": "APIs, integraciones y la ingeniería que conecta los sistemas que ya usas.",
+          "desc": "Conectamos los sistemas que ya usas para que los datos fluyan sin trabajo manual.",
           "items": [
-            "APIs REST y webhooks",
-            "Stripe, Google Workspace, WhatsApp y email",
-            "Colas, crons y sincronización de datos"
+            {"k": "Qué integramos", "v": "Stripe, Google Workspace, WhatsApp, email y tu ERP/CRM, vía APIs REST y webhooks."},
+            {"k": "Cómo entregamos", "v": "Colas, crons y sincronización con reintentos, monitorización y documentación de la API."},
+            {"k": "Ventaja", "v": "Un único flujo de datos fiable entre herramientas, sin exportar e importar hojas a mano."}
           ]
         },
         {
-          "label": "Leads y Datos",
-          "title": "Leads y Datos",
-          "desc": "Listas B2B verificadas, enriquecimiento de datos y monitorización de mercado.",
+          "label": "Leads & Datos",
+          "title": "Leads & Datos",
+          "desc": "Listas B2B verificadas e inteligencia de mercado para tu equipo comercial.",
           "items": [
-            "Generación de leads B2B verificados",
-            "Enriquecimiento y limpieza de datos",
-            "Inteligencia de mercado"
+            {"k": "Qué entregamos", "v": "Leads B2B verificados, enriquecimiento y limpieza de listas, recogida de datos públicos a medida."},
+            {"k": "Cómo entregamos", "v": "Email verificado antes de la entrega, teléfono directo, sin duplicados, flujo mensual segmentado por sector y región."},
+            {"k": "Ventaja", "v": "Tu equipo habla con quien importa, en vez de buscar contactos."}
           ],
           "linkTo": "leads"
         }
@@ -150,9 +149,9 @@ export default {
       "page": {
         "title": "Servicios — Software a Medida, Automatización y Leads B2B | Matecno",
         "description": "Software a medida, automatización de procesos, webs, backends e integraciones, además de leads B2B y datos. Código escrito desde cero con Next.js, Prisma y PostgreSQL.",
-        "h1": "Lo que construimos",
+        "h1": "Qué construimos",
         "paras": [
-          "Trabajamos en cinco áreas: software a medida, automatización de procesos, webs, backends y datos B2B. Usamos el mismo stack en todo lo que hacemos, incluidos nuestros propios productos."
+          "Trabajamos en cinco áreas: software a medida, automatización de procesos, webs, backends e integraciones, y leads B2B. El mismo stack en todo lo que hacemos, incluidos nuestros propios productos."
         ],
         "cta": "Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 o geral@matecno.pt."
       }
