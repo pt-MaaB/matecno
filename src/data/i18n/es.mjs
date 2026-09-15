@@ -63,10 +63,6 @@ export default {
     "stepsHeading": "Qué pasa a continuación",
     "steps": [
       {
-        "title": "Escribes, respondemos nosotros",
-        "body": "Por WhatsApp o email. Responde Mauro o alguien del equipo, no un formulario automático."
-      },
-      {
         "title": "Diagnóstico gratuito de 30 min",
         "body": "Por llamada o en persona. Repasamos contigo el proceso en cuestión y los sistemas que ya usas."
       },

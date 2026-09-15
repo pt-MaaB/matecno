@@ -63,10 +63,6 @@ export default {
     "stepsHeading": "What happens next",
     "steps": [
       {
-        "title": "You write, we answer",
-        "body": "By WhatsApp or email. Mauro or someone on the team replies, not an automated form."
-      },
-      {
         "title": "Free 30-min assessment",
         "body": "By call or in person. We go over the process in question and the systems you already use."
       },
