@@ -5,9 +5,9 @@
 export default {
   "seo": {
     "titleHome": "Matecno — Software a Medida en Coimbra",
-    "descHome": "Software a medida, automatizaciones, webs y backends para empresas. Código escrito desde cero con Next.js, Prisma y PostgreSQL, el mismo stack de nuestros productos en producción.",
+    "descHome": "Software a medida, automatización, webs e integraciones para empresas, en Coimbra y en todo el país. Construido desde cero para tu proceso, con nuestro propio producto en producción como prueba.",
     "jsonldDescription": "Construimos software a medida, automatizaciones, webs, backends e integraciones para empresas, en Coimbra y en remoto. Código escrito desde cero.",
-    "ownsDescription": "Plataforma de reservas multi-tenant, en tres idiomas y con recordatorios automáticos. En producción.",
+    "ownsDescription": "Plataforma de reservas online para varios negocios, en tres idiomas, con recordatorios automáticos. En producción.",
     "areaServedRemote": "Remoto: Portugal y resto del mundo",
     "knowsAbout": [
       "Desarrollo de software a medida",
@@ -39,7 +39,7 @@ export default {
     ]
   },
   "core": {
-    "tagline": "Tu competencia aparece primero en Google. Nosotros nos encargamos."
+    "tagline": "Software que hace el trabajo repetitivo por ti. Una web que te trae clientes."
   },
   "ui": {
     "navAria": "Principal",
@@ -144,10 +144,10 @@ export default {
       ],
       "page": {
         "title": "Servicios — Software a Medida, Automatización y Leads B2B | Matecno",
-        "description": "Software a medida, automatización de procesos, webs, backends e integraciones, además de leads B2B y datos. Código escrito desde cero con Next.js, Prisma y PostgreSQL.",
+        "description": "Software a medida, automatización de procesos, webs, backends e integraciones, y leads B2B. La herramienta exacta para tu proceso cuando el software de estantería no encaja.",
         "h1": "Qué construimos",
         "paras": [
-          "Trabajamos en cinco áreas: software a medida, automatización de procesos, webs, backends e integraciones, y leads B2B. El mismo stack en todo lo que hacemos, incluidos nuestros propios productos."
+          "Trabajamos en cinco áreas: software a medida, automatización de procesos, webs, backends e integraciones, y leads B2B. Empezamos siempre por el proceso que hoy te cuesta tiempo o clientes."
         ],
         "cta": "Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 o mauro@matecno.pt."
       }
@@ -207,18 +207,18 @@ export default {
           "title": "El producto en producción",
           "desc": "Plataforma de reservas online, en producción, con negocios reales usándola cada día.",
           "items": [
-            {"k": "Qué es", "v": "Reservas online multi-tenant, con datos aislados por negocio, recordatorios automáticos y tres idiomas nativos."},
-            {"k": "En producción", "v": "Cientos de reservas gestionadas al mes."},
+            {"k": "Qué es", "v": "Reservas online para varios negocios en la misma plataforma, con los datos de cada uno aislados, recordatorios automáticos y tres idiomas nativos."},
+            {"k": "En producción", "v": "Más de 2.000 reservas procesadas hasta hoy, cada una con su recordatorio automático."},
             {"k": "Ventaja", "v": "Ves lo que construimos funcionando antes de confiarnos tu proyecto."}
           ]
         },
         {
-          "label": "Stack",
-          "title": "La ingeniería detrás",
-          "desc": "El mismo stack que usamos en los proyectos para clientes, probándose en un producto propio.",
+          "label": "Prueba",
+          "title": "Lo que HoraCerta demuestra",
+          "desc": "Las decisiones técnicas que tu proyecto va a necesitar ya se tomaron y se probaron aquí.",
           "items": [
-            {"k": "Qué usamos", "v": "Next.js en la aplicación, Prisma y PostgreSQL en el modelo de datos, backends e integraciones a medida."},
-            {"k": "Cómo está hecho", "v": "Aislamiento de datos por tenant diseñado desde cero; código nuestro de principio a fin."},
+            {"k": "Lo que ya funciona", "v": "Pagos online, señal contra ausencias, consentimientos RGPD firmados en el móvil y recordatorios automáticos, en negocios reales."},
+            {"k": "Cómo está hecho", "v": "Los datos de cada negocio aislados desde la primera línea; código nuestro de principio a fin."},
             {"k": "Ventaja", "v": "Ninguna decisión técnica en tu proyecto es teoría: ya la tomamos en un producto en producción."}
           ]
         },
@@ -227,7 +227,7 @@ export default {
           "title": "La línea va a crecer",
           "desc": "HoraCerta es el primero; cada producto siguiente entra aquí cuando está en producción.",
           "items": [
-            {"k": "Qué viene", "v": "El próximo producto será para marketing, en el mismo stack."},
+            {"k": "Qué viene", "v": "El próximo producto será para marketing."},
             {"k": "Cómo entra", "v": "Solo aparece en esta página cuando está en producción con usuarios reales."},
             {"k": "Ventaja", "v": "Esta página muestra lo que funciona, no lo que está planeado."}
           ]
@@ -235,11 +235,11 @@ export default {
       ],
       "page": {
         "title": "Productos — HoraCerta y la línea Matecno | Coimbra",
-        "description": "HoraCerta, plataforma de reservas multi-tenant en producción con Next.js, Prisma y Postgres, en tres idiomas. El software propio de Matecno.",
+        "description": "HoraCerta, la plataforma de reservas de Matecno: en producción, en tres idiomas, con más de 2.000 reservas procesadas. El producto que muestra cómo construimos.",
         "h1": "Nuestros productos",
         "paras": [
-          "Además del trabajo para clientes, lanzamos nuestros propios productos. El primero es HoraCerta, una plataforma de reservas en producción que gestiona cientos de reservas al mes.",
-          "Es multi-tenant, con varios negocios sobre la misma base y datos aislados por tenant, en tres idiomas y con recordatorios automáticos en cada reserva. La aplicación funciona con Next.js, con Prisma y Postgres en el modelo de datos.",
+          "No solo hacemos software para clientes: lanzamos nuestros propios productos. El primero es HoraCerta, una plataforma de reservas en producción con más de 2.000 reservas procesadas.",
+          "Varios negocios usan la misma plataforma con los datos de cada uno aislados, en tres idiomas, con recordatorios automáticos en cada reserva, pagos online y consentimientos RGPD firmados en el móvil.",
           "La línea va a crecer. El próximo producto será para marketing, y cada uno entra en esta página cuando esté en producción.",
           "HoraCerta es también nuestra carta de presentación. Es la forma más directa de valorar nuestro trabajo antes de contratarnos. Si tienes un producto en mente, el diagnóstico gratuito de 30 minutos sirve para mapearlo, en Coimbra o en remoto."
         ],
@@ -287,7 +287,7 @@ export default {
         "paras": [
           "Son cuatro fases: diagnóstico, arquitectura, construcción en ciclos cortos y entrega en producción. El presupuesto aparece después del diagnóstico, cuando el alcance está claro para las dos partes.",
           "La arquitectura de datos, flujos e integraciones se diseña y se valida contigo antes de la primera línea de código. La construcción avanza en ciclos cortos y vas viendo el software funcionar en cada fase. Al final queda en producción, documentado, en un repositorio tuyo.",
-          "Este método produjo HoraCerta, nuestra plataforma de reservas multi-tenant en tres idiomas, hoy en producción sobre Next.js, Prisma y Postgres.",
+          "Este método produjo HoraCerta, nuestra plataforma de reservas, hoy en producción en tres idiomas.",
           "Después de la entrega, el soporte lo da quien escribió el código, con plazos de respuesta acordados por escrito. Las evoluciones entran por fases, a tu ritmo. Para agendar el diagnóstico, escribe al +351 919 642 845 (WhatsApp) o a mauro@matecno.pt."
         ],
         "cta": "El diagnóstico son 30 minutos, gratuitos. WhatsApp +351 919 642 845 o mauro@matecno.pt."
@@ -329,11 +329,11 @@ export default {
       ],
       "page": {
         "title": "Sobre Matecno — Ingeniería de Software a Medida en Coimbra",
-        "description": "Matecno escribe software desde cero con Next.js, Prisma y PostgreSQL, en Coimbra y remoto para todo el país. Nuestro producto HoraCerta está en producción.",
+        "description": "Ingeniería de software en Coimbra y remoto para todo el país: software a medida, automatización, webs e integraciones, con nuestro producto HoraCerta en producción.",
         "h1": "Ingeniería de software hecha en Coimbra",
         "paras": [
-          "Matecno desarrolla aplicaciones web, automatizaciones, webs, backends e integraciones. Trabajamos con Next.js, Node.js, TypeScript, Prisma y PostgreSQL, y usamos Python en las automatizaciones. Conectamos los sistemas con Stripe, Google Workspace, email y WhatsApp. Además del trabajo para clientes, tenemos productos propios.",
-          "Nuestro principal producto es HoraCerta, una plataforma de reservas multi-tenant en tres idiomas, con recordatorios automáticos, que gestiona cientos de reservas al mes en producción. Esta web también es trabajo nuestro, incluido el grafo 3D de la página de inicio.",
+          "Matecno construye aplicaciones web, automatizaciones, webs, backends e integraciones para empresas que ya no caben en el software de estantería. Conectamos los sistemas que ya usas con Stripe, Google Workspace, email y WhatsApp, para que tu equipo deje de copiar datos a mano. Además del trabajo para clientes, tenemos productos propios.",
+          "Nuestro principal producto es HoraCerta, una plataforma de reservas en tres idiomas, con recordatorios automáticos, en producción con más de 2.000 reservas procesadas. Esta web también es trabajo nuestro, incluido el grafo 3D de la página de inicio.",
           "El código fuente se queda en el repositorio del cliente. Alcance, plazos y soporte quedan definidos por escrito antes de empezar. Cuando pensamos que un proyecto no se justifica, lo decimos en el diagnóstico.",
           "Estamos en Coimbra y trabajamos en persona en la región Centro y en remoto para el resto del país. El primer paso es un diagnóstico gratuito de 30 minutos, por llamada o en persona."
         ],

@@ -5,9 +5,9 @@
 export default {
   "seo": {
     "titleHome": "Matecno — Custom Software in Coimbra",
-    "descHome": "Custom software, automations, websites and backends for businesses. Code written from scratch with Next.js, Prisma and PostgreSQL, the same stack our own products run on.",
+    "descHome": "Custom software, automation, websites and integrations for businesses, in Coimbra and nationwide. Built from scratch for your process, with our own product in production as proof.",
     "jsonldDescription": "We build custom software, automations, websites, backends and integrations for businesses, in Coimbra and remotely. Code written from scratch.",
-    "ownsDescription": "Multi-tenant bookings platform, in three languages with automatic reminders. In production.",
+    "ownsDescription": "Online bookings platform serving several businesses, in three languages, with automatic reminders. In production.",
     "areaServedRemote": "Remote: Portugal and worldwide",
     "knowsAbout": [
       "Custom software development",
@@ -39,7 +39,7 @@ export default {
     ]
   },
   "core": {
-    "tagline": "Your competitor shows up first on Google. We take care of that."
+    "tagline": "Software that does the repetitive work for you. A website that brings you clients."
   },
   "ui": {
     "navAria": "Main",
@@ -144,10 +144,10 @@ export default {
       ],
       "page": {
         "title": "Services — Custom Software, Automation and B2B Leads | Matecno",
-        "description": "Custom software, process automation, websites, backends and integrations, plus B2B leads and data. Code written from scratch with Next.js, Prisma and PostgreSQL.",
+        "description": "Custom software, process automation, websites, backends and integrations, and B2B leads. The exact tool for your process when off-the-shelf software does not fit.",
         "h1": "What we build",
         "paras": [
-          "We work in five areas: custom software, process automation, websites, backends and integrations, and B2B leads. The same stack in everything we do, including our own products."
+          "We work in five areas: custom software, process automation, websites, backends and integrations, and B2B leads. We always start with the process that costs you time or clients today."
         ],
         "cta": "Free 30-minute assessment. WhatsApp +351 919 642 845 or mauro@matecno.pt."
       }
@@ -207,18 +207,18 @@ export default {
           "title": "The product in production",
           "desc": "An online booking platform, in production, with real businesses using it every day.",
           "items": [
-            {"k": "What it is", "v": "Multi-tenant online booking, data isolated per business, automatic reminders and three native languages."},
-            {"k": "In production", "v": "Hundreds of bookings managed per month."},
+            {"k": "What it is", "v": "Online bookings for several businesses on one platform, each with its data isolated, automatic reminders and three native languages."},
+            {"k": "In production", "v": "Over 2,000 bookings processed to date, each with its automatic reminder."},
             {"k": "Advantage", "v": "You see what we build running before you trust us with your project."}
           ]
         },
         {
-          "label": "Stack",
-          "title": "The engineering behind it",
-          "desc": "The same stack we use on client projects, proving itself in a product of our own.",
+          "label": "Proof",
+          "title": "What HoraCerta proves",
+          "desc": "The technical decisions your project will need have already been made and tested here.",
           "items": [
-            {"k": "What we use", "v": "Next.js in the application, Prisma and PostgreSQL in the data model, custom backends and integrations."},
-            {"k": "How it's built", "v": "Per-tenant data isolation designed from scratch; our code end to end."},
+            {"k": "Already running", "v": "Online payments, deposits against no-shows, GDPR consents signed on the phone and automatic reminders, in real businesses."},
+            {"k": "How it's built", "v": "Each business's data isolated from the first line; our code end to end."},
             {"k": "Advantage", "v": "No technical decision on your project is theory: we've already made it in a product in production."}
           ]
         },
@@ -227,7 +227,7 @@ export default {
           "title": "The line will grow",
           "desc": "HoraCerta is the first; each next product lands here when it is in production.",
           "items": [
-            {"k": "What's next", "v": "The next product will be for marketing, on the same stack."},
+            {"k": "What's next", "v": "The next product will be for marketing."},
             {"k": "How it qualifies", "v": "It only appears on this page once in production with real users."},
             {"k": "Advantage", "v": "This page shows what works, not what's planned."}
           ]
@@ -235,11 +235,11 @@ export default {
       ],
       "page": {
         "title": "Products — HoraCerta and the Matecno line | Coimbra",
-        "description": "HoraCerta, a multi-tenant bookings platform in production with Next.js, Prisma and Postgres, in three languages. Matecno's own software.",
+        "description": "HoraCerta, Matecno's bookings platform: in production, in three languages, with over 2,000 bookings processed. The product that shows how we build.",
         "h1": "Our products",
         "paras": [
-          "Besides client work, we launch our own products. The first is HoraCerta, a bookings platform in production that manages hundreds of bookings a month.",
-          "It's multi-tenant, with several businesses on the same platform and data isolated per tenant, in three languages, with automatic reminders on every booking. The application runs on Next.js, with Prisma and Postgres on the data model.",
+          "We don't only build software for clients: we launch our own products. The first is HoraCerta, a bookings platform in production with over 2,000 bookings processed.",
+          "Several businesses use the same platform with each one's data isolated, in three languages, with automatic reminders on every booking, online payments and GDPR consents signed on the phone.",
           "The line will grow. The next product will be for marketing, and each one lands on this page once it's in production.",
           "HoraCerta is also our calling card. It's the most direct way to judge our work before hiring us. If you have a product in mind, the free 30-minute assessment is where we map it out, in Coimbra or remotely."
         ],
@@ -287,7 +287,7 @@ export default {
         "paras": [
           "There are four phases: assessment, architecture, building in short cycles and delivery in production. The quote comes after the assessment, once the scope is clear to both sides.",
           "The architecture for data, flows and integrations is designed and validated with you before the first line of code. Building moves in short cycles and you see the software running at every phase. It ends up in production, documented, in your repository.",
-          "This method produced HoraCerta, our multi-tenant bookings platform in three languages, in production today on Next.js, Prisma and Postgres.",
+          "This method produced HoraCerta, our bookings platform, in production today in three languages.",
           "After delivery, support is given by the people who wrote the code, with response times agreed in writing. Evolution lands in phases, at your pace. To book the assessment, write to +351 919 642 845 (WhatsApp) or mauro@matecno.pt."
         ],
         "cta": "The assessment takes 30 minutes and is free. WhatsApp +351 919 642 845 or mauro@matecno.pt."
@@ -329,11 +329,11 @@ export default {
       ],
       "page": {
         "title": "About Matecno — Custom Software Engineering in Coimbra",
-        "description": "Matecno writes software from scratch with Next.js, Prisma and PostgreSQL, in Coimbra and remotely nationwide. Our product HoraCerta is in production.",
+        "description": "Software engineering in Coimbra and remotely nationwide: custom software, automation, websites and integrations, with our product HoraCerta in production.",
         "h1": "Software engineering made in Coimbra",
         "paras": [
-          "Matecno develops web applications, automations, websites, backends and integrations. We work with Next.js, Node.js, TypeScript, Prisma and PostgreSQL, and use Python on the automations. We connect systems to Stripe, Google Workspace, email and WhatsApp. Besides client work, we have products of our own.",
-          "Our main product is HoraCerta, a multi-tenant bookings platform in three languages, with automatic reminders, managing hundreds of bookings a month in production. This site is our work too, including the 3D graph on the home page.",
+          "Matecno builds web applications, automations, websites, backends and integrations for businesses that have outgrown off-the-shelf software. We connect the systems you already use to Stripe, Google Workspace, email and WhatsApp, so your team stops copying data by hand. Besides client work, we have products of our own.",
+          "Our main product is HoraCerta, a bookings platform in three languages, with automatic reminders, in production with over 2,000 bookings processed. This site is our work too, including the 3D graph on the home page.",
           "The source code stays in the client's repository. Scope, deadlines and support are set down in writing before we start. When we think a project isn't justified, we say so at the assessment.",
           "We are in Coimbra and work on-site across the Centro region and remotely for the rest of the country. The first step is a free 30-minute assessment, by call or in person."
         ],
