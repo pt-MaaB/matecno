@@ -52,7 +52,7 @@ export default {
   },
   contact: {
     ctaKicker: 'Fala connosco',
-    ctaSub: 'Resposta direta de quem constrói · PT ou EN · Coimbra e remoto para o país',
+    ctaSub: 'PT ou EN · Coimbra e remoto para o país',
     stepsHeading: 'O que acontece a seguir',
     steps: [
       {
@@ -66,7 +66,7 @@ export default {
     ],
     formKicker: 'Preferes escrever',
     formHeading: 'Conta-nos o que precisas',
-    formSub: 'Quem lê é quem constrói.',
+    formSub: 'Duas linhas chegam para começar.',
     labelName: 'Nome',
     labelCompany: 'Empresa',
     labelEmail: 'Email',
@@ -306,11 +306,11 @@ export default {
         {
           label: 'Onde',
           title: 'Coimbra e remoto para o país',
-          desc: 'Base em Coimbra, trabalho remoto para todo o país, e falas sempre com quem constrói.',
+          desc: 'Coimbra, com trabalho presencial na região Centro e remoto para o resto do país.',
           items: [
-            { k: 'Onde estamos', v: 'Base em Coimbra, com presença na região Centro; remoto para todo o país.' },
-            { k: 'Como chegas', v: 'WhatsApp e email respondidos por quem constrói; diagnóstico por chamada ou pessoalmente.' },
-            { k: 'Vantagem', v: 'Acesso direto a quem constrói, sem gestores de conta pelo meio.' },
+            { k: 'Onde estamos', v: 'Coimbra. Reuniões presenciais na região Centro; remoto para o resto do país.' },
+            { k: 'Como chegas', v: 'WhatsApp ou email; o diagnóstico é por chamada ou pessoalmente.' },
+            { k: 'Vantagem', v: 'Reuniões na tua empresa quando fizer falta, e um projeto no teu fuso horário e na tua língua.' },
           ],
         },
         {
@@ -344,20 +344,20 @@ export default {
         {
           label: 'Direto',
           title: 'Linha direta',
-          desc: 'Um contacto, uma pessoa: falas com quem constrói.',
+          desc: 'Um número, um email, uma pessoa do outro lado.',
           items: [
             { k: 'Como chegas', v: 'WhatsApp +351 919 642 845 ou mauro@matecno.pt.' },
             { k: 'Onde', v: 'Coimbra, e remoto para todo o país.' },
-            { k: 'Vantagem', v: 'Sem formulários que ninguém lê. A mensagem chega a quem escreve o código.' },
+            { k: 'Vantagem', v: 'A tua mensagem é lida por quem vai fazer o trabalho.' },
           ],
         },
         {
           label: 'Resposta',
-          title: 'Resposta de quem constrói',
-          desc: 'Email e WhatsApp respondidos por quem escreve o código, em português ou inglês.',
+          title: 'Quem responde',
+          desc: 'Email e WhatsApp respondidos pela pessoa que vai fazer o trabalho, em português ou inglês.',
           items: [
             { k: 'Como respondemos', v: 'Por email ou WhatsApp, em horário de trabalho, em português ou inglês.' },
-            { k: 'Quem responde', v: 'Quem escreve o código, numa só conversa do primeiro contacto ao deploy.' },
+            { k: 'Uma conversa', v: 'A mesma pessoa do primeiro contacto ao deploy.' },
             { k: 'Vantagem', v: 'Nunca repetes o contexto a uma segunda pessoa.' },
           ],
         },
@@ -375,10 +375,10 @@ export default {
       page: {
         title: 'Contacto — Diagnóstico Gratuito | Matecno Coimbra',
         description:
-          'Fala direto com quem constrói o teu software. Diagnóstico gratuito de 30 minutos, por WhatsApp ou email.',
+          'Diagnóstico gratuito de 30 minutos para software à medida, automação, websites e apps. WhatsApp ou email, Coimbra e remoto.',
         h1: 'Vamos falar do teu projeto',
         paras: [
-          'Falas diretamente com quem constrói, sem gestores de conta pelo meio.',
+          'Conta-nos o problema, o processo que queres automatizar ou a ideia que queres lançar.',
           'A primeira conversa são 30 minutos, gratuitos. Vemos o processo ou a ideia e os sistemas que já usas. No fim tens um orçamento com âmbito definido, ou um não com explicação.',
           'Escreve por WhatsApp (+351 919 642 845) ou email (mauro@matecno.pt). Respondemos em português ou inglês.',
         ],

@@ -59,7 +59,7 @@ export default {
   },
   "contact": {
     "ctaKicker": "Habla con nosotros",
-    "ctaSub": "Respuesta directa de quien construye · ES o EN · Coimbra y remoto para todo el país",
+    "ctaSub": "ES o EN · Coimbra y remoto para todo el país",
     "stepsHeading": "Qué pasa a continuación",
     "steps": [
       {
@@ -73,7 +73,7 @@ export default {
     ],
     "formKicker": "Prefieres escribir",
     "formHeading": "Cuéntanos qué necesitas",
-    "formSub": "Lo lee quien construye.",
+    "formSub": "Dos líneas bastan para empezar.",
     "labelName": "Nombre",
     "labelCompany": "Empresa",
     "labelEmail": "Email",
@@ -309,11 +309,11 @@ export default {
         {
           "label": "Dónde",
           "title": "Coimbra y remoto para todo el país",
-          "desc": "Base en Coimbra, trabajo remoto para todo Portugal, y siempre hablas con quien construye.",
+          "desc": "Coimbra, con trabajo presencial en la región Centro y remoto para el resto del país.",
           "items": [
-            {"k": "Dónde estamos", "v": "Base en Coimbra, con presencia en la región Centro; remoto para todo el país."},
-            {"k": "Cómo llegas", "v": "WhatsApp y email respondidos por quien construye; diagnóstico por llamada o en persona."},
-            {"k": "Ventaja", "v": "Acceso directo a quien construye, sin gestores de cuenta en medio."}
+            {"k": "Dónde estamos", "v": "Coimbra. Reuniones presenciales en la región Centro; remoto para el resto del país."},
+            {"k": "Cómo llegas", "v": "WhatsApp o email; el diagnóstico es por llamada o en persona."},
+            {"k": "Ventaja", "v": "Reuniones en tu empresa cuando hagan falta, y un proyecto en tu zona horaria y en tu idioma."}
           ]
         },
         {
@@ -346,20 +346,20 @@ export default {
         {
           "label": "Directo",
           "title": "Línea directa",
-          "desc": "Un contacto, una persona: hablas con quien construye.",
+          "desc": "Un número, un email, una persona al otro lado.",
           "items": [
             {"k": "Cómo llegas", "v": "WhatsApp +351 919 642 845 o mauro@matecno.pt."},
             {"k": "Dónde", "v": "Coimbra, y remoto para todo Portugal."},
-            {"k": "Ventaja", "v": "Sin formularios que nadie lee. El mensaje llega a quien escribe el código."}
+            {"k": "Ventaja", "v": "Tu mensaje lo lee quien va a hacer el trabajo."}
           ]
         },
         {
           "label": "Respuesta",
-          "title": "Respuesta de quien construye",
-          "desc": "Email y WhatsApp respondidos por quien escribe el código, en portugués o inglés.",
+          "title": "Quién responde",
+          "desc": "Email y WhatsApp respondidos por la persona que va a hacer el trabajo, en portugués o inglés.",
           "items": [
             {"k": "Cómo respondemos", "v": "Por email o WhatsApp, en horario laboral, en portugués o inglés."},
-            {"k": "Quién responde", "v": "Quien escribe el código, en una sola conversación del primer contacto al deploy."},
+            {"k": "Una conversación", "v": "La misma persona del primer contacto al deploy."},
             {"k": "Ventaja", "v": "Nunca repites el contexto a una segunda persona."}
           ]
         },
@@ -376,10 +376,10 @@ export default {
       ],
       "page": {
         "title": "Contacto — Diagnóstico Gratuito | Matecno Coimbra",
-        "description": "Habla directo con quien construye tu software. Diagnóstico gratuito de 30 minutos, por WhatsApp o email.",
+        "description": "Diagnóstico gratuito de 30 minutos para software a medida, automatización, webs y apps. WhatsApp o email, Coimbra y remoto.",
         "h1": "Hablemos de tu proyecto",
         "paras": [
-          "Hablas directamente con quien construye, sin gestores de cuenta de por medio.",
+          "Cuéntanos el problema, el proceso que quieres automatizar o la idea que quieres lanzar.",
           "La primera conversación son 30 minutos, gratuitos. Repasamos el proceso o la idea y los sistemas que ya usas. Al final tienes un presupuesto con alcance definido, o un no con explicación.",
           "Escribe por WhatsApp (+351 919 642 845) o email (mauro@matecno.pt). Respondemos en español o inglés."
         ],

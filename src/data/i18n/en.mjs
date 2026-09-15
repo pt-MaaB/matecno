@@ -59,7 +59,7 @@ export default {
   },
   "contact": {
     "ctaKicker": "Talk to us",
-    "ctaSub": "A direct reply from the people who build · PT or EN · Coimbra and remote nationwide",
+    "ctaSub": "PT or EN · Coimbra and remote nationwide",
     "stepsHeading": "What happens next",
     "steps": [
       {
@@ -73,7 +73,7 @@ export default {
     ],
     "formKicker": "Prefer to write",
     "formHeading": "Tell us what you need",
-    "formSub": "Read by the people who build.",
+    "formSub": "Two lines are enough to start.",
     "labelName": "Name",
     "labelCompany": "Company",
     "labelEmail": "Email",
@@ -309,11 +309,11 @@ export default {
         {
           "label": "Where",
           "title": "Coimbra, and remote across the country",
-          "desc": "Based in Coimbra, working remotely across Portugal, and you always talk to whoever builds.",
+          "desc": "Coimbra, working on site across the Centro region and remotely for the rest of the country.",
           "items": [
-            {"k": "Where we are", "v": "Based in Coimbra with presence across the Centro region; remote for the whole country."},
-            {"k": "How you reach us", "v": "WhatsApp and email answered by the people who build; assessment by call or in person."},
-            {"k": "Advantage", "v": "Direct access to the people who build, with no account managers in between."}
+            {"k": "Where we are", "v": "Coimbra. In-person meetings across the Centro region; remote for the rest of the country."},
+            {"k": "How you reach us", "v": "WhatsApp or email; the assessment is by call or in person."},
+            {"k": "Advantage", "v": "Meetings at your company when they are needed, and a project in your time zone and your language."}
           ]
         },
         {
@@ -346,20 +346,20 @@ export default {
         {
           "label": "Direct",
           "title": "Direct line",
-          "desc": "One contact, one person: you talk to whoever builds.",
+          "desc": "One number, one email, one person on the other end.",
           "items": [
             {"k": "How you reach us", "v": "WhatsApp +351 919 642 845 or mauro@matecno.pt."},
             {"k": "Where", "v": "Coimbra, and remote across Portugal."},
-            {"k": "Advantage", "v": "No forms nobody reads. Your message reaches the person who writes the code."}
+            {"k": "Advantage", "v": "Your message is read by the person who will do the work."}
           ]
         },
         {
           "label": "Response",
-          "title": "A reply from the people who build",
-          "desc": "Email and WhatsApp answered by the people who write the code, in Portuguese or English.",
+          "title": "Who replies",
+          "desc": "Email and WhatsApp answered by the person who will do the work, in Portuguese or English.",
           "items": [
             {"k": "How we reply", "v": "By email or WhatsApp, in working hours, in Portuguese or English."},
-            {"k": "Who replies", "v": "The person who writes the code, in one conversation from first contact to deploy."},
+            {"k": "One conversation", "v": "The same person from first contact to deploy."},
             {"k": "Advantage", "v": "You never repeat the context to a second person."}
           ]
         },
@@ -376,10 +376,10 @@ export default {
       ],
       "page": {
         "title": "Contact — Free Assessment | Matecno Coimbra",
-        "description": "Talk directly with the people who build your software. Free 30-minute assessment, by WhatsApp or email.",
+        "description": "Free 30-minute assessment for custom software, automation, websites and apps. WhatsApp or email, Coimbra and remote.",
         "h1": "Let's talk about your project",
         "paras": [
-          "You talk directly with the people who build, with no account managers in between.",
+          "Tell us the problem, the process you want to automate, or the idea you want to launch.",
           "The first conversation takes 30 minutes and is free. We go over the process or the idea and the systems you already use. At the end you have a quote with a defined scope, or a no with an explanation.",
           "Write on WhatsApp (+351 919 642 845) or email (mauro@matecno.pt). We reply in Portuguese or English."
         ],
