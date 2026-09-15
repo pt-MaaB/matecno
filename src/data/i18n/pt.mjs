@@ -203,7 +203,7 @@ export default {
           desc: 'Plataforma de marcações online, em produção, com negócios reais a usá-la todos os dias.',
           items: [
             { k: 'O que é', v: 'Marcações online para vários negócios na mesma plataforma, com os dados de cada um isolados, lembretes automáticos e três idiomas nativos.' },
-            { k: 'Em produção', v: 'Mais de 2.000 marcações processadas até hoje, cada uma com o seu lembrete automático.' },
+            { k: 'Em produção', v: 'Agenda, pagamentos com sinal, lembretes e consentimentos RGPD a correr para negócios reais, em três idiomas.' },
             { k: 'Vantagem', v: 'Vês o que construímos a correr antes de nos confiares o teu projeto.' },
           ],
         },
@@ -231,10 +231,10 @@ export default {
       page: {
         title: 'Produtos — HoraCerta e a linha Matecno | Coimbra',
         description:
-          'HoraCerta, a plataforma de marcações da Matecno: em produção, em três idiomas, com mais de 2.000 marcações processadas. O produto que mostra como construímos.',
+          'HoraCerta, a plataforma de marcações da Matecno: um sistema completo em produção, da agenda aos pagamentos, em três idiomas. O produto que mostra como construímos.',
         h1: 'Os nossos produtos',
         paras: [
-          'Não fazemos só software para clientes: lançamos os nossos próprios produtos. O primeiro é o HoraCerta, uma plataforma de marcações em produção com mais de 2.000 marcações processadas.',
+          'Não fazemos só software para clientes: lançamos os nossos próprios produtos. O primeiro é o HoraCerta, uma plataforma de marcações em produção, construída e operada por nós de ponta a ponta.',
           'Vários negócios usam a mesma plataforma com os dados de cada um isolados, em três idiomas, com lembretes automáticos em cada marcação, pagamentos online e consentimentos RGPD assinados no telemóvel.',
           'A linha vai crescer. O próximo produto será para marketing, e cada um entra nesta página quando estiver em produção.',
           'O HoraCerta é também o nosso cartão de visita. É a forma mais direta de avaliar o nosso trabalho antes de nos contratar. Se tens um produto em mente, o diagnóstico gratuito de 30 minutos serve para o mapear, em Coimbra ou remoto.',
@@ -331,7 +331,7 @@ export default {
         h1: 'Engenharia de software feita em Coimbra',
         paras: [
           'A Matecno constrói aplicações web, automações, websites, backends e integrações para empresas que já não cabem no software de prateleira. Ligamos os sistemas que já usas a Stripe, Google Workspace, email e WhatsApp, para a tua equipa deixar de copiar dados à mão. Além do trabalho para clientes, temos produtos próprios.',
-          'O nosso principal produto é o HoraCerta, uma plataforma de marcações em três idiomas, com lembretes automáticos, em produção com mais de 2.000 marcações processadas. Este site também é trabalho nosso, incluindo o grafo 3D da página inicial.',
+          'O nosso principal produto é o HoraCerta, uma plataforma de marcações em três idiomas, em produção, da agenda aos pagamentos, construída e operada por nós. Este site também é trabalho nosso, incluindo o grafo 3D da página inicial.',
           'O código-fonte fica no repositório do cliente. Âmbito, prazos e suporte ficam definidos por escrito antes de começarmos. Quando achamos que um projeto não se justifica, dizemos isso logo no diagnóstico.',
           'Estamos em Coimbra e trabalhamos presencialmente na região Centro e remoto para o resto do país. O primeiro passo é um diagnóstico gratuito de 30 minutos, por chamada ou pessoalmente.',
         ],

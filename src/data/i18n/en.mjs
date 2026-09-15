@@ -208,7 +208,7 @@ export default {
           "desc": "An online booking platform, in production, with real businesses using it every day.",
           "items": [
             {"k": "What it is", "v": "Online bookings for several businesses on one platform, each with its data isolated, automatic reminders and three native languages."},
-            {"k": "In production", "v": "Over 2,000 bookings processed to date, each with its automatic reminder."},
+            {"k": "In production", "v": "Calendar, payments with deposits, reminders and GDPR consents running for real businesses, in three languages."},
             {"k": "Advantage", "v": "You see what we build running before you trust us with your project."}
           ]
         },
@@ -235,10 +235,10 @@ export default {
       ],
       "page": {
         "title": "Products — HoraCerta and the Matecno line | Coimbra",
-        "description": "HoraCerta, Matecno's bookings platform: in production, in three languages, with over 2,000 bookings processed. The product that shows how we build.",
+        "description": "HoraCerta, Matecno's bookings platform: a complete system in production, from the calendar to payments, in three languages. The product that shows how we build.",
         "h1": "Our products",
         "paras": [
-          "We don't only build software for clients: we launch our own products. The first is HoraCerta, a bookings platform in production with over 2,000 bookings processed.",
+          "We don't only build software for clients: we launch our own products. The first is HoraCerta, a bookings platform in production, built and operated by us end to end.",
           "Several businesses use the same platform with each one's data isolated, in three languages, with automatic reminders on every booking, online payments and GDPR consents signed on the phone.",
           "The line will grow. The next product will be for marketing, and each one lands on this page once it's in production.",
           "HoraCerta is also our calling card. It's the most direct way to judge our work before hiring us. If you have a product in mind, the free 30-minute assessment is where we map it out, in Coimbra or remotely."
@@ -333,7 +333,7 @@ export default {
         "h1": "Software engineering made in Coimbra",
         "paras": [
           "Matecno builds web applications, automations, websites, backends and integrations for businesses that have outgrown off-the-shelf software. We connect the systems you already use to Stripe, Google Workspace, email and WhatsApp, so your team stops copying data by hand. Besides client work, we have products of our own.",
-          "Our main product is HoraCerta, a bookings platform in three languages, with automatic reminders, in production with over 2,000 bookings processed. This site is our work too, including the 3D graph on the home page.",
+          "Our main product is HoraCerta, a bookings platform in three languages, in production, from the calendar to payments, built and operated by us. This site is our work too, including the 3D graph on the home page.",
           "The source code stays in the client's repository. Scope, deadlines and support are set down in writing before we start. When we think a project isn't justified, we say so at the assessment.",
           "We are in Coimbra and work on-site across the Centro region and remotely for the rest of the country. The first step is a free 30-minute assessment, by call or in person."
         ],
