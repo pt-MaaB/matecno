@@ -43,3 +43,10 @@ else
   echo "✗ Live check failed: ${CHECK_URL} returned HTTP $code" >&2
   exit 1
 fi
+
+# IndexNow (2026-10-08): tell Bing & co. which pages exist, the moment they change; ChatGPT search and Copilot read
+# Bing's index. Key + sites: ANTI/empire-brain/seo/indexnow.yaml. Never fails a deploy that already succeeded.
+INDEXNOW="$SITE_DIR/../../../../../tools/empire_indexnow.py"
+if [ -f "$INDEXNOW" ]; then
+  python3 "$INDEXNOW" submit --site matecno || echo "⚠ IndexNow submission failed (the deploy itself is fine)"
+fi
