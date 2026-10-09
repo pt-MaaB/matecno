@@ -1,6 +1,21 @@
 {
   "about": "MaTecno's SEO layer: the CEO-approved wording of each page in every language (tools/empire_seo_apply.py writes it from Deliverables/marketing/matecno/seo/*.md; never edit by hand). `overrides` replaces a page's title, h1 and description in one language; `pages` are service pages of their own: `card` is the /servicos card they detail (its wording in each language is the body), `slugs` the address in each language. A language appears only with its approved wording (CEO 2026-10-09: every language the site serves).",
-  "overrides": {},
+  "overrides": {
+    "home": {
+      "pt": {
+        "title": "Software para PME em Coimbra | MaTecno",
+        "h1": "Software para PME em Coimbra: O Que Construímos",
+        "description": "Software para PME em Coimbra: software à medida, automação, websites, backends e leads B2B. A ferramenta exata para o teu processo, sem prateleira."
+      }
+    },
+    "serv": {
+      "pt": {
+        "title": "Empresa de Software Coimbra | MaTecno",
+        "h1": "Empresa de Software em Coimbra: O que Construímos",
+        "description": "Software à medida, automação, websites, backends e leads B2B: a empresa de software em Coimbra para o teu processo, sem prateleira."
+      }
+    }
+  },
   "pages": {
     "software-a-medida": {
       "card": [
@@ -18,8 +33,7 @@
         "pt": {
           "title": "Software Personalizado para Empresas | MaTecno",
           "h1": "Software à Medida, Construído de Raiz para o Teu Negócio",
-          "description": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu. Fala connosco sobre o teu projeto.",
-          "lede": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu."
+          "description": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu. Fala connosco sobre o teu projeto."
         }
       }
     },
@@ -39,8 +53,7 @@
         "pt": {
           "title": "Automação de Processos Empresariais | MaTecno",
           "h1": "Automação de Processos Empresariais, Sem Vigilância Manual",
-          "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo.",
-          "lede": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos."
+          "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo."
         }
       }
     }
