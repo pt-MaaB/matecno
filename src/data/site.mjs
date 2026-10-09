@@ -14,6 +14,7 @@
 // Do NOT introduce force-directed physics — the layout is hand-placed.
 // ---------------------------------------------------------------------------
 
+import SEO from './seo_pages.json';
 import {
   COLORS,
   POS,
@@ -70,12 +71,18 @@ export function getSite(lang) {
       label: h.label,
       color: COLORS[key],
       pos: POS[key],
-      aspects: h.aspects,
-      page: h.page,
+      aspects: linkedAspects(key, h.aspects, lang),
+      page: withOverride(key, h.page, lang),
     };
   });
   const core = { label: 'MATECNO', route: homeRoute(lang), tagline: pack.core.tagline };
-  const seo = { title: pack.seo.titleHome, h1: pack.seo.h1Home || pack.seo.titleHome, description: pack.seo.descHome, jsonld: buildJsonLd(pack, lang) };
+  const home = (SEO.overrides?.home || {})[lang] || {};
+  const seo = {
+    title: home.title || pack.seo.titleHome,
+    h1: home.h1 || pack.seo.h1Home || home.title || pack.seo.titleHome,
+    description: home.description || pack.seo.descHome,
+    jsonld: buildJsonLd(pack, lang),
+  };
   return {
     lang,
     htmlLang: HTML_LANG[lang],
@@ -93,9 +100,62 @@ export function getSite(lang) {
 // its string pack + structure. Used by section/detail pages so a hub that
 // isn't in HUB_KEYS (e.g. the Leads & Dados service page) still resolves.
 export function getHub(key, lang) {
+  if (SEO.pages?.[key]) return servicePage(key, lang);
   const pack = PACKS[lang] || PACKS[DEFAULT_LOCALE];
   const h = pack.hubs[key] || PACKS[DEFAULT_LOCALE].hubs[key];
-  return { key, route: routeFor(key, lang), label: h.label, color: COLORS[key], aspects: h.aspects, page: h.page };
+  return { key, route: routeFor(key, lang), label: h.label, color: COLORS[key], aspects: linkedAspects(key, h.aspects, lang), page: withOverride(key, h.page, lang) };
+}
+
+// ── the SEO layer (src/data/seo_pages.json, written by tools/empire_seo_apply.py) ─────────────────────────────────
+// A page's approved title / h1 / description in one language replace the pack's (CEO-approved on the hub).
+function withOverride(key, page, lang) {
+  const o = (SEO.overrides?.[key] || {})[lang];
+  return o ? { ...page, ...pick(o, ['title', 'h1', 'description']) } : page;
+}
+
+function pick(o, keys) {
+  return Object.fromEntries(keys.filter((k) => o[k]).map((k) => [k, o[k]]));
+}
+
+// The /servicos card a service page details links to it, in every language the page has approved wording for.
+function linkedAspects(key, aspects, lang) {
+  const out = aspects.map((a) => ({ ...a }));
+  for (const [pkey, p] of Object.entries(SEO.pages || {})) {
+    const [hub, idx] = p.card || [];
+    if (hub === key && out[idx] && p.slugs?.[lang] && p.lang?.[lang]) out[idx].linkTo = pkey;
+  }
+  return out;
+}
+
+// A service page of its own: the approved title / h1 / description / intro in this language; the body is the
+// card it details and the HoraCerta proof, both in this language's own pack (copy already live on the site).
+function servicePage(key, lang) {
+  const p = SEO.pages[key];
+  const pack = PACKS[lang] || PACKS[DEFAULT_LOCALE];
+  const e = p.lang?.[lang] || p.lang?.[DEFAULT_LOCALE] || {};
+  const at = ([hub, i]) => (pack.hubs[hub] || PACKS[DEFAULT_LOCALE].hubs[hub]).aspects[i];
+  const card = at(p.card);
+  return {
+    key,
+    route: routeFor(key, lang),
+    label: card.title,
+    color: COLORS[key],
+    aspects: [card, ...(p.proof ? [at(p.proof)] : [])],
+    page: {
+      title: e.title,
+      description: e.description,
+      h1: e.h1,
+      paras: [e.lede || e.description],
+      cta: (pack.hubs[p.card[0]] || PACKS[DEFAULT_LOCALE].hubs[p.card[0]]).page.cta,
+    },
+  };
+}
+
+// The service pages that exist in a locale (approved wording + an address there), for the routes and the sitemap.
+export function servicePagesIn(lang) {
+  return Object.entries(SEO.pages || {})
+    .filter(([, p]) => p.slugs?.[lang] && p.lang?.[lang])
+    .map(([key, p]) => ({ key, slug: p.slugs[lang] }));
 }
 
 // The object <GraphExplorer content={...} /> serialises to JSON. Carries the ui

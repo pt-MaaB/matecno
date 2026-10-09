@@ -1,0 +1,16 @@
+---
+// Portuguese service pages of their own, one per entry of src/data/seo_pages.json that has approved Portuguese
+// wording and a Portuguese address under /servicos/ (tools/empire_seo_apply.py writes them; CEO 2026-10-09).
+import SectionPage from '../../components/SectionPage.astro';
+import { servicePagesIn } from '../../data/site.mjs';
+
+export function getStaticPaths() {
+  return servicePagesIn('pt')
+    .filter(({ slug }) => slug.startsWith('servicos/'))
+    .map(({ key, slug }) => ({ params: { svc: slug.slice('servicos/'.length) }, props: { key } }));
+}
+
+const { key } = Astro.props;
+---
+
+<SectionPage hubKey={key} lang="pt" />

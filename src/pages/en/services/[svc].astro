@@ -1,0 +1,16 @@
+---
+// English service pages of their own, one per entry of src/data/seo_pages.json that has approved English
+// wording and a English address under /en/services/ (tools/empire_seo_apply.py writes them; CEO 2026-10-09).
+import SectionPage from '../../../components/SectionPage.astro';
+import { servicePagesIn } from '../../../data/site.mjs';
+
+export function getStaticPaths() {
+  return servicePagesIn('en')
+    .filter(({ slug }) => slug.startsWith('services/'))
+    .map(({ key, slug }) => ({ params: { svc: slug.slice('services/'.length) }, props: { key } }));
+}
+
+const { key } = Astro.props;
+---
+
+<SectionPage hubKey={key} lang="en" />

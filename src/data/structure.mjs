@@ -7,6 +7,8 @@
 // locked V14 prototype — do NOT re-solve them.
 // ---------------------------------------------------------------------------
 
+import SEO from './seo_pages.json';
+
 export const LOCALES = ['pt', 'en', 'es'];
 export const DEFAULT_LOCALE = 'pt';
 
@@ -28,8 +30,6 @@ export const HUB_KEYS = ['serv', 'produtos', 'method', 'about', 'contact'];
 export const COLORS = {
   serv: '#2f6fe0',
   leads: '#c2268f',
-  software: '#2f6fe0',
-  automacao: '#2f6fe0',
   produtos: '#12a06a',
   method: '#7a52e0',
   about: '#c07d16',
@@ -51,14 +51,19 @@ export const POS = {
 export const SLUGS = {
   serv: { pt: 'servicos', en: 'services', es: 'servicios' },
   leads: { pt: 'leads-dados', en: 'leads-data', es: 'leads-datos' },
-  // PT only (MaTecno is Portugal-only for now): no EN/ES route, so no hreflang to a page that does not exist
-  software: { pt: 'servicos/software-a-medida' },
-  automacao: { pt: 'servicos/automacao' },
   produtos: { pt: 'produtos', en: 'products', es: 'productos' },
   method: { pt: 'metodo', en: 'method', es: 'metodo' },
   about: { pt: 'sobre', en: 'about', es: 'nosotros' },
   contact: { pt: 'contacto', en: 'contact', es: 'contacto' },
 };
+
+// Service pages of their own (src/data/seo_pages.json, written by tools/empire_seo_apply.py): their address in each
+// language they have approved wording for, and the colour of the hub whose card they detail. A language with no slug
+// has no route and no hreflang (alternatesFor), so a page appears in a language only once its wording is approved.
+for (const [key, p] of Object.entries(SEO.pages || {})) {
+  SLUGS[key] = { ...(p.slugs || {}) };
+  COLORS[key] = COLORS[(p.card || ['serv'])[0]] || COLORS.serv;
+}
 
 export const SITE_URL = 'https://matecno.pt';
 

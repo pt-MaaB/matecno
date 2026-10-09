@@ -1,0 +1,16 @@
+---
+// Spanish service pages of their own, one per entry of src/data/seo_pages.json that has approved Spanish
+// wording and a Spanish address under /es/servicios/ (tools/empire_seo_apply.py writes them; CEO 2026-10-09).
+import SectionPage from '../../../components/SectionPage.astro';
+import { servicePagesIn } from '../../../data/site.mjs';
+
+export function getStaticPaths() {
+  return servicePagesIn('es')
+    .filter(({ slug }) => slug.startsWith('servicios/'))
+    .map(({ key, slug }) => ({ params: { svc: slug.slice('servicios/'.length) }, props: { key } }));
+}
+
+const { key } = Astro.props;
+---
+
+<SectionPage hubKey={key} lang="es" />

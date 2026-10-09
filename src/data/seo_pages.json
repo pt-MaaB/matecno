@@ -1,0 +1,48 @@
+{
+  "about": "MaTecno's SEO layer: the CEO-approved wording of each page in every language (tools/empire_seo_apply.py writes it from Deliverables/marketing/matecno/seo/*.md; never edit by hand). `overrides` replaces a page's title, h1 and description in one language; `pages` are service pages of their own: `card` is the /servicos card they detail (its wording in each language is the body), `slugs` the address in each language. A language appears only with its approved wording (CEO 2026-10-09: every language the site serves).",
+  "overrides": {},
+  "pages": {
+    "software-a-medida": {
+      "card": [
+        "serv",
+        0
+      ],
+      "proof": [
+        "produtos",
+        1
+      ],
+      "slugs": {
+        "pt": "servicos/software-a-medida"
+      },
+      "lang": {
+        "pt": {
+          "title": "Software Personalizado para Empresas | MaTecno",
+          "h1": "Software à Medida, Construído de Raiz para o Teu Negócio",
+          "description": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu. Fala connosco sobre o teu projeto.",
+          "lede": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu."
+        }
+      }
+    },
+    "automacao": {
+      "card": [
+        "serv",
+        1
+      ],
+      "proof": [
+        "produtos",
+        1
+      ],
+      "slugs": {
+        "pt": "servicos/automacao"
+      },
+      "lang": {
+        "pt": {
+          "title": "Automação de Processos Empresariais | MaTecno",
+          "h1": "Automação de Processos Empresariais, Sem Vigilância Manual",
+          "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo.",
+          "lede": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos."
+        }
+      }
+    }
+  }
+}
