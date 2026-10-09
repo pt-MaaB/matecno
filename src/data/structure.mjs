@@ -28,6 +28,8 @@ export const HUB_KEYS = ['serv', 'produtos', 'method', 'about', 'contact'];
 export const COLORS = {
   serv: '#2f6fe0',
   leads: '#c2268f',
+  software: '#2f6fe0',
+  automacao: '#2f6fe0',
   produtos: '#12a06a',
   method: '#7a52e0',
   about: '#c07d16',
@@ -49,6 +51,9 @@ export const POS = {
 export const SLUGS = {
   serv: { pt: 'servicos', en: 'services', es: 'servicios' },
   leads: { pt: 'leads-dados', en: 'leads-data', es: 'leads-datos' },
+  // PT only (MaTecno is Portugal-only for now): no EN/ES route, so no hreflang to a page that does not exist
+  software: { pt: 'servicos/software-a-medida' },
+  automacao: { pt: 'servicos/automacao' },
   produtos: { pt: 'produtos', en: 'products', es: 'productos' },
   method: { pt: 'metodo', en: 'method', es: 'metodo' },
   about: { pt: 'sobre', en: 'about', es: 'nosotros' },
@@ -72,7 +77,7 @@ export function homeRoute(lang) {
 
 // hreflang alternates for a page. key === 'home' or a hub key.
 export function alternatesFor(key) {
-  return LOCALES.map((l) => ({
+  return LOCALES.filter((l) => key === 'home' || SLUGS[key]?.[l]).map((l) => ({
     lang: l,
     htmlLang: HTML_LANG[l],
     href: key === 'home' ? homeRoute(l) : routeFor(key, l),

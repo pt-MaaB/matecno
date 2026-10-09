@@ -100,7 +100,7 @@ const lang = content.lang ?? 'pt';
   <!-- Visually-hidden content block: gives crawlers/AT the H1, tagline and a
        full link list to every page even though the visual layer is a canvas. -->
   <div class="sr-only">
-    <h1>{content.seo.title}</h1>
+    <h1>{content.seo.h1 ?? content.seo.title}</h1>
     <p>{core.tagline}</p>
     <ul>
       {hubs.map((h) => (
@@ -115,7 +115,7 @@ const lang = content.lang ?? 'pt';
   <noscript>
     <style>{`[data-mtc-root] #mtc-graph,[data-mtc-root] #mtc-links,[data-mtc-root] .mtc-hint,[data-mtc-root] .mtc-intro{display:none!important}[data-mtc-root] .mtc-fallback{display:block!important}`}</style>
     <div class="mtc-fallback">
-      <h1>{content.seo.title}</h1>
+      <h1>{content.seo.h1 ?? content.seo.title}</h1>
       <p class="mtc-fallback-tag">{core.tagline}</p>
       <ul class="mtc-fallback-links">
         {hubs.map((h) => (

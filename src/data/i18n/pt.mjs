@@ -6,9 +6,11 @@
 // ---------------------------------------------------------------------------
 export default {
   seo: {
-    titleHome: 'Matecno — Software à Medida em Coimbra',
+    // CEO-approved SEO (hub Marketing tab, 2026-10-08): title, H1 and description of the home page
+    titleHome: 'Software para PME em Coimbra | MaTecno',
+    h1Home: 'Software para PME em Coimbra: O Que Construímos',
     descHome:
-      'Software à medida, automação, websites e integrações para empresas, em Coimbra e em todo o país. Construído de raiz para o teu processo, com o nosso próprio produto em produção como prova.',
+      'Software para PME em Coimbra: software à medida, automação, websites, backends e leads B2B. A ferramenta exata para o teu processo, sem prateleira.',
     jsonldDescription:
       'Construímos software à medida, automações, websites, backends e integrações para empresas, em Coimbra e remoto. Código escrito de raiz.',
     ownsDescription:
@@ -88,6 +90,7 @@ export default {
           label: 'Software',
           title: 'Software à medida',
           desc: 'Plataformas web e ferramentas internas feitas à medida para escalar a tua operação.',
+          linkTo: 'software',
           items: [
             { k: 'O que construímos', v: 'Painéis de gestão, portais de clientes e aplicações SaaS multi-tenant.' },
             { k: 'Como entregamos', v: 'Código-fonte 100% teu, infraestrutura escalável e autenticação/pagamentos integrados.' },
@@ -98,6 +101,7 @@ export default {
           label: 'Automação',
           title: 'Automação de processos',
           desc: 'Elimina trabalho manual repetitivo entre as ferramentas que a tua equipa já usa.',
+          linkTo: 'automacao',
           items: [
             { k: 'O que automatizamos', v: 'Sincronização de dados, emissão de faturação, envios de email e relatórios automáticos.' },
             { k: 'Infraestrutura', v: 'Execução agendada ou por eventos, com logs de auditoria e alertas instantâneos se algo falhar.' },
@@ -136,12 +140,85 @@ export default {
         },
       ],
       page: {
-        title: 'Serviços — Software à Medida, Automação e Leads B2B | Matecno',
+        // CEO-approved SEO (hub Marketing tab, 2026-10-08)
+        title: 'Empresa de Software Coimbra | MaTecno',
         description:
-          'Software à medida, automação de processos, websites, backends e integrações, e leads B2B. A ferramenta exata para o teu processo quando o software de prateleira não encaixa.',
-        h1: 'O que construímos',
+          'Software à medida, automação, websites, backends e leads B2B: a empresa de software em Coimbra para o teu processo, sem prateleira.',
+        h1: 'Empresa de Software em Coimbra: O que Construímos',
         paras: [
           'Trabalhamos em cinco áreas: software à medida, automação de processos, websites, backends e integrações, e leads B2B. Começamos sempre pelo processo que hoje te custa tempo ou clientes.',
+        ],
+        cta: 'Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 ou mauro@matecno.pt.',
+      },
+    },
+    // New service pages (CEO-approved on the hub's Marketing tab, 2026-10-08: title, H1, description). PT only:
+    // MaTecno is Portugal-only for now. The body reuses copy already live on /servicos and /produtos.
+    software: {
+      label: 'Software à medida',
+      aspects: [
+        {
+          label: 'Software',
+          title: 'O que construímos',
+          desc: 'Plataformas web e ferramentas internas feitas à medida para escalar a tua operação.',
+          items: [
+            { k: 'O que construímos', v: 'Painéis de gestão, portais de clientes e aplicações SaaS multi-tenant.' },
+            { k: 'Como entregamos', v: 'Código-fonte 100% teu, infraestrutura escalável e autenticação/pagamentos integrados.' },
+            { k: 'Vantagem', v: 'Total controlo sobre o produto, sem licenças de terceiros nem limitações de software pronto.' },
+          ],
+        },
+        {
+          label: 'Prova',
+          title: 'O que o HoraCerta prova',
+          desc: 'As decisões técnicas de que o teu projeto vai precisar já foram tomadas e testadas aqui.',
+          items: [
+            { k: 'O que já corre', v: 'Pagamentos online, sinal contra faltas, consentimentos RGPD assinados no telemóvel e lembretes automáticos, em negócios reais.' },
+            { k: 'Como está feito', v: 'Os dados de cada negócio isolados desde a primeira linha; código nosso de ponta a ponta.' },
+            { k: 'Vantagem', v: 'Nenhuma decisão técnica no teu projeto é teoria: já a tomámos num produto em produção.' },
+          ],
+        },
+      ],
+      page: {
+        title: 'Software Personalizado para Empresas | MaTecno',
+        description:
+          'Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu. Fala connosco sobre o teu projeto.',
+        h1: 'Software à Medida, Construído de Raiz para o Teu Negócio',
+        paras: [
+          'Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu.',
+        ],
+        cta: 'Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 ou mauro@matecno.pt.',
+      },
+    },
+    automacao: {
+      label: 'Automação de processos',
+      aspects: [
+        {
+          label: 'Automação',
+          title: 'O que automatizamos',
+          desc: 'Elimina trabalho manual repetitivo entre as ferramentas que a tua equipa já usa.',
+          items: [
+            { k: 'O que automatizamos', v: 'Sincronização de dados, emissão de faturação, envios de email e relatórios automáticos.' },
+            { k: 'Infraestrutura', v: 'Execução agendada ou por eventos, com logs de auditoria e alertas instantâneos se algo falhar.' },
+            { k: 'Vantagem', v: 'Processos a correr 24/7 com zero erro humano.' },
+          ],
+        },
+        {
+          label: 'Prova',
+          title: 'O que o HoraCerta prova',
+          desc: 'As decisões técnicas de que o teu projeto vai precisar já foram tomadas e testadas aqui.',
+          items: [
+            { k: 'O que já corre', v: 'Pagamentos online, sinal contra faltas, consentimentos RGPD assinados no telemóvel e lembretes automáticos, em negócios reais.' },
+            { k: 'Como está feito', v: 'Os dados de cada negócio isolados desde a primeira linha; código nosso de ponta a ponta.' },
+            { k: 'Vantagem', v: 'Nenhuma decisão técnica no teu projeto é teoria: já a tomámos num produto em produção.' },
+          ],
+        },
+      ],
+      page: {
+        title: 'Automação de Processos Empresariais | MaTecno',
+        description:
+          'Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo.',
+        h1: 'Automação de Processos Empresariais, Sem Vigilância Manual',
+        paras: [
+          'Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos.',
         ],
         cta: 'Diagnóstico gratuito de 30 minutos. WhatsApp +351 919 642 845 ou mauro@matecno.pt.',
       },

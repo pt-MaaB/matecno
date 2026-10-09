@@ -75,7 +75,7 @@ export function getSite(lang) {
     };
   });
   const core = { label: 'MATECNO', route: homeRoute(lang), tagline: pack.core.tagline };
-  const seo = { title: pack.seo.titleHome, description: pack.seo.descHome, jsonld: buildJsonLd(pack, lang) };
+  const seo = { title: pack.seo.titleHome, h1: pack.seo.h1Home || pack.seo.titleHome, description: pack.seo.descHome, jsonld: buildJsonLd(pack, lang) };
   return {
     lang,
     htmlLang: HTML_LANG[lang],
