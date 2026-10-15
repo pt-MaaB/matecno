@@ -13,6 +13,16 @@
         "title": "Empresa de Software Coimbra | MaTecno",
         "h1": "Empresa de Software em Coimbra: O que Construímos",
         "description": "Software à medida, automação, websites, backends e leads B2B: a empresa de software em Coimbra para o teu processo, sem prateleira."
+      },
+      "en": {
+        "title": "Software Company Coimbra | MaTecno",
+        "h1": "Software Company in Coimbra: What We Build",
+        "description": "Custom software, automation, websites, backends and B2B leads: the Coimbra software company for your process, no off-the-shelf fit."
+      },
+      "es": {
+        "title": "Empresa de Software en Coimbra | MaTecno",
+        "h1": "Empresa de Software en Coimbra: Qué Construimos",
+        "description": "Software a medida, automatización, sitios web, backends y leads B2B: la empresa de software en Coimbra para tu proceso, sin estantería."
       }
     }
   },
@@ -27,13 +37,25 @@
         1
       ],
       "slugs": {
-        "pt": "servicos/software-a-medida"
+        "pt": "servicos/software-a-medida",
+        "en": "services/custom-software",
+        "es": "servicios/software-a-medida"
       },
       "lang": {
         "pt": {
           "title": "Software Personalizado para Empresas | MaTecno",
           "h1": "Software à Medida, Construído de Raiz para o Teu Negócio",
           "description": "Software personalizado para a tua empresa, construído do zero, sem adaptar um template. O código-fonte fica teu. Fala connosco sobre o teu projeto."
+        },
+        "en": {
+          "title": "Custom Software for Businesses | MaTecno",
+          "h1": "Custom Software, Built From Scratch for Your Business",
+          "description": "Custom software for your business, built from zero, never adapted from a template. The source code is yours. Talk to us about your project."
+        },
+        "es": {
+          "title": "Software Personalizado para Empresas | MaTecno",
+          "h1": "Software a Medida, Construido Desde Cero para Tu Negocio",
+          "description": "Software personalizado para tu empresa, construido desde cero, sin adaptar una plantilla. El código fuente es tuyo. Habla con nosotros sobre tu proyecto."
         }
       }
     },
@@ -47,13 +69,89 @@
         1
       ],
       "slugs": {
-        "pt": "servicos/automacao"
+        "pt": "servicos/automacao",
+        "en": "services/process-automation",
+        "es": "servicios/automatizacion"
       },
       "lang": {
         "pt": {
           "title": "Automação de Processos Empresariais | MaTecno",
           "h1": "Automação de Processos Empresariais, Sem Vigilância Manual",
           "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo."
+        },
+        "en": {
+          "title": "Business Process Automation | MaTecno",
+          "h1": "Business Process Automation, No Manual Watching",
+          "description": "We automate invoicing, emails and system syncing, with logs and alerts, processes running on their own. Talk to us about your process."
+        },
+        "es": {
+          "title": "Automatización de Procesos Empresariales | MaTecno",
+          "h1": "Automatización de Procesos Empresariales, Sin Vigilancia Manual",
+          "description": "Automatizamos facturación, emails y sincronización entre sistemas, con logs y alertas, procesos que funcionan solos. Habla con nosotros sobre tu proceso."
+        }
+      }
+    },
+    "apis": {
+      "card": [
+        "serv",
+        3
+      ],
+      "proof": [
+        "produtos",
+        1
+      ],
+      "slugs": {
+        "pt": "servicos/apis",
+        "en": "services/apis",
+        "es": "servicios/apis"
+      },
+      "lang": {
+        "pt": {
+          "title": "Integração de Sistemas e APIs | MaTecno",
+          "h1": "Backends, APIs e Integrações, os Teus Sistemas a Falar Entre Si",
+          "description": "Integramos os teus sistemas, APIs e ferramentas (pagamentos, email, WhatsApp e mais) para trocarem dados sem trabalho manual. Fala connosco."
+        },
+        "en": {
+          "title": "Systems and API Integration | MaTecno",
+          "h1": "Backends, APIs and Integrations, Your Systems Talking to Each Other",
+          "description": "We integrate your systems, APIs and tools (payments, email, WhatsApp and more) to exchange data without manual work. Talk to us."
+        },
+        "es": {
+          "title": "Integración de Sistemas y APIs | MaTecno",
+          "h1": "Backends, APIs e Integraciones, tus Sistemas Hablando Entre Sí",
+          "description": "Integramos tus sistemas, APIs y herramientas (pagos, email, WhatsApp y más) para que intercambien datos sin trabajo manual. Habla con nosotros."
+        }
+      }
+    },
+    "websites": {
+      "card": [
+        "serv",
+        2
+      ],
+      "proof": [
+        "produtos",
+        1
+      ],
+      "slugs": {
+        "pt": "servicos/websites",
+        "en": "services/websites",
+        "es": "servicios/websites"
+      },
+      "lang": {
+        "pt": {
+          "title": "Web Design Coimbra, Sites Profissionais | MaTecno",
+          "h1": "Websites e Plataformas, Escritos à Mão com SEO Técnico Desde o Início",
+          "description": "Criamos sites profissionais e rápidos para empresas em Portugal, com SEO técnico desde o início, multi-idioma. Fala connosco sobre o teu projeto."
+        },
+        "en": {
+          "title": "Web Design Coimbra, Professional Sites | MaTecno",
+          "h1": "Websites and Platforms, Hand-Written With Technical SEO From the Start",
+          "description": "We build fast, professional sites for businesses in Portugal, with technical SEO from the start, multi-language. Talk to us about your project."
+        },
+        "es": {
+          "title": "Diseño Web Coimbra, Sitios Profesionales | MaTecno",
+          "h1": "Webs y Plataformas, Hechas a Mano con SEO Técnico Desde el Inicio",
+          "description": "Creamos webs profesionales y rápidas para empresas en Portugal, con SEO técnico desde el inicio, multi-idioma. Habla con nosotros sobre tu proyecto."
         }
       }
     }
