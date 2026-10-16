@@ -24,6 +24,13 @@
         "h1": "Empresa de Software en Coimbra: Qué Construimos",
         "description": "Software a medida, automatización, sitios web, backends y leads B2B: la empresa de software en Coimbra para tu proceso, sin estantería."
       }
+    },
+    "leads": {
+      "pt": {
+        "title": "Plataforma de Geração de Leads B2B e Dados | MaTecno",
+        "h1": "Geração de Leads B2B e Dados Verificados",
+        "description": "Plataforma de geração de leads B2B: leads verificadas com nome, cargo, email e telefone do decisor. Enriquecimento de dados e inteligência de mercado."
+      }
     }
   },
   "pages": {
