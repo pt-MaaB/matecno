@@ -30,6 +30,16 @@
         "title": "Plataforma de Geração de Leads B2B e Dados | MaTecno",
         "h1": "Geração de Leads B2B e Dados Verificados",
         "description": "Plataforma de geração de leads B2B: leads verificadas com nome, cargo, email e telefone do decisor. Enriquecimento de dados e inteligência de mercado."
+      },
+      "en": {
+        "title": "B2B Lead Generation and Data Platform | MaTecno",
+        "h1": "B2B Lead Generation and Verified Data",
+        "description": "B2B lead generation platform: verified leads with the decision-maker's name, role, email and phone. Data enrichment and market intelligence."
+      },
+      "es": {
+        "title": "Plataforma de Generación de Leads B2B y Datos | MaTecno",
+        "h1": "Generación de Leads B2B y Datos Verificados",
+        "description": "Plataforma de leads B2B: leads verificados con nombre, cargo, email y teléfono del decisor. Enriquecimiento de datos e inteligencia de mercado."
       }
     }
   },
