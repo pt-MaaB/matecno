@@ -5,7 +5,17 @@
       "pt": {
         "title": "Software para PME em Coimbra | MaTecno",
         "h1": "Software para PME em Coimbra: O Que Construímos",
-        "description": "Software para PME em Coimbra: software à medida, automação, websites, backends e leads B2B. A ferramenta exata para o teu processo, sem prateleira."
+        "description": "Software para PME em Coimbra: software à medida, automação, websites, backends e leads B2B. A ferramenta exata para o seu processo, sem prateleira."
+      },
+      "en": {
+        "title": "Software for SMBs in Coimbra | MaTecno",
+        "h1": "Software for SMBs in Coimbra: What We Build",
+        "description": "Software for SMBs in Coimbra: custom software, automation, websites, backends and B2B leads. The exact tool for your process, no off-the-shelf fit."
+      },
+      "es": {
+        "title": "Software para Pymes en Coimbra | MaTecno",
+        "h1": "Software para Pymes en Coimbra: Lo Que Construimos",
+        "description": "Software para pymes en Coimbra: software a medida, automatización, webs, backends y leads B2B. La herramienta exacta para su proceso, sin nada prediseñado."
       }
     },
     "serv": {
