@@ -24,10 +24,13 @@
 //     focus-visible styling on links/buttons
 // ---------------------------------------------------------------------------
 
+// Items are labelled bullets ({ k: label, v: text }) since the 2026-09-15 copy
+// restructure; plain strings are still accepted.
+type Item = string | { k: string; v: string };
 interface Aspect {
   label: string;
   title: string;
-  items: string[];
+  items: Item[];
 }
 interface HubPage {
   title: string;
@@ -354,6 +357,9 @@ const lang = content.lang ?? 'pt';
     flex-direction: column;
     gap: 16px;
     overflow-y: auto;
+    /* scrolled cards fade out before they reach the fixed nav/legend */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 52px, #000 72px);
+    mask-image: linear-gradient(to bottom, transparent 52px, #000 72px);
     pointer-events: none;
     opacity: 0;
     transform: translateX(30px);
@@ -497,6 +503,40 @@ const lang = content.lang ?? 'pt';
   .acard li:hover {
     background: color-mix(in srgb, var(--acc) 14%, #fff);
   }
+  /* labelled bullets ({ k, v }): stacked rows, not chips */
+  .acard ul.kv {
+    display: block;
+  }
+  .acard ul.kv li,
+  .acard ul.kv li:hover {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: none;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 0;
+    padding: 10px 0 0;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .acard ul.kv li:first-child {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .acard ul.kv li b {
+    font-family: var(--mtc-mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--acc);
+  }
+  .acard ul.kv li span {
+    font-size: 13.5px;
+    color: var(--mtc-ink);
+  }
   .acard p {
     margin: 0;
     font-size: 14px;
@@ -532,7 +572,10 @@ const lang = content.lang ?? 'pt';
   @media (max-width: 760px) {
     .mtc-detail {
       width: 100%;
-      padding: clamp(72px, 14vh, 110px) 20px 32px;
+      /* the nav wraps to ~3 rows (~110px) on phones: start the panel below it */
+      padding: 124px 20px 88px;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 100px, #000 120px);
+      mask-image: linear-gradient(to bottom, transparent 100px, #000 120px);
       background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0) 0%,
@@ -541,8 +584,21 @@ const lang = content.lang ?? 'pt';
       );
       backdrop-filter: blur(2px);
     }
+    /* back = a pill bottom-left (at the top it sat on the wrapped nav links) */
     .mtc-back {
-      top: clamp(18px, 3vw, 26px);
+      top: auto;
+      bottom: 22px;
+      left: 20px;
+      padding: 9px 14px;
+      color: var(--mtc-ink);
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 999px;
+      box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.35);
+    }
+    /* the orbit/zoom hint means nothing while the panel covers the graph */
+    .mtc-back.show ~ .mtc-hint {
+      opacity: 0;
     }
   }
 
@@ -1162,10 +1218,14 @@ const lang = content.lang ?? 'pt';
               esc(asp.label) +
               '</p><h3>' +
               esc(asp.title) +
-              '</h3><ul>' +
+              '</h3><ul' +
+              (asp.items.some(function (it) { return typeof it !== 'string'; }) ? ' class="kv"' : '') +
+              '>' +
               asp.items
                 .map(function (it) {
-                  return '<li>' + esc(it) + '</li>';
+                  // labelled bullet { k, v } -> label + text; plain string -> chip
+                  if (typeof it === 'string') return '<li>' + esc(it) + '</li>';
+                  return '<li><b>' + esc(it.k) + '</b><span>' + esc(it.v) + '</span></li>';
                 })
                 .join('') +
               '</ul></div>'
