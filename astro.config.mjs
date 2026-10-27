@@ -20,9 +20,11 @@ export default defineConfig({
         let priority = 0.7;
         if (isHome) priority = isPtHome ? 1.0 : 0.8;
         else if (isContact) priority = 0.8;
+        // No lastmod (2026-10-27): it was the build date on every URL at every deploy, a date Google learns to
+        // ignore. Google uses lastmod only when it is consistently true; none is better than a false one.
+        const { lastmod, ...rest } = item;
         return {
-          ...item,
-          lastmod: new Date().toISOString().split('T')[0],
+          ...rest,
           changefreq: isHome ? 'weekly' : 'monthly',
           priority,
         };
