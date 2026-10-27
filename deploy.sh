@@ -22,6 +22,21 @@ SITE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$SITE_DIR"
 
+# ─── GUARD: publish only what git holds (2026-10-27) ─────
+# This script builds the working tree. An uncommitted GraphExplorer.astro edit went live on 2026-10-17 and git never
+# held it, so the SEO auto-ship rail (ANTI tools/empire_seo_ship.py) held every approved wording as "drift" until a
+# session reconciled it on 10-26. Untracked files under src/ or public/ count: a new page would go live the same way.
+dirty="$(git status --porcelain --untracked-files=all -- src public astro.config.mjs tailwind.config.mjs \
+  package.json package-lock.json tsconfig.json)"
+if [ -n "$dirty" ] && [ "${ALLOW_DIRTY:-0}" != "1" ]; then
+  echo "✗ These changes are not committed, so they would go live without git knowing:" >&2
+  echo "$dirty" >&2
+  echo "  Commit them, then run ./deploy.sh again." >&2
+  echo "  ALLOW_DIRTY=1 ./deploy.sh publishes anyway; the SEO auto-ship rail then holds until git matches the site." >&2
+  exit 1
+fi
+# ─────────────────────────────────────────────────────────
+
 echo "▸ Building (astro)…"
 npm run build --cache "$NPM_CACHE"
 
