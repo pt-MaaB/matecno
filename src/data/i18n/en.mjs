@@ -210,7 +210,8 @@ export default {
             {"k": "What it is", "v": "Online bookings for several businesses on one platform, each with its data isolated, automatic reminders and three native languages."},
             {"k": "In production", "v": "Calendar, payments with deposits, reminders and GDPR consents running for real businesses, in three languages."},
             {"k": "Advantage", "v": "You see what we build running before you trust us with your project."}
-          ]
+          ],
+          "link": {"href": "https://ahoracerta.pt/en", "label": "ahoracerta.pt"}
         },
         {
           "label": "Proof",

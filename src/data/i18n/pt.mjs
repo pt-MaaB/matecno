@@ -209,6 +209,8 @@ export default {
             { k: 'Em produção', v: 'Agenda, pagamentos com sinal, lembretes e consentimentos RGPD a correr para negócios reais, em três idiomas.' },
             { k: 'Vantagem', v: 'Vês o que construímos a correr antes de nos confiares o teu projeto.' },
           ],
+          // The product itself, one click away (2026-11-11): the page said "evaluate our work" and gave no way to it.
+          link: { href: 'https://ahoracerta.pt/', label: 'ahoracerta.pt' },
         },
         {
           label: 'Prova',

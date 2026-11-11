@@ -97,6 +97,12 @@ const mono = 'font-mono';
                 </li>
               ))}
             </ul>
+            {asp.link && (
+              <a href={asp.link.href} target="_blank" rel="noopener"
+                class="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900">
+                {asp.link.label}<span aria-hidden="true">↗</span>
+              </a>
+            )}
           </div>
         ))}
       </div>

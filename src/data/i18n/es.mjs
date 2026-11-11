@@ -210,7 +210,8 @@ export default {
             {"k": "Qué es", "v": "Reservas online para varios negocios en la misma plataforma, con los datos de cada uno aislados, recordatorios automáticos y tres idiomas nativos."},
             {"k": "En producción", "v": "Agenda, pagos con señal, recordatorios y consentimientos RGPD funcionando para negocios reales, en tres idiomas."},
             {"k": "Ventaja", "v": "Ves lo que construimos funcionando antes de confiarnos tu proyecto."}
-          ]
+          ],
+          "link": {"href": "https://ahoracerta.pt/es", "label": "ahoracerta.pt"}
         },
         {
           "label": "Prueba",
