@@ -146,7 +146,10 @@ const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floating
         }
         var choice = get();
         if (choice === 'granted') loadGA();
-        else if (choice !== 'denied') show();
+        else {
+          dropGaCookies();          // cookies left from before the banner (GA ran for everyone until 2026-11-12)
+          if (choice !== 'denied') show();
+        }
         document.addEventListener('click', function (e) {
           var t = e.target && e.target.closest ? e.target.closest('[data-consent],[data-consent-open]') : null;
           if (!t) return;
