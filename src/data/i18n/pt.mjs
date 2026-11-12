@@ -51,6 +51,12 @@ export default {
     waMessage: 'Olá, gostaria de marcar a minha avaliação gratuita',
     floatingWaAria: 'Fale connosco no WhatsApp',
     floatingWaMessage: 'Olá, gostaria de saber mais sobre os vossos serviços',
+    cookieText: 'Usamos cookies de estatística (Google Analytics) para perceber como o site é usado. Só os ativamos se aceitar.',
+    cookieAccept: 'Aceitar',
+    cookieReject: 'Recusar',
+    cookieDialog: 'Aviso de cookies',
+    privacyLabel: 'Política de privacidade',
+    privacyShort: 'Privacidade',
   },
   contact: {
     ctaKicker: 'Fala connosco',

@@ -55,7 +55,13 @@ export default {
     "backToGraph": "back to the graph",
     "waMessage": "Hi, I'd like to book my free assessment",
     "floatingWaAria": "Message us on WhatsApp",
-    "floatingWaMessage": "Hi, I'd like to know more about your services"
+    "floatingWaMessage": "Hi, I'd like to know more about your services",
+    "cookieText": "We use statistics cookies (Google Analytics) to understand how the site is used. We only turn them on if you accept.",
+    "cookieAccept": "Accept",
+    "cookieReject": "Decline",
+    "cookieDialog": "Cookie notice",
+    "privacyLabel": "Privacy policy (in Portuguese)",
+    "privacyShort": "Privacy"
   },
   "contact": {
     "ctaKicker": "Talk to us",

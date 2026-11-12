@@ -1,0 +1,169 @@
+---
+// Política de privacidade (CEO 2026-11-12: "publish the privacy page with name and email only").
+// Source draft: ANTI Deliverables/compliance/matecno/privacy_policy_pt_draft_2026-10-05.md (t-0420), corrected to what
+// the site and the outreach engine do TODAY: matecno.pt sends (decision-0047 Amendment 1, no Workspace/Smartlead),
+// no paid verifier, auto-replies not live yet, contact form on Formspree, fonts from Google Fonts, analytics only
+// after the cookie banner's "Aceitar". Update this page when any of those change (e.g. auto-replies go live, t-0417).
+import Layout from '../layouts/Layout.astro';
+import { getSite } from '../data/site.mjs';
+
+const site = getSite('pt');
+const alternates = [{ lang: 'pt', htmlLang: site.htmlLang, href: '/privacidade' }];
+const updated = '12 de novembro de 2026';
+---
+
+<Layout
+  title="Política de Privacidade | MaTecno"
+  description="Como a MaTecno trata os seus dados pessoais: quem é o responsável, que dados usa, porquê, durante quanto tempo e como exercer os seus direitos."
+  lang="pt"
+  htmlLang={site.htmlLang}
+  ogLocale={site.ogLocale}
+  jsonld={site.seo.jsonld}
+  alternates={alternates}
+  ui={site.ui}
+>
+  <div class="min-h-screen bg-white text-gray-900 antialiased">
+    <header class="border-b border-gray-100">
+      <nav class="mx-auto flex max-w-3xl items-center gap-6 px-6 py-4 text-[13px]">
+        <a href="/" class="font-mono font-semibold tracking-[0.14em] text-gray-900">MATECNO</a>
+      </nav>
+    </header>
+
+    <main class="prose prose-gray mx-auto max-w-3xl px-6 pb-24 pt-12">
+      <h1>Política de Privacidade</h1>
+      <p class="text-sm text-gray-500">Última atualização: {updated}</p>
+
+      <h2>1. Quem é o responsável</h2>
+      <p>
+        A MaTecno é uma marca de Mauro Abrantes, o responsável pelo tratamento dos dados pessoais descritos nesta
+        página, nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD).
+      </p>
+      <p>Contacto: <a href="mailto:mauro@matecno.pt">mauro@matecno.pt</a></p>
+
+      <h2>2. Que dados tratamos</h2>
+      <ul>
+        <li>
+          <strong>Dados que nos envia:</strong> nome, email, telefone e o conteúdo da mensagem, quando usa o
+          formulário de contacto, nos escreve por email ou nos contacta por WhatsApp.
+        </li>
+        <li>
+          <strong>Dados de navegação:</strong> páginas visitadas, duração da visita, origem do tráfego e tipo de
+          dispositivo, recolhidos pelo Google Analytics apenas se aceitar os cookies de estatística (secção 6).
+        </li>
+        <li>
+          <strong>Contactos profissionais de empresas:</strong> nome da empresa, nome e email de trabalho do
+          contacto e telefone, obtidos em fontes públicas, para prospeção comercial (secção 5).
+        </li>
+      </ul>
+
+      <h2>3. Para que usamos os dados e com que base legal</h2>
+      <table>
+        <thead>
+          <tr><th>Finalidade</th><th>Base legal (art. 6.º do RGPD)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Responder a pedidos de contacto e de orçamento</td>
+            <td>Diligências pré-contratuais a seu pedido (n.º 1, alínea b)</td>
+          </tr>
+          <tr>
+            <td>Prospeção comercial por email junto de empresas, incluindo confirmar que o endereço existe</td>
+            <td>Interesse legítimo (n.º 1, alínea f), nos termos da Lei n.º 41/2004</td>
+          </tr>
+          <tr>
+            <td>Estatísticas de visitas ao site (Google Analytics)</td>
+            <td>Consentimento (n.º 1, alínea a), dado no aviso de cookies</td>
+          </tr>
+          <tr>
+            <td>Cumprir obrigações fiscais e contabilísticas com clientes</td>
+            <td>Obrigação legal (n.º 1, alínea c)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Com quem partilhamos os dados</h2>
+      <p>Não vendemos dados pessoais. Recorremos a estes prestadores, que tratam dados por nossa conta:</p>
+      <ul>
+        <li><strong>Hetzner Online GmbH</strong> (Alemanha): alojamento do site e dos servidores onde guardamos os dados.</li>
+        <li><strong>Amen</strong>: alojamento do domínio e do email @matecno.pt, para enviar e receber email.</li>
+        <li><strong>Formspree, Inc.</strong> (EUA): receção das mensagens enviadas pelo formulário de contacto.</li>
+        <li>
+          <strong>Google Ireland Limited</strong>: Google Analytics, apenas com o seu consentimento, e o tipo de letra
+          do site (Google Fonts), carregado a partir dos servidores da Google, o que lhes comunica o endereço IP do
+          seu navegador.
+        </li>
+        <li><strong>WhatsApp Ireland Limited</strong>, se escolher contactar-nos por WhatsApp.</li>
+      </ul>
+      <p>
+        Quando um destes prestadores transfere dados para fora da União Europeia, por exemplo para os EUA, fá-lo com
+        as garantias previstas no RGPD, como o Quadro de Privacidade de Dados UE-EUA ou cláusulas contratuais-tipo.
+      </p>
+
+      <h2>5. Prospeção comercial por email</h2>
+      <p>Se recebeu um email nosso sem nos ter contactado antes, esta secção é para si.</p>
+      <p>
+        <strong>Porque recebeu o email.</strong> A MaTecno tem interesse legítimo em apresentar os seus serviços de
+        websites, software e automação a empresas a quem possam ser úteis. Escrevemos para contactos profissionais
+        de empresas.
+      </p>
+      <p>
+        <strong>De onde vem o seu contacto.</strong> De uma fonte pública: o site da sua empresa, o Registo Nacional
+        de Alojamento Local (RNAL, Turismo de Portugal), no caso de alojamento local, o OpenStreetMap ou o Google
+        Maps. O email indica a fonte e a data em que a consultámos.
+      </p>
+      <p>
+        <strong>Confirmação do endereço.</strong> Antes de enviar, podemos confirmar que o endereço existe,
+        perguntando ao servidor de email do destinatário, sem enviar qualquer mensagem.
+      </p>
+      <p>
+        <strong>Quanto tempo guardamos.</strong> Até se opor ao contacto, ou até 2 anos sem resposta. Se se opuser,
+        guardamos apenas o necessário para não voltar a contactá-lo.
+      </p>
+      <p>
+        <strong>O seu direito de oposição.</strong> Pode opor-se a este tratamento a qualquer momento e sem dar
+        razões: responda "remover" a qualquer email nosso, ou escreva para
+        <a href="mailto:mauro@matecno.pt">mauro@matecno.pt</a>. O seu contacto sai de imediato da nossa lista, em
+        todos os nossos projetos e canais.
+      </p>
+      <p>
+        <strong>Reclamação.</strong> Pode apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD), em
+        <a href="https://www.cnpd.pt" rel="noopener">www.cnpd.pt</a>.
+      </p>
+
+      <h2>6. Cookies</h2>
+      <p>
+        O site só usa cookies de estatística (Google Analytics: cookies <code>_ga</code> e <code>_ga_*</code>) se
+        clicar em "Aceitar" no aviso de cookies. Se clicar em "Recusar", ou não escolher, o Google Analytics não é
+        carregado. A sua escolha fica guardada no seu navegador, para não voltarmos a perguntar.
+      </p>
+      <p>
+        Pode mudar de ideias a qualquer momento em
+        <button type="button" data-consent-open class="underline">Cookies</button>, no canto inferior esquerdo de
+        cada página. Se retirar o consentimento, os cookies do Google Analytics são apagados.
+      </p>
+
+      <h2>7. Durante quanto tempo guardamos os dados</h2>
+      <ul>
+        <li>Pedidos de contacto: até 3 anos após o último contacto, ou até pedir o apagamento.</li>
+        <li>Prospeção comercial: até se opor, ou até 2 anos sem resposta.</li>
+        <li>Estatísticas do Google Analytics: no máximo 14 meses.</li>
+        <li>Dados de clientes: durante o contrato e, depois, pelo prazo legal de conservação de documentos fiscais.</li>
+      </ul>
+
+      <h2>8. Os seus direitos</h2>
+      <p>
+        Pode pedir acesso aos seus dados, a sua retificação ou apagamento, a limitação do tratamento e a
+        portabilidade; opor-se ao tratamento, incluindo à prospeção comercial; e retirar o consentimento a qualquer
+        momento, sem afetar o tratamento feito antes. Para isso, escreva para
+        <a href="mailto:mauro@matecno.pt">mauro@matecno.pt</a>. Respondemos no prazo de um mês.
+      </p>
+      <p>
+        Pode também apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD), em
+        <a href="https://www.cnpd.pt" rel="noopener">www.cnpd.pt</a>.
+      </p>
+
+      <h2>9. Alterações</h2>
+      <p>Se esta política mudar, a data no topo é atualizada.</p>
+    </main>
+  </div>
+</Layout>

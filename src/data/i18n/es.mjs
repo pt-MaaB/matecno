@@ -55,7 +55,13 @@ export default {
     "backToGraph": "volver al grafo",
     "waMessage": "Hola, me gustaría reservar mi evaluación gratuita",
     "floatingWaAria": "Habla con nosotros por WhatsApp",
-    "floatingWaMessage": "Hola, me gustaría saber más sobre vuestros servicios"
+    "floatingWaMessage": "Hola, me gustaría saber más sobre vuestros servicios",
+    "cookieText": "Usamos cookies de estadística (Google Analytics) para entender cómo se usa el sitio. Solo las activamos si las acepta.",
+    "cookieAccept": "Aceptar",
+    "cookieReject": "Rechazar",
+    "cookieDialog": "Aviso de cookies",
+    "privacyLabel": "Política de privacidad (en portugués)",
+    "privacyShort": "Privacidad"
   },
   "contact": {
     "ctaKicker": "Habla con nosotros",
