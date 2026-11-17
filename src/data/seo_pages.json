@@ -102,19 +102,19 @@
       },
       "lang": {
         "pt": {
-          "title": "Automação de Processos Empresariais | MaTecno",
-          "h1": "Automação de Processos Empresariais, Sem Vigilância Manual",
-          "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas, processos a correr sozinhos. Fala connosco sobre o teu processo."
+          "title": "Sistema de Automação Empresarial | MaTecno",
+          "h1": "Sistema de Automação Empresarial, Sem Vigilância Manual",
+          "description": "Automatizamos faturação, emails e sincronização entre sistemas, com logs e alertas: processos a correr sozinhos. Fale connosco sobre o seu processo."
         },
         "en": {
-          "title": "Business Process Automation | MaTecno",
-          "h1": "Business Process Automation, No Manual Watching",
-          "description": "We automate invoicing, emails and system syncing, with logs and alerts, processes running on their own. Talk to us about your process."
+          "title": "Business Automation System | MaTecno",
+          "h1": "Business Automation System, No Manual Watching",
+          "description": "We automate invoicing, emails and system syncing, with logs and alerts: processes running on their own. Talk to us about your process."
         },
         "es": {
-          "title": "Automatización de Procesos Empresariales | MaTecno",
-          "h1": "Automatización de Procesos Empresariales, Sin Vigilancia Manual",
-          "description": "Automatizamos facturación, emails y sincronización entre sistemas, con logs y alertas, procesos que funcionan solos. Habla con nosotros sobre tu proceso."
+          "title": "Sistema de Automatización Empresarial | MaTecno",
+          "h1": "Sistema de Automatización Empresarial, Sin Vigilancia Manual",
+          "description": "Automatizamos facturación, emails y sincronización entre sistemas, con logs y alertas: procesos que funcionan solos. Hable con nosotros sobre su proceso."
         }
       }
     },
