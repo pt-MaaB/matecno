@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GraphExplorer from './GraphExplorer.astro';
+import HomeServices from './HomeServices.astro';
 import { getSite, getGraphContent, alternatesFor } from '../data/site.mjs';
 
 interface Props { lang: string }
@@ -22,4 +23,5 @@ const alternates = alternatesFor('home');
   ui={site.ui}
 >
   <GraphExplorer content={content} />
+  <HomeServices lang={lang} />
 </Layout>

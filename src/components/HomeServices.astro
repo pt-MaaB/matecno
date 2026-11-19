@@ -1,0 +1,109 @@
+---
+// HomeServices.astro
+// Visible (non-hidden) section rendered after GraphExplorer on the home page.
+// Two parts: (1) a lead paragraph stating who MaTecno is, for whom, and where
+// (Coimbra) — the exact CEO-approved h1Home/tagline text that already exists,
+// already rendered, but only inside the sr-only/noscript safety-net until now;
+// (2) one real paragraph + a real link per /servicos sub-page. No new copy is
+// invented anywhere in this file — both parts reuse data the page already
+// fetches (getSite) or that ServicesPage.astro already uses (getHub('serv')).
+import { getSite, getHub, routeFor } from '../data/site.mjs';
+
+interface Props { lang: string }
+const { lang } = Astro.props;
+
+const site = getSite(lang);
+const hub = getHub('serv', lang);
+const ui = site.ui;
+const services = hub.aspects.filter((s: any) => s.linkTo);
+---
+
+<section class="mtc-home-services" aria-labelledby="mtc-hs-h2">
+  <div class="mtc-hs-inner">
+    <p class="mtc-hs-intro-kicker">{site.core.label} &middot; Coimbra</p>
+    <h2 id="mtc-hs-h2">{site.seo.h1}</h2>
+    <p class="mtc-hs-lead">{site.core.tagline}</p>
+    <div class="mtc-hs-grid">
+      {services.map((svc: any) => (
+        <article class="mtc-hs-card">
+          <h3>{svc.title}</h3>
+          {svc.desc && <p>{svc.desc}</p>}
+          <a href={routeFor(svc.linkTo, lang)}>{ui.viewPage.replace('{label}', svc.title)} →</a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .mtc-home-services {
+    position: relative;
+    background: #fff;
+    padding: clamp(56px, 9vw, 96px) clamp(22px, 5vw, 52px) clamp(64px, 10vw, 110px);
+  }
+  .mtc-hs-inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .mtc-hs-intro-kicker {
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a7a7a2;
+    margin: 0 0 14px;
+  }
+  .mtc-home-services h2 {
+    font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+    letter-spacing: -0.02em;
+    color: #1b1b1e;
+    margin: 0 0 12px;
+  }
+  .mtc-hs-lead {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #6a6a70;
+    max-width: 56ch;
+    margin: 0 0 40px;
+  }
+  .mtc-hs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 720px) {
+    .mtc-hs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .mtc-hs-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .mtc-hs-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1b1b1e;
+    margin: 0 0 8px;
+  }
+  .mtc-hs-card p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #6a6a70;
+    margin: 0 0 14px;
+  }
+  .mtc-hs-card a {
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: #2f6fe0;
+    text-decoration: none;
+  }
+  .mtc-hs-card a:hover {
+    text-decoration: underline;
+  }
+</style>

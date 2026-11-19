@@ -118,8 +118,14 @@ const inputCls =
         <p class={`${mono} mb-4 text-[11px] uppercase tracking-[0.16em] text-gray-400`}>{c.formKicker}</p>
         <h2 class="mb-1 text-xl font-semibold tracking-tight text-gray-900">{c.formHeading}</h2>
         <p class="mb-7 text-[14px] text-gray-500">{c.formSub}</p>
-        <form action="https://formspree.io/f/xaqdaevr" method="POST" class="space-y-4">
+        <form id="mt-contact-form" action="https://formspree.io/f/xaqdaevr" method="POST" class="space-y-4">
           <input type="hidden" name="_language" value={lang} />
+          <!-- lead source (S19): filled from sessionStorage by the script after the form -->
+          <input type="hidden" name="entry_referrer" value="" />
+          <input type="hidden" name="entry_landing" value="" />
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" value="" />
           <div class="grid gap-4 sm:grid-cols-2">
             <div>
               <label for="nome" class="mb-1.5 block text-[13px] font-medium text-gray-700">{c.labelName} *</label>
@@ -149,6 +155,18 @@ const inputCls =
           </button>
           <p class={`${mono} text-center text-[11px] tracking-wide text-gray-400`}>{c.formFootnote}</p>
         </form>
+        <script is:inline>
+          (function () {
+            var form = document.getElementById('mt-contact-form');
+            if (!form) return;
+            var entry = {};
+            try { entry = JSON.parse(sessionStorage.getItem('mt_entry_touch') || '{}'); } catch (e) {}
+            ['entry_referrer', 'entry_landing', 'utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
+              var input = form.querySelector('input[name="' + key + '"]');
+              if (input) input.value = entry[key] || '';
+            });
+          })();
+        </script>
       </div>
 
       <!-- explore other nodes -->
