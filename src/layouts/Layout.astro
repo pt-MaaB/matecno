@@ -16,9 +16,11 @@ interface Props {
   jsonld: unknown;
   alternates: Alt[];
   ui: Ui;
+  /** Open Graph type; 'article' on blog posts. Every other page: 'website'. */
+  ogType?: string;
 }
 
-const { title, description, lang, htmlLang, ogLocale, jsonld, alternates, ui } = Astro.props;
+const { title, description, lang, htmlLang, ogLocale, jsonld, alternates, ui, ogType = 'website' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 const abs = (href: string) => new URL(href, Astro.site).href;
 const xDefault = alternates.find((a) => a.lang === DEFAULT_LOCALE) ?? alternates[0];
@@ -73,7 +75,7 @@ const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floating
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:locale" content={ogLocale} />
     {alternates
       .filter((a) => a.lang !== lang)

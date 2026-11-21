@@ -1,0 +1,16 @@
+---
+// Renders one blog text field: **bold** and [text](href) only (src/lib/blog.ts `inline`). Everything else is text,
+// escaped by Astro, so a post file can never inject HTML.
+import { inline } from '../lib/blog';
+
+interface Props { text: string }
+const segs = inline(Astro.props.text);
+const linkCls = 'font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900';
+---
+{segs.map((s) =>
+  s.t === 'b' ? <strong class="font-semibold text-gray-800">{s.v}</strong>
+  : s.t === 'a' ? (s.ext
+      ? <a href={s.href} target="_blank" rel="noopener noreferrer" class={linkCls}>{s.v}</a>
+      : <a href={s.href} class={linkCls}>{s.v}</a>)
+  : s.v
+)}

@@ -1,0 +1,20 @@
+{
+  "about": "Wording of the MaTecno blog outside the posts: the /blog/ index page (title, description, h1, intro), the nav label, and the labels every post shows. Page wording is Marketing's (decision-0050): Copywriters may change any string here and the template reads it. Posts live one per file in src/data/blog/<slug>.json (contract: src/lib/blog.ts). With no post file there is no /blog/ page and no nav link.",
+  "title": "Blog | MaTecno",
+  "description": "Problemas reais de restaurantes, oficinas, ginásios, salões e clínicas, com uma resposta direta: o que os resolve e quando a MaTecno não é a resposta.",
+  "h1": "Blog",
+  "intro": "Cada artigo parte de uma queixa real de um negócio e responde-lhe de forma direta, incluindo quando a solução não é um serviço da MaTecno.",
+  "navLabel": "Blog",
+  "labels": {
+    "home": "MaTecno",
+    "breadcrumb": "Navegação estrutural",
+    "answer": "Resposta curta",
+    "toc": "Nesta página",
+    "faq": "Perguntas frequentes",
+    "related": "Ler também",
+    "published": "Publicado em",
+    "updated": "Atualizado em",
+    "nextStep": "Próximo passo",
+    "notOurService": "O que a MaTecno não faz"
+  }
+}

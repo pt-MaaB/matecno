@@ -64,12 +64,14 @@ interface Props {
 }
 
 import LangSwitcher from './LangSwitcher.astro';
+import { blogNav } from '../lib/blog';
 
 const { content } = Astro.props;
 const { core, hubs } = content;
 const ui = content.ui ?? {};
 const alternates = content.alternates ?? [];
 const lang = content.lang ?? 'pt';
+const blogLink = blogNav(lang); // the blog index, PT only, once a post exists
 ---
 
 <div class="mtc-explorer" data-mtc-root>
@@ -88,7 +90,7 @@ const lang = content.lang ?? 'pt';
     <nav class="mtc-navlinks" aria-label={ui.navAria}>
       {hubs.map((h) => (
         <a href={h.route}>{h.label}</a>
-      ))}
+      ))}{blogLink && <a href={blogLink.href}>{blogLink.label}</a>}
     </nav>
     <div class="mtc-navright">
       <div class="mtc-legend" aria-hidden="true">

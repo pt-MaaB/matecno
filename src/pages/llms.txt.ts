@@ -8,6 +8,7 @@
 import type { APIRoute } from 'astro';
 import { getSite, getHub } from '../data/site.mjs';
 import { SITE_URL } from '../data/structure.mjs';
+import { BLOG, BLOG_ROUTE, blogPosts, displayTitle, plain } from '../lib/blog';
 
 export const GET: APIRoute = () => {
   const pt = getSite('pt');
@@ -17,6 +18,17 @@ export const GET: APIRoute = () => {
   const serv = pt.hubs.find((h: any) => h.key === 'serv');
   const leads = getHub('leads', 'pt');
   const pages = [serv, leads, ...pt.hubs.filter((h: any) => h.key !== 'serv')];
+  // The blog (src/data/blog/*.json, newest first): a section only once a post exists, so a site with no post says nothing.
+  const posts = blogPosts();
+  const blog = posts.length
+    ? [
+        '## Blog',
+        '',
+        `- [${plain(BLOG.navLabel)}](${abs(BLOG_ROUTE)}): ${plain(BLOG.description)}`,
+        ...posts.map((p) => `- [${displayTitle(p)}](${abs(p.slug)}): ${plain(p.description)}`),
+        '',
+      ]
+    : [];
   const lines = [
     '# Matecno',
     '',
@@ -28,6 +40,7 @@ export const GET: APIRoute = () => {
     '',
     ...pages.filter(Boolean).map((h: any) => `- [${h.label}](${abs(h.route)}): ${h.page?.description ?? ''}`.trimEnd()),
     '',
+    ...blog,
     '## Outros idiomas',
     '',
     `- [English](${abs(en.core.route)}): ${en.seo.description}`,

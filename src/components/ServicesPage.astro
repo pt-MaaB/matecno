@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import LangSwitcher from './LangSwitcher.astro';
 import { getSite, getHub, alternatesFor, routeFor } from '../data/site.mjs';
 import { COLORS } from '../data/structure.mjs';
+import { blogNav } from '../lib/blog';
 
 interface Props { lang: string }
 const { lang } = Astro.props;
@@ -14,6 +15,7 @@ const color = hub.color;
 const lead = paras[0];
 const others = site.hubs.filter((h) => h.key !== 'serv');
 const ui = site.ui;
+const blogLink = blogNav(lang); // the blog index, PT only, once a post exists
 const services = hub.aspects; // each aspect is one service: {label,title,desc,items,linkTo?}
 const alternates = alternatesFor('serv');
 
@@ -49,7 +51,7 @@ const accentOf = (svc: any) => (svc.linkTo ? COLORS[svc.linkTo] ?? color : color
               h.key === 'serv' ? 'text-gray-900 font-medium' : 'text-gray-400',
             ]}
           >{h.label}</a>
-        ))}
+        ))}{blogLink && <a href={blogLink.href} class="text-gray-400 transition-colors hover:text-gray-900">{blogLink.label}</a>}
         <LangSwitcher alternates={alternates} current={lang} class="ml-auto" />
       </nav>
     </header>

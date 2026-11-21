@@ -1,0 +1,21 @@
+---
+// The header of the blog pages: the same nav as the section pages (SectionPage.astro), with the blog link current.
+// PT only: no language switcher until a post has an en/es twin (spec 3).
+import { getSite } from '../data/site.mjs';
+import { BLOG, BLOG_ROUTE } from '../lib/blog';
+
+interface Props { color: string }
+const { color } = Astro.props;
+const site = getSite('pt');
+---
+<div class="h-[3px] w-full" style={`background:${color}`}></div>
+<header class="border-b border-gray-100">
+  <nav class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-4 text-[13px]">
+    <a href={site.core.route} class="font-mono font-semibold tracking-[0.14em] text-gray-900">MATECNO</a>
+    <span class="text-gray-300">/</span>
+    {site.hubs.map((h) => (
+      <a href={h.route} class="text-gray-400 transition-colors hover:text-gray-900">{h.label}</a>
+    ))}
+    <a href={BLOG_ROUTE} class="font-medium text-gray-900 transition-colors hover:text-gray-900">{BLOG.navLabel}</a>
+  </nav>
+</header>
