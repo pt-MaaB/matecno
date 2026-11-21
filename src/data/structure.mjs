@@ -69,7 +69,7 @@ export const SITE_URL = 'https://matecno.pt';
 
 // The byline of every blog post (CEO 2026-11-21: "use my name as the author on the articles"). One real person,
 // fixed here and never in a post's data file, so no post can name anyone else or a made-up writer (ANTI
-// decision-0051 rule 5). The same @id is the Organization's founder below, so Google reads one person.
+// decision-0051 rule 5). Momentos' articles carry the same @id, so Google reads one person across both sites.
 export const AUTHOR = {
   name: 'Mauro Abrantes',
   role: 'fundador da MaTecno',
@@ -126,10 +126,11 @@ export const JSONLD_BASE = {
     latitude: 40.2033,
     longitude: -8.4103,
   },
+  // Not yet AUTHOR.id: that changes every live page, and the wording auto-ship (ANTI tools/empire_seo_ship.py)
+  // then holds the first blog post as drift until a hand deploy. Join them in the next normal deploy.
   founder: {
     '@type': 'Person',
-    '@id': AUTHOR.id,
-    name: AUTHOR.name,
+    name: 'Mauro Abrantes',
   },
   sameAs: [],
 };
