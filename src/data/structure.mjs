@@ -67,6 +67,16 @@ for (const [key, p] of Object.entries(SEO.pages || {})) {
 
 export const SITE_URL = 'https://matecno.pt';
 
+// The byline of every blog post (CEO 2026-11-21: "use my name as the author on the articles"). One real person,
+// fixed here and never in a post's data file, so no post can name anyone else or a made-up writer (ANTI
+// decision-0051 rule 5). The same @id is the Organization's founder below, so Google reads one person.
+export const AUTHOR = {
+  name: 'Mauro Abrantes',
+  role: 'fundador da MaTecno',
+  jobTitle: 'Fundador',
+  id: 'https://matecno.pt/#mauro-abrantes',
+};
+
 // Route for a hub key in a locale. Trailing slash to match Astro's directory
 // output (/servicos/index.html) so nav links, hreflang, canonical and og:url
 // all agree and no redirect is needed.
@@ -118,7 +128,8 @@ export const JSONLD_BASE = {
   },
   founder: {
     '@type': 'Person',
-    name: 'Mauro Abrantes',
+    '@id': AUTHOR.id,
+    name: AUTHOR.name,
   },
   sameAs: [],
 };

@@ -44,7 +44,9 @@
 
 import BLOG_INDEX from '../data/blog_index.json';
 import { getSite, getHub, servicePagesIn } from '../data/site.mjs';
-import { COLORS, SITE_URL } from '../data/structure.mjs';
+import { AUTHOR, COLORS, SITE_URL } from '../data/structure.mjs';
+
+export { AUTHOR };
 
 export type Block =
   | { type: 'p'; text: string }
@@ -378,6 +380,8 @@ export function dateLabel(iso: string): string {
 // ── JSON-LD (spec 10): Article + FAQPage (when there is one) + BreadcrumbList; never ProfessionalService ─────────
 const abs = (path: string) => SITE_URL + path;
 const ORG = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Matecno', url: `${SITE_URL}/` };
+// The author is a Person (CEO 2026-11-21: his name on the articles); the publisher stays the Organization.
+const PERSON = { '@type': 'Person', '@id': AUTHOR.id, name: AUTHOR.name, jobTitle: AUTHOR.jobTitle, worksFor: { '@id': ORG['@id'] } };
 const crumb = (items: [string, string][]) => ({
   '@type': 'BreadcrumbList',
   itemListElement: items.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(path) })),
@@ -399,7 +403,7 @@ export function postJsonLd(post: BlogPost) {
         url,
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         image: `${SITE_URL}/og.png`,
-        author: ORG,
+        author: PERSON,
         publisher: { ...ORG, logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` } },
       },
       ...(post.faq.length

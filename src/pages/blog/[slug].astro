@@ -7,7 +7,7 @@ import Layout from '../../layouts/Layout.astro';
 import BlogHeader from '../../components/BlogHeader.astro';
 import Inline from '../../components/Inline.astro';
 import { getSite } from '../../data/site.mjs';
-import { BLOG, BLOG_ROUTE, blogPosts, colorFor, dateLabel, pageRef, plain, postJsonLd, type BlogPost } from '../../lib/blog';
+import { AUTHOR, BLOG, BLOG_ROUTE, blogPosts, colorFor, dateLabel, pageRef, plain, postJsonLd, type BlogPost } from '../../lib/blog';
 
 export function getStaticPaths() {
   return blogPosts().map((post) => ({ params: { slug: post.slug.slice('/blog/'.length, -1) }, props: { post } }));
@@ -60,6 +60,7 @@ const bodyText = 'text-[1.05rem] leading-relaxed text-gray-600';
         </div>
         <h1 class="max-w-[24ch] text-[2.2rem] font-semibold leading-[1.08] tracking-tight text-gray-900 sm:text-[3rem]">{post.h1}</h1>
         <p class={`${mono} mt-6 text-[12px] text-gray-400`}>
+          <span class="text-gray-500">{(L.by ?? 'Por') + ' ' + AUTHOR.name + ', ' + AUTHOR.role}</span>{' · '}
           {L.published + ' '}<time datetime={post.published}>{dateLabel(post.published)}</time>{post.updated !== post.published && (
             <span>{' · ' + L.updated + ' '}<time datetime={post.updated}>{dateLabel(post.updated)}</time></span>
           )}
