@@ -4,12 +4,14 @@
 // the site and the outreach engine do TODAY: matecno.pt sends (decision-0047 Amendment 1, no Workspace/Smartlead),
 // no paid verifier, auto-replies not live yet, contact form on Formspree, fonts from Google Fonts, analytics only
 // after the cookie banner's "Aceitar". Update this page when any of those change (e.g. auto-replies go live, t-0417).
+// 2026-11-21 (DRAFT for the CEO's go with the deploy that ships it): §2 and §6 name what the contact form sends about
+// how the visitor arrived, and the first-page note kept in the tab only with the statistics consent.
 import Layout from '../layouts/Layout.astro';
 import { getSite } from '../data/site.mjs';
 
 const site = getSite('pt');
 const alternates = [{ lang: 'pt', htmlLang: site.htmlLang, href: '/privacidade' }];
-const updated = '12 de novembro de 2026';
+const updated = '21 de novembro de 2026';
 ---
 
 <Layout
@@ -45,6 +47,13 @@ const updated = '12 de novembro de 2026';
         <li>
           <strong>Dados que nos envia:</strong> nome, email, telefone e o conteúdo da mensagem, quando usa o
           formulário de contacto, nos escreve por email ou nos contacta por WhatsApp.
+        </li>
+        <li>
+          <strong>Como chegou ao site, com o formulário:</strong> quando envia o formulário de contacto, ele indica
+          também a página do site por onde entrou (ou a página anterior ao formulário), o nome do site que o trouxe
+          (por exemplo google.com, sem o endereço completo) e a etiqueta de campanha do link, se existir
+          (<code>utm_source</code>). Serve para sabermos que páginas trazem pedidos de contacto. Os mesmos dados, sem o
+          seu nome, email ou mensagem, ficam no registo do nosso servidor.
         </li>
         <li>
           <strong>Dados de navegação:</strong> páginas visitadas, duração da visita, origem do tráfego e tipo de
@@ -135,6 +144,11 @@ const updated = '12 de novembro de 2026';
         O site só usa cookies de estatística (Google Analytics: cookies <code>_ga</code> e <code>_ga_*</code>) se
         clicar em "Aceitar" no aviso de cookies. Se clicar em "Recusar", ou não escolher, o Google Analytics não é
         carregado. A sua escolha fica guardada no seu navegador, para não voltarmos a perguntar.
+      </p>
+      <p>
+        Se aceitar, o site guarda também, só neste separador do navegador (<code>sessionStorage</code>, apagado quando
+        o fecha), a primeira página que visitou e o site de onde veio, para os juntar ao formulário de contacto se o
+        enviar. Se recusar, não guarda nada: o formulário indica apenas a página anterior a ele.
       </p>
       <p>
         Pode mudar de ideias a qualquer momento em

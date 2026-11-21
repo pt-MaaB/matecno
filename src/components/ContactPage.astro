@@ -122,9 +122,11 @@ const inputCls =
         <p class="mb-7 text-[14px] text-gray-500">{c.formSub}</p>
         <form id="mt-contact-form" action="https://formspree.io/f/xaqdaevr" method="POST" class="space-y-4">
           <input type="hidden" name="_language" value={lang} />
-          <!-- lead source (S19): filled from sessionStorage by the script after the form -->
+          <!-- lead source (S19; 2026-11-21): filled by the script after the form at submit — the visit's first page when
+               the statistics consent kept it, else the page before this one. entry_basis says which. -->
           <input type="hidden" name="entry_referrer" value="" />
           <input type="hidden" name="entry_landing" value="" />
+          <input type="hidden" name="entry_basis" value="" />
           <input type="hidden" name="utm_source" value="" />
           <input type="hidden" name="utm_medium" value="" />
           <input type="hidden" name="utm_campaign" value="" />
@@ -161,11 +163,51 @@ const inputCls =
           (function () {
             var form = document.getElementById('mt-contact-form');
             if (!form) return;
-            var entry = {};
-            try { entry = JSON.parse(sessionStorage.getItem('mt_entry_touch') || '{}'); } catch (e) {}
-            ['entry_referrer', 'entry_landing', 'utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
-              var input = form.querySelector('input[name="' + key + '"]');
-              if (input) input.value = entry[key] || '';
+            // Where the visitor came in, read when they send the form. With the statistics consent the visit's first
+            // page is in sessionStorage (Layout.astro); without it nothing was stored, so this page load says what it
+            // can: the page before this one on our site, or the site that sent them straight here.
+            function touch() {
+              var entry = {};
+              try {
+                if (localStorage.getItem('mt_cookie_consent') === 'granted') {
+                  entry = JSON.parse(sessionStorage.getItem('mt_entry_touch') || '{}') || {};
+                }
+              } catch (e) { entry = {}; }
+              if (entry.entry_landing) { entry.entry_basis = 'first'; return entry; }
+              var params = new URLSearchParams(location.search);
+              var out = {
+                entry_referrer: '', entry_landing: location.pathname, entry_basis: 'first',
+                utm_source: (params.get('utm_source') || '').toLowerCase(),
+                utm_medium: (params.get('utm_medium') || '').toLowerCase(),
+                utm_campaign: (params.get('utm_campaign') || '').toLowerCase()
+              };
+              if (document.referrer) {
+                try {
+                  var r = new URL(document.referrer);
+                  if (r.hostname === location.hostname) { out.entry_landing = r.pathname; out.entry_basis = 'prev'; }
+                  else { out.entry_referrer = r.hostname.replace(/^www\./, ''); }
+                } catch (e) {}
+              }
+              return out;
+            }
+            function fill(entry) {
+              ['entry_referrer', 'entry_landing', 'entry_basis', 'utm_source', 'utm_medium', 'utm_campaign'].forEach(function (key) {
+                var input = form.querySelector('input[name="' + key + '"]');
+                if (input) input.value = entry[key] || '';
+              });
+            }
+            fill(touch());
+            // The submit ping: the same page, referrer host and tag (no name, email or message) to our own server,
+            // whose access log is how the results loop counts contact requests per page (tools/site_conversions.py).
+            // It never blocks the form: it rides keepalive while the browser goes on to Formspree.
+            form.addEventListener('submit', function () {
+              var t = touch();
+              fill(t);
+              try {
+                var q = new URLSearchParams({ lp: t.entry_landing || '', b: t.entry_basis || '',
+                                              ref: t.entry_referrer || '', src: t.utm_source || '' });
+                fetch('/contact-sent.txt?' + q.toString(), { method: 'GET', keepalive: true, credentials: 'omit', cache: 'no-store' });
+              } catch (e) {}
             });
           })();
         </script>

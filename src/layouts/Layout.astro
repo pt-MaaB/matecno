@@ -35,29 +35,38 @@ const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floating
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- First-touch lead source (S19, pile-cmo_seo_geo-s19): entry_referrer (host only), entry_landing (path only)
-         and utm_source/medium/campaign, kept once per tab in sessionStorage (no cookie) and sent only with a
-         contact-form submission. Same field names as HoraCerta (Deliverables/marketing/horacerta/utm_standard.md). -->
+    <!-- First-touch lead source (S19, pile-cmo_seo_geo-s19; consent gate 2026-11-21): the visit's first page (path),
+         the site that sent the visitor (host only) and utm_source/medium/campaign, kept in sessionStorage (no cookie,
+         gone when the tab closes) ONLY after "Aceitar" on the statistics cookies (privacidade §6, Lei 41/2004 art. 5:
+         storing anything on the device needs consent unless strictly necessary), and only on the visit's first page.
+         Sent only with a contact-form submission. Without consent the form reads the page before it at submit time,
+         storing nothing (ContactPage.astro). Same field names as HoraCerta (web/lib/signupSource.ts). -->
     <script is:inline>
       (function () {
         var KEY = 'mt_entry_touch';
-        try { if (sessionStorage.getItem(KEY)) return; } catch (e) { return; }
-        var refHost = '';
-        if (document.referrer) {
+        window.__mtEntryTouch = function () {
           try {
-            var h = new URL(document.referrer).hostname;
-            if (h && h !== location.hostname) refHost = h;
-          } catch (e) {}
-        }
-        var params = new URLSearchParams(location.search);
-        var entry = {
-          entry_referrer: refHost,
-          entry_landing: location.pathname,
-          utm_source: (params.get('utm_source') || '').toLowerCase(),
-          utm_medium: (params.get('utm_medium') || '').toLowerCase(),
-          utm_campaign: (params.get('utm_campaign') || '').toLowerCase()
+            if (localStorage.getItem('mt_cookie_consent') !== 'granted' || sessionStorage.getItem(KEY)) return;
+          } catch (e) { return; }
+          var refHost = '';
+          if (document.referrer) {
+            try {
+              var h = new URL(document.referrer).hostname;
+              if (h === location.hostname) return;      // not the visit's first page: nothing to keep
+              refHost = h.replace(/^www\./, '');
+            } catch (e) {}
+          }
+          var params = new URLSearchParams(location.search);
+          var entry = {
+            entry_referrer: refHost,
+            entry_landing: location.pathname,
+            utm_source: (params.get('utm_source') || '').toLowerCase(),
+            utm_medium: (params.get('utm_medium') || '').toLowerCase(),
+            utm_campaign: (params.get('utm_campaign') || '').toLowerCase()
+          };
+          try { sessionStorage.setItem(KEY, JSON.stringify(entry)); } catch (e) {}
         };
-        try { sessionStorage.setItem(KEY, JSON.stringify(entry)); } catch (e) {}
+        window.__mtEntryTouch();
       })();
     </script>
 
@@ -176,6 +185,7 @@ const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floating
         if (choice === 'granted') loadGA();
         else {
           dropGaCookies();          // cookies left from before the banner (GA ran for everyone until 2026-11-12)
+          try { sessionStorage.removeItem('mt_entry_touch'); } catch (e) {}   // kept before the 11-21 consent gate
           if (choice !== 'denied') show();
         }
         document.addEventListener('click', function (e) {
@@ -185,7 +195,8 @@ const waHref = `https://wa.me/351919642845?text=${encodeURIComponent(ui.floating
           var v = t.getAttribute('data-consent');
           set(v);
           hide();
-          if (v === 'granted') { loadGA(); return; }
+          if (v === 'granted') { if (window.__mtEntryTouch) window.__mtEntryTouch(); loadGA(); return; }
+          try { sessionStorage.removeItem('mt_entry_touch'); } catch (e) {}
           dropGaCookies();
           if (loaded) location.reload();
         });
