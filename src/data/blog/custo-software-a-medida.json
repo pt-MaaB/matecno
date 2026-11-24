@@ -1,0 +1,137 @@
+{
+  "slug": "/blog/custo-software-a-medida/",
+  "title": "Quanto custa um software à medida em Portugal? - MaTecno",
+  "description": "Não existe um preço único. Veja os fatores reais que mudam o custo de um software à medida e o que descrever antes de pedir orçamento a um fornecedor.",
+  "kicker": "Para donos de pequenos negócios a orçar um software à medida",
+  "h1": "Quanto custa um software à medida em Portugal?",
+  "answer": "Não existe um preço único: depende do âmbito definido, das integrações com sistemas existentes, da migração de dados e da manutenção depois de entregue. Em Portugal, a programação cobra-se tipicamente entre 14 e 40 euros por hora segundo a Fixando, e entre 10 e 45 euros segundo a Zaask. Um orçamento sério exige sempre o âmbito escrito primeiro.",
+  "sections": [
+    {
+      "h2": "Os fatores que realmente mudam o preço de um software à medida",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Quem procura «quanto custa fazer um software» está, na prática, a pedir um número que ainda não existe: o preço de um software à medida depende de quatro fatores que mudam de projeto para projeto, não de uma tabela fixa."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "O âmbito definido por escrito: quantas funcionalidades, para quantos utilizadores, com que regras de negócio.",
+            "O número de integrações com sistemas já existentes (faturação, pagamentos, CRM, outras aplicações internas).",
+            "A migração de dados antigos: quantos registos, em que formato, com que qualidade.",
+            "A manutenção depois de entregue: quem corrige um erro, quem atualiza dependências, com que frequência."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Dois softwares com o mesmo número de ecrãs podem ter preços muito diferentes se um precisa de três integrações e o outro de nenhuma, ou se um tem de importar dez anos de dados de um sistema antigo e o outro parte do zero."
+        }
+      ]
+    },
+    {
+      "h2": "Porque a resposta é quase sempre «depende», e o que descrever antes de pedir orçamento",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Um fornecedor que responde «depende» a uma pergunta de preço não está a fugir à resposta: sem o âmbito escrito, qualquer número seria uma adivinhação, não um orçamento. A pergunta certa não é «quanto custa», é «o que preciso de descrever para receber um orçamento real»."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "O que o software tem de fazer, função a função, não só a ideia geral.",
+            "Com que sistemas tem de falar, e que documentação existe de cada um.",
+            "Que dados existentes têm de ser migrados, e em que estado estão hoje.",
+            "Quem vai manter o software depois de entregue, e com que frequência."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Um orçamento pedido sem esta lista escrita tende a voltar vago ou, pior, otimista: sem o âmbito, o fornecedor arrisca estimar por baixo e corrigir o preço a meio do projeto, já com o negócio dependente dele."
+        }
+      ]
+    },
+    {
+      "h2": "Quando compensa mandar construir, em vez de configurar o que já existe",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Nem toda a necessidade justifica um software à medida. Configurar uma ferramenta já existente, um SaaS ou uma plataforma no-code, custa menos e arranca mais depressa, mas obriga o negócio a adaptar-se às regras dessa ferramenta. Construir à medida custa mais no arranque, mas a lógica do negócio é que manda."
+        },
+        {
+          "type": "p",
+          "text": "O critério, não uma venda: um software à medida compensa quando o processo tem regras próprias, precisa de integrações que uma ferramenta pronta não cobre, ou tem volume que justifica o investimento. Quando o processo é comum a milhares de outras empresas, uma ferramenta já pronta é normalmente a opção mais barata."
+        },
+        {
+          "type": "p",
+          "text": "Em Portugal, a programação à hora cobra-se tipicamente entre 14 e 40 euros (Fixando, média real de propostas) e entre 10 e 45 euros (Zaask); um projeto completo soma horas de âmbito definido, integrações, migração de dados e testes, nunca um valor único à parte."
+        }
+      ]
+    },
+    {
+      "h2": "O que a MaTecno entrega em software à medida, por escrito",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A MaTecno constrói software à medida desde o zero, com tecnologia moderna e amplamente testada no mercado, já com autenticação, pagamentos, faturação e notificações cobertos pelo serviço. O código-fonte fica propriedade do cliente, como o site da MaTecno garante: o software construído não fica preso a uma conta ou a um fornecedor específico depois de entregue. Para uma oficina mecânica, por exemplo, isto pode significar juntar o stock de peças e as marcações de serviço num único sistema, em vez de dois cadernos separados."
+        },
+        {
+          "type": "p",
+          "text": "Isto não substitui a lista da secção anterior, continuam a ser as perguntas certas a fazer a qualquer fornecedor, incluindo este. Ver [Software à medida](/servicos/software-a-medida/) para o serviço completo."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Quanto custa, em euros, um software à medida em Portugal?",
+      "a": "Não existe um preço único. Depende do âmbito definido, das integrações com sistemas existentes, da migração de dados e da manutenção depois de entregue. Em Portugal, a programação cobra-se tipicamente entre 14 e 40 euros por hora segundo a Fixando, e entre 10 e 45 euros por hora segundo a Zaask; um projeto completo soma-se a partir daí, de acordo com o âmbito escrito."
+    },
+    {
+      "q": "Porque é que nenhum fornecedor dá logo um preço fixo?",
+      "a": "Porque sem o âmbito escrito, funcionalidades, integrações, dados a migrar, manutenção, qualquer número seria uma adivinhação. A pergunta a fazer a um fornecedor não é «quanto custa», é «o que preciso de descrever para receber um orçamento real»."
+    },
+    {
+      "q": "O que preciso de descrever antes de pedir um orçamento?",
+      "a": "O que o software tem de fazer função a função, com que sistemas tem de falar, que dados antigos têm de ser migrados e quem vai manter o software depois de entregue. Sem esta lista escrita, um orçamento tende a voltar vago ou otimista a mais."
+    },
+    {
+      "q": "Quando compensa mais um software à medida do que uma ferramenta já existente?",
+      "a": "Quando o processo tem regras próprias, integrações que uma ferramenta pronta não cobre, ou volume que justifica o investimento. Quando o processo é comum a milhares de outras empresas, uma ferramenta já pronta, um SaaS ou no-code, é normalmente a opção mais barata."
+    },
+    {
+      "q": "A MaTecno entrega o código-fonte de um software à medida?",
+      "a": "Sim. O site da MaTecno garante que o código-fonte fica propriedade do cliente: o software construído desde o zero, com tecnologia moderna e amplamente testada no mercado, não fica preso a uma conta ou a um fornecedor específico depois de entregue."
+    }
+  ],
+  "related": [
+    "/servicos/software-a-medida/",
+    "/servicos/",
+    "/blog/"
+  ],
+  "navLabel": "Custo de um software à medida",
+  "vertical": "auto_repair",
+  "complaint": {
+    "question": "quanto custa fazer um software",
+    "sources": [
+      {
+        "quote": "A sr Soraia enviou me um orçamento onde a meio do projeto pediram dinheiro de lincecas que não foram faladas",
+        "url": "https://portaldaqueixa.com/brands/bestsites/complaints/bestsites-criacao-de-site-143737225",
+        "date": "2025-11-11"
+      }
+    ]
+  },
+  "service_link": "/servicos/software-a-medida/",
+  "not_our_service_reason": null,
+  "cta": {
+    "label": "Ver o serviço de Software à medida",
+    "href": "/servicos/software-a-medida/"
+  },
+  "claims": [
+    "Auth, payments, invoicing, notifications."
+  ],
+  "lang": "pt",
+  "published": "2026-11-22",
+  "updated": "2026-11-22"
+}
